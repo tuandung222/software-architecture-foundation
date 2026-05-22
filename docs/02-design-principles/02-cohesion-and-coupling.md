@@ -2,7 +2,7 @@
 id: 02-cohesion-and-coupling
 title: 2.2 Cohesion và Coupling
 sidebar_position: 2
-description: Hai khái niệm cốt lõi nhất trong modular design. Cohesion đo độ gắn kết bên trong module, Coupling đo độ phụ thuộc giữa các module. Mục tiêu vĩnh cửu: cohesion cao, coupling thấp.
+description: "Hai khái niệm cốt lõi nhất trong modular design. Cohesion đo độ gắn kết bên trong module, Coupling đo độ phụ thuộc giữa các module. Mục tiêu vĩnh cửu: cohesion cao, coupling thấp."
 ---
 
 # 2.2 Cohesion và Coupling
