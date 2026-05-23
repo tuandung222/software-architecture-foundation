@@ -92,7 +92,7 @@ graph TD
     U[User]
     S[Our E-commerce<br/>System]
     E1[Stripe<br/>Payment]
-    E2[Inventory<br/>System (legacy)]
+    E2["Inventory<br/>System legacy"]
     E3[Email Service]
     
     U -->|browses, orders| S

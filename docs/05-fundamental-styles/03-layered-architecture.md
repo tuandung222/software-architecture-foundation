@@ -49,7 +49,7 @@ Vd: introduce Shared Services layer mà Presentation có thể skip:
 ```mermaid
 graph TD
     P[Presentation]
-    SS[Shared Services<br/>(OPEN)]
+    SS["Shared Services<br/>OPEN"]
     B[Business]
     PS[Persistence]
     
