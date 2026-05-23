@@ -56,6 +56,13 @@ graph TD
     %% Cụm 8
     C8_2[8.2 UAMS Case]
     C8_3[8.3 Smart City]
+    C8_4[8.4 Feature Store]
+    
+    %% Cụm 9
+    C9_2[9.2 IoT]
+    C9_3[9.3 Web3]
+    C9_4[9.4 MLOps]
+    C9_5[9.5 Digital Twin]
     
     %% Dependencies
     C1_2 --> C2_2
@@ -100,9 +107,25 @@ graph TD
     C5_5 --> C8_3
     C6_3 --> C8_3
     C6_4 --> C8_3
+    C5_4 --> C8_4
+    C6_2 --> C8_4
+    C6_4 --> C8_4
+
+    C6_4 --> C9_2
+    C5_4 --> C9_2
+    C6_4 --> C9_3
+    C5_4 --> C9_4
+    C6_2 --> C9_4
+    C6_4 --> C9_5
+    C7_4 --> C9_5
     
     style C8_2 fill:#fffacd
     style C8_3 fill:#fffacd
+    style C8_4 fill:#fffacd
+    style C9_2 fill:#e8f4fd
+    style C9_3 fill:#e8f4fd
+    style C9_4 fill:#e8f4fd
+    style C9_5 fill:#e8f4fd
 ```
 
 ## Concept dùng ở đâu
@@ -137,7 +160,8 @@ graph TD
 | 4.2-4.4 | Define + identify + map to component |
 | 3.3 | Trade-off analysis ATAM-lite |
 | 5-6 | Mỗi style optimize/sacrifice các QA |
-| 8.2-8.3 | Case study: justify decision by QA |
+| 8.2-8.4 | Case study: justify decision by QA |
+| 9.2-9.5 | Advanced domains: IoT, Web3, MLOps, Digital Twin |
 
 ### Trade-off
 
@@ -147,7 +171,8 @@ graph TD
 | 5.2 | Monolith vs Distributed |
 | 5.3-5.5 | Mỗi style: pros/cons |
 | 6.2-6.5 | Mỗi distributed style |
-| 8.2-8.3 | Case study reflection |
+| 8.2-8.4 | Case study reflection |
+| 9.2-9.5 | Advanced seminar trade-off under domain constraints |
 
 ### Bounded Context (DDD)
 
@@ -168,7 +193,7 @@ Time: ~10 giờ
 
 ### Focus: "Tôi cần choose architecture style cho dự án"
 
-Path: 1.2 → 4.1 → 4.2 → 4.3 → 5.1 → 5.2 → (5.3 OR 6.2 OR 6.3 OR 6.4 tuỳ context) → 8.2 → 8.3
+Path: 1.2 → 4.1 → 4.2 → 4.3 → 5.1 → 5.2 → (5.3 OR 6.2 OR 6.3 OR 6.4 tuỳ context) → 8.2 → 8.3 → 9.x nếu domain cần
 
 Time: ~12 giờ
 
@@ -202,7 +227,9 @@ Nếu mục tiêu của bạn là đưa model/data pipeline vào production, đi
 6. [C&C Views](../07-documenting/03-component-connector-views.md): vẽ online inference runtime flow.
 7. [Smart City case](../08-case-studies/03-smart-city-traffic.md): xem một hệ data/ML realtime end-to-end.
 8. [Production ML Feature Store](../08-case-studies/05-production-ml-feature-store.md): xem feature store, model serving và monitoring production.
-9. [Lộ trình cho Data Scientist](data-scientist-learning-path.md): checklist và bài tập riêng.
+9. [MLOps seminar](../09-seminar-advanced-topics/04-software-architecture-for-mlops.md): xem ML lifecycle như một platform architecture.
+10. [Digital Twin seminar](../09-seminar-advanced-topics/05-software-architecture-for-digital-twin.md): xem ML trong cyber-physical system.
+11. [Lộ trình cho Data Scientist](data-scientist-learning-path.md): checklist và bài tập riêng.
 
 ## Khái niệm dễ confused
 

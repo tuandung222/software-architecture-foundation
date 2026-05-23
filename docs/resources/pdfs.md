@@ -23,6 +23,7 @@ Các file PDF dưới đây gộp toàn bộ nội dung của mỗi cụm bài g
 | Cụm 6 | Distributed Architecture Styles | [cum-6-distributed-styles-full.pdf](pathname:///pdfs/lectures/cum-6-distributed-styles-full.pdf) |
 | Cụm 7 | Documenting Software Architecture | [cum-7-documenting-full.pdf](pathname:///pdfs/lectures/cum-7-documenting-full.pdf) |
 | Cụm 8 | Case Studies | [cum-8-case-studies-full.pdf](pathname:///pdfs/lectures/cum-8-case-studies-full.pdf) |
+| Cụm 9 | Seminar Advanced Topics | [cum-9-seminar-advanced-topics-full.pdf](pathname:///pdfs/lectures/cum-9-seminar-advanced-topics-full.pdf) |
 | Bonus | Tóm tắt toàn khoá | [course-summary-full.pdf](pathname:///pdfs/lectures/course-summary-full.pdf) |
 
 Mỗi PDF có:

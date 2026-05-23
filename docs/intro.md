@@ -75,7 +75,7 @@ Nếu bạn muốn lộ trình riêng, hãy mở [Lộ trình cho Data Scientist
 
 ## Cấu trúc tài liệu
 
-Khoá gồm **tám cụm bài giảng** và **các tài nguyên tra cứu**.
+Khoá gồm **chín cụm bài giảng** và **các tài nguyên tra cứu**.
 
 | Cụm | Tên | Số bài | Trọng tâm |
 |---|---|---:|---|
@@ -87,6 +87,7 @@ Khoá gồm **tám cụm bài giảng** và **các tài nguyên tra cứu**.
 | 6 | Distributed Styles | 5 | Service-based, microservices, event-driven, space-based |
 | 7 | Documenting Architecture | 4 | Module/C&C/Allocation views, ADR |
 | 8 | Case Studies | 5 | UAMS, Smart City, Production ML Feature Store, bài tập tổng hợp |
+| 9 | Seminar - Advanced Topics | 5 | IoT, Web3, MLOps, Digital Twin |
 
 Mỗi cụm bắt đầu bằng một bài overview. Nếu bạn đọc tuần tự, overview giúp bạn biết cụm này giải quyết vấn đề gì. Nếu bạn đọc tra cứu, overview giúp bạn nhanh chóng định vị bài cần đọc.
 
@@ -94,7 +95,7 @@ Mỗi cụm bắt đầu bằng một bài overview. Nếu bạn đọc tuần t
 
 ### Người đọc lần đầu
 
-Đọc theo thứ tự tự nhiên: Cụm 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8. Đây là đường chắc nhất nếu bạn muốn xây nền tảng đầy đủ. Sau Cụm 4, bạn đã hiểu vì sao kiến trúc bị chi phối bởi Quality Attributes. Sau Cụm 6, bạn có đủ vocabulary để phân tích đa số system design ở mức trung bình. Sau Cụm 7 và 8, bạn biết cách trình bày lựa chọn kiến trúc cho team.
+Đọc theo thứ tự tự nhiên: Cụm 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8 → 9. Đây là đường chắc nhất nếu bạn muốn xây nền tảng đầy đủ. Sau Cụm 4, bạn đã hiểu vì sao kiến trúc bị chi phối bởi Quality Attributes. Sau Cụm 6, bạn có đủ vocabulary để phân tích đa số system design ở mức trung bình. Sau Cụm 7 và 8, bạn biết cách trình bày lựa chọn kiến trúc cho team. Cụm 9 giúp bạn áp dụng nền tảng đó vào các domain hiện đại khó hơn như IoT, Web3, MLOps và Digital Twin.
 
 ### Data Scientist muốn productionize ML
 
@@ -107,6 +108,7 @@ Mỗi cụm bắt đầu bằng một bài overview. Nếu bạn đọc tuần t
 5. Cụm 6.4 để hiểu event-driven và streaming.
 6. Cụm 7 để biết cách document ML/data systems.
 7. Cụm 8.3 để xem case real-time data/ML system.
+8. Bài 9.4 để xem MLOps như một production platform end-to-end.
 
 Path chi tiết nằm ở [Lộ trình cho Data Scientist](resources/data-scientist-learning-path.md).
 

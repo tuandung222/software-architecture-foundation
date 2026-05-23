@@ -2,7 +2,7 @@
 id: course-summary
 title: Tóm tắt toàn khoá
 sidebar_position: 1
-description: Tổng hợp toàn bộ 8 cụm trong 1 bài đọc nhanh. Phù hợp để ôn nhanh hoặc tra cứu cấp tốc trước khi đi vào bài cụ thể.
+description: Tổng hợp toàn bộ 9 cụm trong 1 bài đọc nhanh. Phù hợp để ôn nhanh hoặc tra cứu cấp tốc trước khi đi vào bài cụ thể.
 ---
 
 # Tóm tắt toàn khoá Software Architecture Foundation
@@ -21,6 +21,7 @@ graph TD
     C6[Cụm 6<br/>Distributed<br/>Styles]
     C7[Cụm 7<br/>Documenting<br/>views + ADR]
     C8[Cụm 8<br/>Case<br/>Studies]
+    C9[Cụm 9<br/>Advanced<br/>Seminar]
     
     C1 --> C2
     C2 --> C3
@@ -31,6 +32,10 @@ graph TD
     C5 --> C8
     C6 --> C8
     C7 --> C8
+    C8 --> C9
+    C5 --> C9
+    C6 --> C9
+    C7 --> C9
 ```
 
 ## Cụm 1: Giới thiệu
@@ -173,6 +178,17 @@ Production ML platform cho nhiều DS teams. **Service-based core + Pipeline + E
 
 8 bài tự practice: Food Delivery, Property Management SaaS, Stock Trading, IoT Manufacturing, Multi-region E-commerce migration, Churn Prediction, Real-time Fraud Detection, Feature Store.
 
+## Cụm 9: Seminar - Advanced Topics
+
+Cụm 9 dùng toàn bộ foundation để phân tích bốn domain khó hơn. Đây là phần chuyển từ "biết style" sang "biết đọc constraint domain và thiết kế style mix hợp lý".
+
+| Seminar | Trọng tâm | Style mix điển hình |
+|---|---|---|
+| [9.2 IoT](../09-seminar-advanced-topics/02-software-architecture-for-iot.md) | Device fleet, telemetry, edge-cloud split | Event-driven + pipeline + service-based + edge |
+| [9.3 Web3](../09-seminar-advanced-topics/03-software-architecture-for-web3.md) | On-chain/off-chain boundary, smart contract, indexer | Hybrid on-chain/off-chain + event-driven indexer |
+| [9.4 MLOps](../09-seminar-advanced-topics/04-software-architecture-for-mlops.md) | Training, registry, serving, monitoring, governance | Service-based + pipeline + event-driven feedback |
+| [9.5 Digital Twin](../09-seminar-advanced-topics/05-software-architecture-for-digital-twin.md) | Physical-digital sync, simulation, command loop | Event-driven + service-based twin core + simulation plugins |
+
 ## Nếu bạn là Data Scientist
 
 Hãy nhớ bản đồ chuyển đổi sau:
@@ -189,7 +205,7 @@ Hãy nhớ bản đồ chuyển đổi sau:
 | Model serving | C&C View + Allocation View |
 | Drift monitoring | Observability + reliability |
 
-Một model tốt offline chưa đủ. Production ML cần hệ thống có contract, monitoring, rollback, lineage và cost model rõ ràng. Vì vậy nếu bạn chỉ có ít thời gian, hãy đọc theo thứ tự: 4.1 Quality Attributes, 5.4 Pipeline, 6.4 Event-Driven, 7.3 C&C Views, 8.3 Smart City.
+Một model tốt offline chưa đủ. Production ML cần hệ thống có contract, monitoring, rollback, lineage và cost model rõ ràng. Vì vậy nếu bạn chỉ có ít thời gian, hãy đọc theo thứ tự: 4.1 Quality Attributes, 5.4 Pipeline, 6.4 Event-Driven, 7.3 C&C Views, 8.3 Smart City, 9.4 MLOps.
 
 ## Key takeaways
 
@@ -229,7 +245,7 @@ Architecture should match team size + 1 stage (Bài 3.3). Đừng over-engineer.
 | Cái cần tối ưu | 4.3 | Top 5-7 QA, measurable |
 | Choose style | 5-6 | Match QA priority, team size |
 | Document | 7 | C4 + 3 views + ADR |
-| Apply | 8 | UAMS, Smart City patterns |
+| Apply | 8-9 | UAMS, Smart City, Feature Store, IoT, Web3, MLOps, Digital Twin |
 
 ## Khi nào hỏi câu nào
 

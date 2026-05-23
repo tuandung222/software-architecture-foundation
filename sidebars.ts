@@ -107,6 +107,19 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
+      label: 'Cụm 9: Seminar - Advanced Topics',
+      link: {type: 'doc', id: '09-seminar-advanced-topics/01-overview'},
+      collapsed: false,
+      items: [
+        '09-seminar-advanced-topics/01-overview',
+        '09-seminar-advanced-topics/02-software-architecture-for-iot',
+        '09-seminar-advanced-topics/03-software-architecture-for-web3',
+        '09-seminar-advanced-topics/04-software-architecture-for-mlops',
+        '09-seminar-advanced-topics/05-software-architecture-for-digital-twin',
+      ],
+    },
+    {
+      type: 'category',
       label: 'Tài nguyên',
       collapsed: true,
       items: [

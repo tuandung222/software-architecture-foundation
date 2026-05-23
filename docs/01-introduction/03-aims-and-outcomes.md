@@ -66,6 +66,14 @@ Cụm 8 đi qua 3 case study chi tiết (UAMS, Smart City Traffic Detection, Pro
 - Trình bày được kiến trúc đó cho người không-kỹ-thuật hiểu (vd: PM, business stakeholder).
 - Defend được lựa chọn trước câu hỏi "vì sao không dùng X?".
 
+### Mục tiêu 6: Áp dụng nền tảng vào advanced domains
+
+Cụm 9 đưa bạn qua bốn seminar nâng cao: IoT, Web3, MLOps và Digital Twin. Sau cụm này bạn:
+
+- Nhìn được constraint đặc thù của từng domain và dịch chúng thành Quality Attributes.
+- Biết vì sao các hệ hiện đại thường là style mix, không phải một style duy nhất.
+- Đọc và phản biện được architecture proposal cho IoT platform, Web3 app, MLOps platform hoặc Digital Twin system.
+
 ## Kết quả học tập (Learning Outcomes)
 
 Kết quả học tập là phiên bản đo được của mục tiêu. Sau khi hoàn thành khoá, bạn có thể:
@@ -82,6 +90,7 @@ Kết quả học tập là phiên bản đo được của mục tiêu. Sau khi
 | LO8 | Viết Architecture Decision Record (ADR) cho một quyết định cụ thể | 7 |
 | LO9 | Thiết kế end-to-end kiến trúc cho hệ cỡ trung trong 2-3 giờ | 8 |
 | LO10 | Đọc, đánh giá, và phản biện architecture của hệ có sẵn | All |
+| LO11 | Phân tích architecture cho advanced domains như IoT, Web3, MLOps, Digital Twin | 9 |
 
 Bộ LO này khá tham vọng. Đạt được toàn bộ đòi hỏi 30-50 giờ học nghiêm túc + 10-20 giờ thực hành. Đừng vội nản nếu sau lần đọc đầu tiên chưa đạt, kiến trúc là kỹ năng tích luỹ.
 

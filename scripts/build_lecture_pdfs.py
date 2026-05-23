@@ -108,6 +108,17 @@ CLUSTERS: list[tuple[str, str, list[Path]]] = [
         ]],
     ),
     (
+        "Cụm 9 - Seminar Advanced Topics",
+        "cum-9-seminar-advanced-topics-full.pdf",
+        [DOCS / "09-seminar-advanced-topics" / f for f in [
+            "01-overview.md",
+            "02-software-architecture-for-iot.md",
+            "03-software-architecture-for-web3.md",
+            "04-software-architecture-for-mlops.md",
+            "05-software-architecture-for-digital-twin.md",
+        ]],
+    ),
+    (
         "Tóm tắt toàn khoá",
         "course-summary-full.pdf",
         [DOCS / "resources" / "course-summary.md"],

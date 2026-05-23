@@ -55,8 +55,9 @@ Thời gian: 12-18 giờ.
 | 7 | [7.3 C&C Views](../07-documenting/03-component-connector-views.md) | Vẽ runtime flow của inference/training. |
 | 8 | [8.3 Smart City Traffic](../08-case-studies/03-smart-city-traffic.md) | Xem một case real-time ML/data system end-to-end. |
 | 9 | [8.4 Production ML Feature Store](../08-case-studies/05-production-ml-feature-store.md) | Xem feature store, model serving, monitoring và governance. |
+| 10 | [9.4 Software Architecture for MLOps](../09-seminar-advanced-topics/04-software-architecture-for-mlops.md) | Nhìn toàn bộ ML lifecycle như một production platform. |
 
-Sau path này, bạn nên tự vẽ được kiến trúc sơ bộ cho một hệ fraud detection, churn prediction, recommendation serving hoặc feature store.
+Sau path này, bạn nên tự vẽ được kiến trúc sơ bộ cho một hệ fraud detection, churn prediction, recommendation serving, feature store hoặc MLOps platform.
 
 ## Lộ trình 2: DS muốn chuyển sang ML Engineer / Platform Engineer
 
