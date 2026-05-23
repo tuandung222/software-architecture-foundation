@@ -103,6 +103,7 @@ CLUSTERS: list[tuple[str, str, list[Path]]] = [
             "01-overview.md",
             "02-uams-academic-management.md",
             "03-smart-city-traffic.md",
+            "05-production-ml-feature-store.md",
             "04-exercise-set.md",
         ]],
     ),

@@ -2,18 +2,18 @@
 id: 01-overview
 title: 8.1 Tổng quan Cụm 8
 sidebar_position: 1
-description: Áp toàn bộ kiến thức 7 cụm trước vào 2 case study end-to-end. UAMS (Academic Management System) và Smart City Traffic Detection. Plus bộ exercise tự practice.
+description: Áp toàn bộ kiến thức 7 cụm trước vào 3 case study end-to-end. UAMS, Smart City Traffic Detection, Production ML Feature Store, plus bộ exercise tự practice.
 ---
 
 # 8.1 Tổng quan Cụm 8: Case Studies
 
-> **Tóm tắt một dòng**: 7 cụm trước cung cấp building block. Cụm này áp tất cả vào 2 case thực để bạn thấy cách lập luận "given context X, why this architecture not that" - skill thực sự của architect.
+> **Tóm tắt một dòng**: 7 cụm trước cung cấp building block. Cụm này áp tất cả vào 3 case thực để bạn thấy cách lập luận "given context X, why this architecture not that" - skill thực sự của architect.
 
 ## Nếu bạn đến từ Data Science
 
-Trong hai case study, hãy đọc kỹ Smart City Traffic. Case này có ingest data, normalize, streaming, ML detector, alerting, time-series storage và data warehouse. Nó rất gần với production data/ML system: nhiều nguồn dữ liệu, throughput cao, latency target rõ, model inference nằm trong pipeline lớn hơn.
+Trong ba case study, hãy đọc kỹ Smart City Traffic và Production ML Feature Store. Smart City cho bạn thấy realtime data/ML system với ingest, normalize, streaming, ML detector, alerting, time-series storage và data warehouse. Production ML Feature Store đi sát hơn vào công việc DS/MLOps: feature definition, offline store, online store, model registry, serving API, drift monitoring và auditability.
 
-UAMS vẫn đáng đọc vì nó dạy phần business workflow, audit, data integrity và service-based thinking. Nhưng Smart City là cầu nối trực tiếp hơn từ DS sang Software Architecture.
+UAMS vẫn đáng đọc vì nó dạy phần business workflow, audit, data integrity và service-based thinking. Nhưng nếu mục tiêu của bạn là đưa model vào production, hãy ưu tiên 8.3 và 8.4.
 
 ## Vì sao case study?
 
@@ -24,9 +24,9 @@ Lý thuyết kiến trúc dễ học, áp dụng khó. Cụm 1-7 cho bạn vocab
 - "Communication nào? Sync HTTP hay async event?"
 - "Architecture style nào best fit?"
 
-Câu trả lời tuỳ context. Case study đi qua **lập luận end-to-end** cho hai context khác nhau, show cách architect thinks.
+Câu trả lời tuỳ context. Case study đi qua **lập luận end-to-end** cho ba context khác nhau, show cách architect thinks.
 
-## 2 Case Studies
+## 3 Case Studies
 
 ### Case 1: UAMS, University Academic Management System
 
@@ -49,6 +49,17 @@ Context:
 - Scale: thousands sensors, millions data points/hour, sub-second response.
 
 Focus: high-throughput streaming, real-time, heterogeneous data.
+
+### Case 3: Production ML Feature Store
+
+Context:
+
+- Công ty SaaS có nhiều team DS/ML cùng build model production.
+- Duplicate feature logic, training-serving skew, thiếu lineage và monitoring.
+- Cần feature registry, offline store, online store, model registry, serving API.
+- Scale: 40 models production, 200 features tăng lên 1000, 15k RPS peak.
+
+Focus: production ML, feature freshness, online inference, auditability, privacy, service-based + pipeline + event-driven mix.
 
 ### Bài tập
 
@@ -107,6 +118,7 @@ Mỗi case dài ~3500-5000 chữ, đọc 1.5-2h. Đáng dành thời gian.
 
 - **8.2 UAMS**: Academic Management System.
 - **8.3 Smart City Traffic**: Real-time incident detection.
-- **8.4 Exercise Set**: 5 bài tập tự practice với hint.
+- **8.4 Production ML Feature Store**: feature store, model serving, monitoring, governance.
+- **8.5 Exercise Set**: 8 bài tập tự practice với hint.
 
-Vào [Bài 8.2: UAMS](02-uams-academic-management.md) để bắt đầu.
+Vào [Bài 8.2: UAMS](02-uams-academic-management.md) để bắt đầu, hoặc nếu bạn đến từ Data Science, có thể đi thẳng tới [Bài 8.4: Production ML Feature Store](05-production-ml-feature-store.md).

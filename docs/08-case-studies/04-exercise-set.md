@@ -1,13 +1,13 @@
 ---
 id: 04-exercise-set
-title: 8.4 Bài tập tổng hợp
-sidebar_position: 4
-description: 5 bài tập kiến trúc với hints chi tiết. Tự practice end-to-end pipeline - identify QA, chọn style, decompose component, draft ADR.
+title: 8.5 Bài tập tổng hợp
+sidebar_position: 5
+description: 8 bài tập kiến trúc với hints chi tiết. Tự practice end-to-end pipeline - identify QA, chọn style, decompose component, draft ADR.
 ---
 
-# 8.4 Bài tập tổng hợp
+# 8.5 Bài tập tổng hợp
 
-> **Tóm tắt một dòng**: 5 bài tập tự practice. Mỗi bài có context, requirements, và hints để bạn lập luận theo framework từ Cụm 1-7. Không có "đáp án đúng" - chỉ có "đáp án hợp lý cho context".
+> **Tóm tắt một dòng**: 8 bài tập tự practice. Mỗi bài có context, requirements, và hints để bạn lập luận theo framework từ Cụm 1-7. Không có "đáp án đúng" - chỉ có "đáp án hợp lý cho context".
 
 ## Cách làm
 
@@ -354,7 +354,7 @@ Feedback từ người có kinh nghiệm thực tế > self-study 10 giờ.
 
 ## Tóm tắt
 
-- 5 bài tập từ easy (food delivery) đến hard (multi-region migration).
+- 8 bài tập từ easy (food delivery) đến hard (multi-region migration, real-time fraud, feature store).
 - Apply framework end-to-end.
 - Discuss với mentor để identify gap.
 

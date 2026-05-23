@@ -165,9 +165,13 @@ Academic Management. **Service-based** với 6 services, shared PostgreSQL schem
 
 Real-time incident detection. **Event-Driven + Microservices + Microkernel** mix. Kafka backbone, TimescaleDB + BigQuery. Cost ~$15-20k/month. 7300 events/s sustained.
 
-### Exercise Set (8.4)
+### Production ML Feature Store (8.4)
 
-5 bài tự practice: Food Delivery, Property Management SaaS, Stock Trading, IoT Manufacturing, Multi-region E-commerce migration.
+Production ML platform cho nhiều DS teams. **Service-based core + Pipeline + Event-Driven** mix. Feature Registry, Offline Store, Online Store, Model Registry, Serving API, Monitoring. Focus: training-serving skew, freshness tiers, auditability, privacy và rollback.
+
+### Exercise Set (8.5)
+
+8 bài tự practice: Food Delivery, Property Management SaaS, Stock Trading, IoT Manufacturing, Multi-region E-commerce migration, Churn Prediction, Real-time Fraud Detection, Feature Store.
 
 ## Nếu bạn là Data Scientist
 
@@ -248,7 +252,7 @@ Architecture should match team size + 1 stage (Bài 3.3). Đừng over-engineer.
 
 ## Final advice
 
-Software Architecture là kỹ năng *cộng dồn*. Đọc khoá này 1 lần không đủ. Practice trên 3-5 dự án thực + đọc 3 sách trong list trên + làm 5 exercise bài 8.4 → 1-2 năm sau bạn sẽ là senior architect.
+Software Architecture là kỹ năng *cộng dồn*. Đọc khoá này 1 lần không đủ. Practice trên 3-5 dự án thực + đọc 3 sách trong list trên + làm 8 exercise bài 8.5 → 1-2 năm sau bạn sẽ là senior architect.
 
 Không có shortcut. Chỉ có *practice* + *reflection* + *feedback*.
 

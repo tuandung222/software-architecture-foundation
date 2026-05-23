@@ -201,7 +201,8 @@ Nếu mục tiêu của bạn là đưa model/data pipeline vào production, đi
 5. [Event-Driven](../06-distributed-styles/04-event-driven.md): hiểu streaming feature và realtime detection.
 6. [C&C Views](../07-documenting/03-component-connector-views.md): vẽ online inference runtime flow.
 7. [Smart City case](../08-case-studies/03-smart-city-traffic.md): xem một hệ data/ML realtime end-to-end.
-8. [Lộ trình cho Data Scientist](data-scientist-learning-path.md): checklist và bài tập riêng.
+8. [Production ML Feature Store](../08-case-studies/05-production-ml-feature-store.md): xem feature store, model serving và monitoring production.
+9. [Lộ trình cho Data Scientist](data-scientist-learning-path.md): checklist và bài tập riêng.
 
 ## Khái niệm dễ confused
 

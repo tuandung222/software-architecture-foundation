@@ -101,6 +101,7 @@ const sidebars: SidebarsConfig = {
         '08-case-studies/01-overview',
         '08-case-studies/02-uams-academic-management',
         '08-case-studies/03-smart-city-traffic',
+        '08-case-studies/05-production-ml-feature-store',
         '08-case-studies/04-exercise-set',
       ],
     },

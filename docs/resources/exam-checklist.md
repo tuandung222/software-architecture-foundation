@@ -94,8 +94,9 @@ description: Bảng checklist để bạn tự kiểm tra mức master sau khi �
 
 - [ ] Đọc UAMS case + reproduce reasoning cho Service-based choice.
 - [ ] Đọc Smart City case + reproduce reasoning cho EDA + Microservices mix.
-- [ ] So sánh UAMS vs Smart City: identify 5 key differences.
-- [ ] Làm 1 exercise (8.4) end-to-end.
+- [ ] Đọc Production ML Feature Store case + reproduce reasoning cho service-based + pipeline + event-driven mix.
+- [ ] So sánh UAMS, Smart City và Production ML: identify 5 key differences.
+- [ ] Làm 1 exercise (8.5) end-to-end.
 - [ ] Critique 1 case study: "what would you do differently".
 
 ## Cross-cutting skills
@@ -138,7 +139,7 @@ Dùng phần này nếu bạn đến từ Data Science và muốn tự đánh gi
 ## Sau khi self-assess
 
 1. **Identify gap**: items chưa tick → tương ứng bài/cụm cần đọc lại.
-2. **Practice**: làm exercises ở Bài 8.4 cho gap area.
+2. **Practice**: làm exercises ở Bài 8.5 cho gap area.
 3. **Apply**: 1 project thật + 1-on-1 review với mentor.
 4. **Iterate**: tự đánh giá lại sau 2-3 tháng. Score sẽ tăng theo experience.
 

@@ -86,7 +86,7 @@ Khoá gồm **tám cụm bài giảng** và **các tài nguyên tra cứu**.
 | 5 | Fundamental Styles | 5 | Monolith, layered, pipeline, microkernel |
 | 6 | Distributed Styles | 5 | Service-based, microservices, event-driven, space-based |
 | 7 | Documenting Architecture | 4 | Module/C&C/Allocation views, ADR |
-| 8 | Case Studies | 4 | UAMS, Smart City, bài tập tổng hợp |
+| 8 | Case Studies | 5 | UAMS, Smart City, Production ML Feature Store, bài tập tổng hợp |
 
 Mỗi cụm bắt đầu bằng một bài overview. Nếu bạn đọc tuần tự, overview giúp bạn biết cụm này giải quyết vấn đề gì. Nếu bạn đọc tra cứu, overview giúp bạn nhanh chóng định vị bài cần đọc.
 

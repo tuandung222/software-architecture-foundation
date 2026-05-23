@@ -60,7 +60,7 @@ Cụm 7 dạy 3 loại view (Module, Component-and-Connector, Allocation), đây
 
 ### Mục tiêu 5: Áp dụng vào case study thực
 
-Cụm 8 đi qua 2 case study chi tiết (UAMS, Academic Management System, Smart City Traffic Detection) và một bộ bài tập tổng hợp. Sau cụm này bạn:
+Cụm 8 đi qua 3 case study chi tiết (UAMS, Smart City Traffic Detection, Production ML Feature Store) và một bộ bài tập tổng hợp. Sau cụm này bạn:
 
 - Tự thiết kế kiến trúc end-to-end cho hệ cỡ trung (50-500k user) dựa trên requirement.
 - Trình bày được kiến trúc đó cho người không-kỹ-thuật hiểu (vd: PM, business stakeholder).

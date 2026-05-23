@@ -133,7 +133,8 @@ Mỗi bài được đánh giá theo 7 tiêu chí:
 | `01-overview.md` | Cần DS lens | Case Smart City có ML nhưng chưa nói rõ đây là bridge. | Thêm note cho DS nên đọc Smart City kỹ. |
 | `02-uams-academic-management.md` | OK, cần annotation | Không cần biến thành DS case. | Thêm box so sánh với data-heavy system khi relevant. |
 | `03-smart-city-traffic.md` | Cần rewrite sâu | Đây là DS-friendly case tốt nhất hiện có. | Mở rộng inference latency, data pipeline, model drift, hot/cold storage. |
-| `04-exercise-set.md` | Cần DS exercises | Hiện chỉ có vài bài gần data. | Thêm churn prediction platform, recommendation system, feature store, ML monitoring. |
+| `05-production-ml-feature-store.md` | Đã thêm | Case study DS-first cho feature store, model serving, monitoring, governance. | Dùng làm anchor chính cho production ML. |
+| `04-exercise-set.md` | Đã cải thiện | Có thêm churn prediction, fraud detection, feature store. | Có thể thêm đáp án mẫu ở phase sau. |
 
 ### Resources
 

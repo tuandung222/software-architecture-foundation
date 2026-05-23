@@ -417,4 +417,4 @@ Smart City case demonstrates:
 
 Both UAMS và Smart City đều "correct", vì serve different contexts. Skill: chọn đúng combination.
 
-Bài tiếp: [Exercise Set](04-exercise-set.md), bạn tự practice.
+Bài tiếp: [Production ML Feature Store](05-production-ml-feature-store.md), case study sát với MLOps và Data Scientist hơn.

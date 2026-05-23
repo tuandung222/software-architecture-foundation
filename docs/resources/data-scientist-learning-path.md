@@ -54,8 +54,9 @@ Thời gian: 12-18 giờ.
 | 6 | [6.4 Event-Driven Architecture](../06-distributed-styles/04-event-driven.md) | Hiểu streaming, Kafka, async processing. |
 | 7 | [7.3 C&C Views](../07-documenting/03-component-connector-views.md) | Vẽ runtime flow của inference/training. |
 | 8 | [8.3 Smart City Traffic](../08-case-studies/03-smart-city-traffic.md) | Xem một case real-time ML/data system end-to-end. |
+| 9 | [8.4 Production ML Feature Store](../08-case-studies/05-production-ml-feature-store.md) | Xem feature store, model serving, monitoring và governance. |
 
-Sau path này, bạn nên tự vẽ được kiến trúc sơ bộ cho một hệ fraud detection, churn prediction hoặc recommendation serving.
+Sau path này, bạn nên tự vẽ được kiến trúc sơ bộ cho một hệ fraud detection, churn prediction, recommendation serving hoặc feature store.
 
 ## Lộ trình 2: DS muốn chuyển sang ML Engineer / Platform Engineer
 
@@ -108,7 +109,7 @@ Không nên nhảy thẳng vào microservices. Rất nhiều ML platform tốt b
 
 ### Giai đoạn 4: Documentation và case study
 
-Đọc Cụm 7 và Cụm 8. Mục tiêu: biết viết architecture doc cho ML system, không chỉ code.
+Đọc Cụm 7 và Cụm 8. Ưu tiên [8.4 Production ML Feature Store](../08-case-studies/05-production-ml-feature-store.md) nếu bạn muốn thấy một ML platform production được thiết kế từ Quality Attributes tới runtime flows. Mục tiêu: biết viết architecture doc cho ML system, không chỉ code.
 
 Một architecture doc tối thiểu cho ML system nên có:
 
