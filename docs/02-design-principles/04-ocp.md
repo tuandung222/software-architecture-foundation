@@ -123,7 +123,7 @@ Khi behavior phụ thuộc context. Vd: `PriceCalculator` có strategy `RegularP
 
 ### 3. Plugin architecture (Microkernel)
 
-Scale OCP lên architecture level. Vd: VS Code có core nhỏ + hàng nghìn plugin. Adding feature = adding plugin, không sửa core. Cụm 5.5 sẽ đi sâu.
+Scale OCP lên architecture level. Vd: VS Code có core nhỏ + hàng nghìn plugin. Adding feature = adding plugin, không sửa core. Bài 5.5 sẽ đi sâu.
 
 ### 4. Hook / Callback
 

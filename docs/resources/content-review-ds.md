@@ -2,7 +2,7 @@
 id: content-review-ds
 title: Review nội dung cho Data Scientist
 sidebar_position: 6
-description: Rà soát toàn bộ nội dung khoá theo góc nhìn người học có nền tảng Data Scientist, kèm kế hoạch cải thiện từng cụm.
+description: Rà soát toàn bộ nội dung khoá theo góc nhìn người học có nền tảng Data Scientist, kèm kế hoạch cải thiện từng phần.
 ---
 
 # Review nội dung cho Data Scientist
@@ -55,9 +55,9 @@ Mỗi bài được đánh giá theo 7 tiêu chí:
 | Flow | Các section nối nhau tự nhiên, không nhảy concept không? |
 | Practice | Có câu hỏi tự kiểm tra hoặc bài tập nhỏ không? |
 
-## Review theo cụm
+## Review theo phần
 
-### Intro và Cụm 1: Giới thiệu
+### Intro và Phần 1: Giới thiệu
 
 | File | Trạng thái | Gap chính | Action |
 |---|---|---|---|
@@ -67,7 +67,7 @@ Mỗi bài được đánh giá theo 7 tiêu chí:
 | `03-aims-and-outcomes.md` | Cần cập nhật | Learning outcomes chưa nói được năng lực thiết kế ML/data systems. | Thêm outcomes phụ cho DS: nhận diện QA của model serving, document ML platform, phân biệt prototype vs production. |
 | `04-roadmap.md` | Cần cập nhật ngay | Chưa có learning path riêng cho DS. | Thêm lộ trình "Data Scientist to Software Architect" và link resource riêng. |
 
-### Cụm 2: Design Principles
+### Phần 2: Design Principles
 
 | File | Trạng thái | Gap chính | Action |
 |---|---|---|---|
@@ -79,7 +79,7 @@ Mỗi bài được đánh giá theo 7 tiêu chí:
 | `06-isp.md` | Cần ví dụ role interface | ISP có thể map sang Trainer, Predictor, Explainer. | Thêm ví dụ tránh ép model nào cũng implement explainability. |
 | `07-dip.md` | Cần bridge mạnh | DIP quan trọng nhưng abstract. | Ví dụ training logic không depend trực tiếp vào S3, MLflow, BigQuery. |
 
-### Cụm 3: Architectural Thinking
+### Phần 3: Architectural Thinking
 
 | File | Trạng thái | Gap chính | Action |
 |---|---|---|---|
@@ -88,16 +88,16 @@ Mỗi bài được đánh giá theo 7 tiêu chí:
 | `03-tradeoffs-analysis.md` | Cần mở rộng | Trade-off là core, nên dùng DS trade-offs. | Accuracy vs latency, freshness vs cost, explainability vs performance, privacy vs observability. |
 | `04-modularity.md` | Cần DS boundary | Đã có vertical slicing, cần map sang ML platform domains. | Feature pipeline, training, model registry, serving, monitoring là bounded contexts. |
 
-### Cụm 4: Quality Attributes
+### Phần 4: Quality Attributes
 
 | File | Trạng thái | Gap chính | Action |
 |---|---|---|---|
-| `01-overview.md` | Rewrite ưu tiên cao | Đây là cụm quan trọng nhất cho DS nhưng chưa có QA riêng cho ML/data. | Rewrite thêm data quality, feature freshness, reproducibility, drift detection, lineage. |
+| `01-overview.md` | Rewrite ưu tiên cao | Đây là phần quan trọng nhất cho DS nhưng chưa có QA riêng cho ML/data. | Rewrite thêm data quality, feature freshness, reproducibility, drift detection, lineage. |
 | `02-functional-vs-nfr.md` | Cần mở rộng | Nên có ví dụ model offline tốt nhưng NFR fail. | FR: predict churn. NFR: p95 latency, data freshness, explainability, rollback time. |
 | `03-identifying-characteristics.md` | Cần thêm worksheet DS | Hiện general, cần stakeholder/questions cho ML platform. | Thêm câu hỏi cho DS: model stale bao lâu thì nguy hiểm, data drift ai nhận alert. |
 | `04-component-based-thinking.md` | Cần map data components | Component examples còn general. | Thêm component map: ingestion, validation, feature store, trainer, registry, serving, monitor. |
 
-### Cụm 5: Fundamental Styles
+### Phần 5: Fundamental Styles
 
 | File | Trạng thái | Gap chính | Action |
 |---|---|---|---|
@@ -107,7 +107,7 @@ Mỗi bài được đánh giá theo 7 tiêu chí:
 | `04-pipeline-architecture.md` | Rewrite ưu tiên cao | Đây là bài gần DS nhất nhưng còn quá ngắn. | Rewrite sâu với ETL, feature pipeline, training pipeline, inference pipeline. |
 | `05-microkernel-architecture.md` | Cần ví dụ DS | Rất hợp plug-in algorithm/metrics. | Thêm model plug-in, metric plug-in, transform plug-in. |
 
-### Cụm 6: Distributed Styles
+### Phần 6: Distributed Styles
 
 | File | Trạng thái | Gap chính | Action |
 |---|---|---|---|
@@ -117,7 +117,7 @@ Mỗi bài được đánh giá theo 7 tiêu chí:
 | `04-event-driven.md` | Rewrite vừa | Rất liên quan streaming ML. | Thêm fraud detection, real-time feature update, Kafka schema evolution. |
 | `05-space-based.md` | Cần contextualize | Niche, DS có thể hiểu qua online feature cache. | Giải thích bằng low-latency feature lookup và extreme traffic. |
 
-### Cụm 7: Documenting
+### Phần 7: Documenting
 
 | File | Trạng thái | Gap chính | Action |
 |---|---|---|---|
@@ -126,7 +126,7 @@ Mỗi bài được đánh giá theo 7 tiêu chí:
 | `03-component-connector-views.md` | Cần inference/training flows | Sequence diagram nên có online inference và batch training. | Thêm runtime flow: request, feature lookup, model inference, logging. |
 | `04-allocation-views.md` | Cần GPU/data infra | Deployment view nên có GPU, object store, warehouse. | Thêm allocation example: CPU API, GPU serving, data lake, monitoring. |
 
-### Cụm 8: Case Studies
+### Phần 8: Case Studies
 
 | File | Trạng thái | Gap chính | Action |
 |---|---|---|---|
@@ -151,7 +151,7 @@ Mỗi bài được đánh giá theo 7 tiêu chí:
 | Priority | Nhóm bài | Lý do |
 |---|---|---|
 | P0 | Intro, Roadmap, DS learning path | Người học DS cần biết mình nên đọc thế nào ngay từ đầu. |
-| P0 | Cụm 4 Overview | QA là nơi DS chuyển từ model metric sang system metric. |
+| P0 | Phần 4 Overview | QA là nơi DS chuyển từ model metric sang system metric. |
 | P0 | Pipeline Architecture | Đây là cầu nối tự nhiên nhất từ DS sang Architecture. |
 | P1 | Trade-off, Modularity, Event-Driven | Ba khái niệm tạo năng lực thiết kế production data/ML systems. |
 | P1 | SOLID với Python/ML examples | Giúp DS refactor từ notebook sang maintainable package. |

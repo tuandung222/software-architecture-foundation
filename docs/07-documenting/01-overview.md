@@ -1,13 +1,13 @@
 ---
 id: 01-overview
-title: 7.1 Tổng quan Cụm 7
+title: 7.1 Tổng quan Phần 7
 sidebar_position: 1
 description: Vì sao tài liệu hoá architecture quan trọng. Three views from SEI - Module, Component-and-Connector, Allocation. ADR. Diagram standards C4 và 4+1.
 ---
 
-# 7.1 Tổng quan Cụm 7: Documenting Software Architecture
+# 7.1 Tổng quan Phần 7: Documenting Software Architecture
 
-> **Tóm tắt một dòng**: Kiến trúc không được tài liệu hoá là kiến trúc chết - tồn tại trong đầu 1-2 người, evolve không kiểm soát, mất khi người đó rời team. Cụm này dạy framework chuẩn để document - 3 views (Module/C&C/Allocation), ADR, và diagram standards.
+> **Tóm tắt một dòng**: Kiến trúc không được tài liệu hoá là kiến trúc chết - tồn tại trong đầu 1-2 người, evolve không kiểm soát, mất khi người đó rời team. Phần này dạy framework chuẩn để document - 3 views (Module/C&C/Allocation), ADR, và diagram standards.
 
 ## Nếu bạn đến từ Data Science
 
@@ -37,7 +37,7 @@ Quyết định cũ làm vì context cũ. Context thay đổi (vd: business mode
 
 ADR (Architecture Decision Record) chính là giải pháp.
 
-## Cụm 7 sẽ dạy
+## Phần 7 sẽ dạy
 
 Bốn bài:
 
@@ -186,11 +186,11 @@ Different doc cho different audience:
 
 Không cần full UML mọi class.
 
-## Cách đọc cụm
+## Cách đọc phần
 
 Tuần tự 7.2 → 7.3 → 7.4. Mỗi bài ~3000-4000 chữ.
 
-Sau cụm, bạn nên:
+Sau phần, bạn nên:
 
 - Vẽ được Module View + C&C View + Deployment View cho hệ mình đang làm.
 - Viết được 5 ADR cho 5 quyết định gần nhất.

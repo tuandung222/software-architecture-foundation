@@ -28,13 +28,13 @@
 
 Repo này là bộ tài liệu giảng dạy Tiếng Việt về **Software Architecture** ở mức nền tảng sau đại học. Mục tiêu: giúp người học hiểu cách thiết kế hệ phần mềm có quality attributes phù hợp, áp dụng SOLID + architecture styles + documenting views chuẩn vào dự án thực.
 
-Tài liệu được viết theo phong cách "lecturer": dẫn dắt trực giác trước, hình thức hoá sau, kèm ví dụ code + Mermaid diagram + case study end-to-end. Trình bày bằng Docusaurus 3, hỗ trợ KaTeX, render Mermaid, và xuất PDF gộp theo cụm.
+Tài liệu được viết theo phong cách "lecturer": dẫn dắt trực giác trước, hình thức hoá sau, kèm ví dụ code + Mermaid diagram + case study end-to-end. Trình bày bằng Docusaurus 3, hỗ trợ KaTeX, render Mermaid, và xuất PDF gộp theo phần.
 
 ## Nội dung khoá học
 
-Tám cụm bài giảng phủ toàn bộ pipeline thiết kế kiến trúc:
+Chín phần bài giảng phủ toàn bộ pipeline thiết kế kiến trúc:
 
-| Cụm | Chủ đề | Trọng tâm |
+| Phần | Chủ đề | Trọng tâm |
 |---|---|---|
 | **1. Giới thiệu** | Software Architecture là gì, mục tiêu khoá, lộ trình | Build framework tư duy |
 | **2. Design Principles** | Cohesion-Coupling + 5 SOLID (SRP, OCP, LSP, ISP, DIP) | Foundation cấp module |
@@ -43,7 +43,8 @@ Tám cụm bài giảng phủ toàn bộ pipeline thiết kế kiến trúc:
 | **5. Fundamental Styles** | Monolithic vs Distributed, Layered, Pipeline, Microkernel | 3 styles + baseline |
 | **6. Distributed Styles** | Service-based, Microservices, Event-Driven, Space-Based | 4 styles distributed |
 | **7. Documenting** | Module/C&C/Allocation Views, ADR, Conway's Law | Truyền đạt kiến trúc |
-| **8. Case Studies** | UAMS, Smart City Traffic + Exercise Set | Apply end-to-end |
+| **8. Case Studies** | UAMS, Smart City, Production ML Feature Store + Exercise Set | Apply end-to-end |
+| **9. Seminar - Advanced Topics** | IoT, Web3, MLOps, Digital Twin | Advanced domain case studies |
 
 Plus resources: course summary, glossary, cross-reference, exam checklist, PDF index.
 
@@ -51,24 +52,25 @@ Plus resources: course summary, glossary, cross-reference, exam checklist, PDF i
 
 ```
 .
-├── docs/                       # Markdown nguồn (37 bài)
+├── docs/                       # Markdown nguồn
 │   ├── intro.md
-│   ├── 01-introduction/        # Cụm 1 - 4 bài
-│   ├── 02-design-principles/   # Cụm 2 - 7 bài (SOLID)
-│   ├── 03-architectural-thinking/  # Cụm 3 - 4 bài
-│   ├── 04-quality-attributes/  # Cụm 4 - 4 bài
-│   ├── 05-fundamental-styles/  # Cụm 5 - 5 bài
-│   ├── 06-distributed-styles/  # Cụm 6 - 5 bài
-│   ├── 07-documenting/         # Cụm 7 - 4 bài
-│   ├── 08-case-studies/        # Cụm 8 - 4 bài
+│   ├── 01-introduction/        # Phần 1 - 4 bài
+│   ├── 02-design-principles/   # Phần 2 - 7 bài (SOLID)
+│   ├── 03-architectural-thinking/  # Phần 3 - 4 bài
+│   ├── 04-quality-attributes/  # Phần 4 - 4 bài
+│   ├── 05-fundamental-styles/  # Phần 5 - 5 bài
+│   ├── 06-distributed-styles/  # Phần 6 - 5 bài
+│   ├── 07-documenting/         # Phần 7 - 4 bài
+│   ├── 08-case-studies/        # Phần 8 - 5 bài
+│   ├── 09-seminar-advanced-topics/  # Phần 9 - 5 bài
 │   └── resources/              # Summary, glossary, cross-ref, ...
 │
 ├── src/                        # Component + page + CSS
 ├── static/                     # Asset tĩnh (img, PDF served)
-│   └── pdfs/lectures/          # 9 PDF gộp, deploy cùng site
+│   └── pdfs/lectures/          # 10 PDF, deploy cùng site
 │
 ├── pdfs/                       # PDF hiển thị trực tiếp trên GitHub
-│   ├── *-full.pdf              # 9 PDF gộp (mirror static/)
+│   ├── *-full.pdf              # 10 PDF mirror static/
 │   └── archive/                # Reference nội bộ, không serve public
 │
 ├── scripts/                    # Tooling Python
@@ -115,7 +117,7 @@ python3 scripts/build_lecture_pdfs.py
 cp static/pdfs/lectures/*.pdf pdfs/
 ```
 
-9 PDF có:
+10 PDF có:
 
 - Mục lục (TOC) tự động, depth 3.
 - Running header (section name) ở top mỗi trang.

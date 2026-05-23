@@ -46,7 +46,7 @@ Nuance:
 
 Trong monolith, có nhiều module nhưng 1 component (1 deployable). Trong microservices, mỗi service là 1 component.
 
-Cụm 5 (Architecture Styles) sẽ trở lại: mỗi style có cách khác nhau để compose component.
+Phần 5 (Architecture Styles) sẽ trở lại: mỗi style có cách khác nhau để compose component.
 
 ## Identify Component
 
@@ -243,9 +243,9 @@ Quy tắc: zero tolerance cho cycle ở component level. Detect + fix immediatel
 - **Coupling principles**: ADP (no cycle), SDP (depend toward stable), SAP (stable = abstract).
 - **Main Sequence**: balance I + A = 1.
 
-## Tổng kết Cụm 4
+## Tổng kết Phần 4
 
-Hết Cụm 4. Tóm tắt:
+Hết Phần 4. Tóm tắt:
 
 | Bài | Insight chính |
 |---|---|
@@ -253,6 +253,6 @@ Hết Cụm 4. Tóm tắt:
 | 4.3 Identifying | Top 5-7 QA, measurable, prioritize qua workshop |
 | 4.4 Component thinking | REP/CCP/CRP cohesion + ADP/SDP/SAP coupling, Main Sequence |
 
-Cụm 5-6 (Architecture Styles) sẽ áp dụng tất cả: mỗi style là một cách compose component để tối ưu một bộ QA cụ thể.
+Phần 5-6 (Architecture Styles) sẽ áp dụng tất cả: mỗi style là một cách compose component để tối ưu một bộ QA cụ thể.
 
-Bài tiếp: [Tổng quan Cụm 5 - Fundamental Architecture Styles](../05-fundamental-styles/01-overview.md).
+Bài tiếp: [Tổng quan Phần 5 - Fundamental Architecture Styles](../05-fundamental-styles/01-overview.md).

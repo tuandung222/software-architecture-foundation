@@ -7,11 +7,11 @@ description: "Tổng quan bộ seminar nâng cao về Software Architecture for 
 
 # 9.1 Tổng quan Seminar - Advanced Topics
 
-> **Tóm tắt một dòng**: Cụm 9 không dạy thêm một style mới. Cụm này dạy cách dùng toàn bộ nền tảng từ Cụm 1-8 để phân tích bốn domain khó: IoT, Web3, MLOps và Digital Twin.
+> **Tóm tắt một dòng**: Phần 9 không dạy thêm một style mới. Phần này dạy cách dùng toàn bộ nền tảng từ Phần 1-8 để phân tích bốn domain khó: IoT, Web3, MLOps và Digital Twin.
 
-## Vì sao cần cụm seminar?
+## Vì sao cần phần seminar?
 
-Sau khi học xong 8 cụm nền tảng, bạn đã có vocabulary để nói về:
+Sau khi học xong 8 phần nền tảng, bạn đã có vocabulary để nói về:
 
 - Architectural decisions.
 - Quality Attributes.
@@ -39,7 +39,7 @@ Bốn seminar này giúp bạn luyện kỹ năng **chuyển từ domain constra
 | 9.4 | Software Architecture for MLOps | ML platform, pipeline orchestration, feature store, model registry, serving, monitoring |
 | 9.5 | Software Architecture for Digital Twin | Real-time mirror, simulation, event streaming, time-series data, command loop |
 
-## Cách đọc cụm này
+## Cách đọc phần này
 
 ### Nếu bạn muốn học nhanh
 
@@ -74,7 +74,7 @@ Mỗi bài đi qua cùng một khung:
 10. ADR examples.
 11. Self-check.
 
-Khung này cố tình giống Cụm 8. Điểm khác là domain phức tạp hơn và trade-off sắc hơn.
+Khung này cố tình giống Phần 8. Điểm khác là domain phức tạp hơn và trade-off sắc hơn.
 
 ## Mapping từ nền tảng sang seminar
 

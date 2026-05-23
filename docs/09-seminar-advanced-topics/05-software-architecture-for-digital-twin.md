@@ -393,4 +393,4 @@ Một architecture doc Digital Twin tối thiểu nên có:
 - Closed-loop control cần safety policy, human approval và audit.
 - Digital thread giúp truy từ telemetry tới state, prediction, recommendation, command và outcome.
 
-Kết thúc cụm seminar. Hãy quay lại [Bản đồ phụ thuộc](../resources/cross-reference.md) để nối các seminar này với foundation concepts.
+Kết thúc phần seminar. Hãy quay lại [Bản đồ phụ thuộc](../resources/cross-reference.md) để nối các seminar này với foundation concepts.

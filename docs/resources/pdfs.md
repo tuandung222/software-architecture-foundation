@@ -2,28 +2,28 @@
 id: pdfs
 title: PDF tham chiếu
 sidebar_position: 4
-description: Các file PDF gộp theo cụm để tải về đọc offline hoặc in. Sinh tự động từ markdown source, có mục lục, header/footer chuẩn.
+description: Các file PDF gộp theo phần để tải về đọc offline hoặc in. Sinh tự động từ markdown source, có mục lục, header/footer chuẩn.
 ---
 
 # PDF tham chiếu và tải về
 
 Trang này cung cấp các file PDF của tài liệu để bạn tải về đọc offline hoặc in ra.
 
-## PDF gộp theo cụm (bản chính)
+## PDF gộp theo phần (bản chính)
 
-Các file PDF dưới đây gộp toàn bộ nội dung của mỗi cụm bài giảng, có mục lục, sinh tự động từ markdown source. Phù hợp để in và đọc offline.
+Các file PDF dưới đây gộp toàn bộ nội dung của mỗi phần bài giảng, có mục lục, sinh tự động từ markdown source. Phù hợp để in và đọc offline.
 
-| Cụm | Nội dung | File |
+| Phần | Nội dung | File |
 |---|---|---|
-| Cụm 1 | Giới thiệu Software Architecture | [cum-1-introduction-full.pdf](pathname:///pdfs/lectures/cum-1-introduction-full.pdf) |
-| Cụm 2 | Design Principles (SOLID + Cohesion/Coupling) | [cum-2-design-principles-full.pdf](pathname:///pdfs/lectures/cum-2-design-principles-full.pdf) |
-| Cụm 3 | Architectural Thinking | [cum-3-architectural-thinking-full.pdf](pathname:///pdfs/lectures/cum-3-architectural-thinking-full.pdf) |
-| Cụm 4 | Quality Attributes | [cum-4-quality-attributes-full.pdf](pathname:///pdfs/lectures/cum-4-quality-attributes-full.pdf) |
-| Cụm 5 | Fundamental Architecture Styles | [cum-5-fundamental-styles-full.pdf](pathname:///pdfs/lectures/cum-5-fundamental-styles-full.pdf) |
-| Cụm 6 | Distributed Architecture Styles | [cum-6-distributed-styles-full.pdf](pathname:///pdfs/lectures/cum-6-distributed-styles-full.pdf) |
-| Cụm 7 | Documenting Software Architecture | [cum-7-documenting-full.pdf](pathname:///pdfs/lectures/cum-7-documenting-full.pdf) |
-| Cụm 8 | Case Studies | [cum-8-case-studies-full.pdf](pathname:///pdfs/lectures/cum-8-case-studies-full.pdf) |
-| Cụm 9 | Seminar Advanced Topics | [cum-9-seminar-advanced-topics-full.pdf](pathname:///pdfs/lectures/cum-9-seminar-advanced-topics-full.pdf) |
+| Phần 1 | Giới thiệu Software Architecture | [cum-1-introduction-full.pdf](pathname:///pdfs/lectures/cum-1-introduction-full.pdf) |
+| Phần 2 | Design Principles (SOLID + Cohesion/Coupling) | [cum-2-design-principles-full.pdf](pathname:///pdfs/lectures/cum-2-design-principles-full.pdf) |
+| Phần 3 | Architectural Thinking | [cum-3-architectural-thinking-full.pdf](pathname:///pdfs/lectures/cum-3-architectural-thinking-full.pdf) |
+| Phần 4 | Quality Attributes | [cum-4-quality-attributes-full.pdf](pathname:///pdfs/lectures/cum-4-quality-attributes-full.pdf) |
+| Phần 5 | Fundamental Architecture Styles | [cum-5-fundamental-styles-full.pdf](pathname:///pdfs/lectures/cum-5-fundamental-styles-full.pdf) |
+| Phần 6 | Distributed Architecture Styles | [cum-6-distributed-styles-full.pdf](pathname:///pdfs/lectures/cum-6-distributed-styles-full.pdf) |
+| Phần 7 | Documenting Software Architecture | [cum-7-documenting-full.pdf](pathname:///pdfs/lectures/cum-7-documenting-full.pdf) |
+| Phần 8 | Case Studies | [cum-8-case-studies-full.pdf](pathname:///pdfs/lectures/cum-8-case-studies-full.pdf) |
+| Phần 9 | Seminar Advanced Topics | [cum-9-seminar-advanced-topics-full.pdf](pathname:///pdfs/lectures/cum-9-seminar-advanced-topics-full.pdf) |
 | Bonus | Tóm tắt toàn khoá | [course-summary-full.pdf](pathname:///pdfs/lectures/course-summary-full.pdf) |
 
 Mỗi PDF có:

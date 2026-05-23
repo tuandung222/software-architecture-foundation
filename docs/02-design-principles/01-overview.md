@@ -1,15 +1,15 @@
 ---
 id: 01-overview
-title: 2.1 Tổng quan Cụm 2
+title: 2.1 Tổng quan Phần 2
 sidebar_position: 1
-description: Vì sao SOLID là nền tảng của Software Architecture, mối quan hệ giữa cohesion-coupling với SOLID, và cách đọc 6 bài còn lại của cụm.
+description: Vì sao SOLID là nền tảng của Software Architecture, mối quan hệ giữa cohesion-coupling với SOLID, và cách đọc 6 bài còn lại của phần.
 ---
 
-# 2.1 Tổng quan Cụm 2: Design Principles (SOLID)
+# 2.1 Tổng quan Phần 2: Design Principles (SOLID)
 
-> **Tóm tắt một dòng**: Kiến trúc tốt luôn bắt đầu từ code tốt, và "code tốt" có ý nghĩa rất cụ thể: 5 nguyên lý SOLID + nguyên tắc cohesion cao - coupling thấp. Master 7 bài trong cụm này là bạn đã có nền cho mọi cụm sau.
+> **Tóm tắt một dòng**: Kiến trúc tốt luôn bắt đầu từ code tốt, và "code tốt" có ý nghĩa rất cụ thể: 5 nguyên lý SOLID + nguyên tắc cohesion cao - coupling thấp. Master 7 bài trong phần này là bạn đã có nền cho mọi phần sau.
 
-## Vì sao cụm này đứng thứ hai
+## Vì sao phần này đứng thứ hai
 
 Bạn có thể hỏi: "Khoá tên là Software Architecture, sao bài đầu lại nói về principles cấp module?". Câu trả lời nằm ở một metaphor cổ điển của Robert C. Martin:
 
@@ -20,7 +20,7 @@ Nghĩa là:
 - **Bricks không tốt** → architecture không cứu được. Class hierarchy mục nát thì dù bạn dùng microservices hay layered, mỗi service vẫn là một đống bug.
 - **Bricks tốt nhưng xếp sai** → vẫn ra một đống lộn xộn. Bạn có class tuân thủ SOLID nhưng tổ chức module sai thì hệ thống vẫn khó maintain.
 
-SOLID đảm bảo bricks tốt. Architecture (Cụm 3-7) đảm bảo xếp đúng. Cả hai đều cần, và SOLID phải đến trước vì nó là tiền đề.
+SOLID đảm bảo bricks tốt. Architecture (Phần 3-7) đảm bảo xếp đúng. Cả hai đều cần, và SOLID phải đến trước vì nó là tiền đề.
 
 ## Nếu bạn đến từ Data Science
 
@@ -30,9 +30,9 @@ Với Data Scientist, SOLID có thể nghe như một chủ đề thuần OOP, x
 
 Nói cách khác: SOLID là cây cầu từ notebook prototype sang package ML production có thể test, review và maintain.
 
-## Cụm 2 sẽ dạy gì?
+## Phần 2 sẽ dạy gì?
 
-Cụm này có 7 bài, chia hai phần:
+Phần này có 7 bài, chia hai phần:
 
 ### Phần A: Foundation (1 bài)
 
@@ -86,7 +86,7 @@ Một nguyên tắc empirical:
 - **Apply selectively** trong startup MVP, code prototype, hoặc script chạy một lần.
 - **Đo bằng pain**: chỗ nào sửa thường xuyên gây bug → áp SOLID trước; chỗ nào ổn định không sửa → để yên.
 
-Cụm 3 (Architectural Thinking) sẽ build lên insight này với khái niệm "iatrogenic" (bệnh do thầy thuốc gây ra), over-engineering cũng là một loại bệnh.
+Phần 3 (Architectural Thinking) sẽ build lên insight này với khái niệm "iatrogenic" (bệnh do thầy thuốc gây ra), over-engineering cũng là một loại bệnh.
 
 ## Thứ tự đọc
 
@@ -94,14 +94,14 @@ Cụm 3 (Architectural Thinking) sẽ build lên insight này với khái niệm
 
 Nếu bạn đã quen với SOLID từ trước, có thể skip 2.2 (cohesion-coupling) nhưng vẫn nên đọc tuần tự 5 bài SOLID vì cách trình bày trong tài liệu này có thể khác với cách bạn đã học. Đặc biệt 2.3 (SRP) thường bị giảng sai, đáng đọc lại.
 
-Bài kế thúc cụm: hết Cụm 2, bạn sẽ vào [Cụm 3: Architectural Thinking](../03-architectural-thinking/01-overview.md), mở rộng tư duy từ class lên hệ thống.
+Bài kế thúc phần: hết Phần 2, bạn sẽ vào [Phần 3: Architectural Thinking](../03-architectural-thinking/01-overview.md), mở rộng tư duy từ class lên hệ thống.
 
-## Kết nối với các cụm sau
+## Kết nối với các phần sau
 
-- **Cụm 3 (Modularity)** dùng cohesion-coupling từ Bài 2.2 ở mức module/sub-system.
-- **Cụm 4 (Quality Attributes)** liên hệ "modifiability", một QA quan trọng, với SOLID violations.
-- **Cụm 5.5 (Microkernel)** chính là OCP ở scale lớn.
-- **Cụm 6.3 (Microservices)** justify bằng SRP ở mức service.
-- **Cụm 7.2 (Module Views)** vẽ ra structure mà SOLID giúp tạo.
+- **Phần 3 (Modularity)** dùng cohesion-coupling từ Bài 2.2 ở mức module/sub-system.
+- **Phần 4 (Quality Attributes)** liên hệ "modifiability", một QA quan trọng, với SOLID violations.
+- **Bài 5.5 (Microkernel)** chính là OCP ở scale lớn.
+- **Bài 6.3 (Microservices)** justify bằng SRP ở mức service.
+- **Bài 7.2 (Module Views)** vẽ ra structure mà SOLID giúp tạo.
 
 Hãy bắt đầu với [Bài 2.2: Cohesion và Coupling](02-cohesion-and-coupling.md).

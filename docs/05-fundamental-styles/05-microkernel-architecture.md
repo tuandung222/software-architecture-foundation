@@ -308,9 +308,9 @@ Fix: define permission model. Sandbox plug-in. Code-review marketplace.
 - **Use cases**: IDE, browser, CMS, e-commerce, DAW.
 - **Trade-off**: extensibility tối ưu, sacrificing performance + complexity.
 
-## Tổng kết Cụm 5
+## Tổng kết Phần 5
 
-Hết Cụm 5. Tóm tắt 3 styles:
+Hết Phần 5. Tóm tắt 3 styles:
 
 | Style | Tối ưu | Sacrificing | Use case điển hình |
 |---|---|---|---|
@@ -320,4 +320,4 @@ Hết Cụm 5. Tóm tắt 3 styles:
 
 Plus **Monolithic vs Distributed** baseline (Bài 5.2).
 
-Cụm tiếp: [Cụm 6 - Distributed Styles](../06-distributed-styles/01-overview.md), bốn style phân tán quan trọng nhất.
+Phần tiếp: [Phần 6 - Distributed Styles](../06-distributed-styles/01-overview.md), bốn style phân tán quan trọng nhất.

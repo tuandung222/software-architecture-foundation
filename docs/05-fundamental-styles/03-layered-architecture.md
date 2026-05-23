@@ -197,13 +197,13 @@ class UserRepository:
 
 ### Layered + Hexagonal
 
-Combine layered với hexagonal (Cụm 2.7 DIP). Business layer định nghĩa abstraction; Persistence layer implement. Decouple business khỏi infrastructure.
+Combine layered với hexagonal (Bài 2.7 DIP). Business layer định nghĩa abstraction; Persistence layer implement. Decouple business khỏi infrastructure.
 
 ### Onion / Clean Architecture
 
 Layered hơi twist: domain ở center, infrastructure ở ngoài. Dependency direction *vào trong* (DIP applied). Effectively layered with DIP enforced.
 
-Cụm này không đi sâu, đọc *Clean Architecture* (Robert Martin) sau khoá.
+Phần này không đi sâu, đọc *Clean Architecture* (Robert Martin) sau khoá.
 
 ## Sai lầm thường gặp
 

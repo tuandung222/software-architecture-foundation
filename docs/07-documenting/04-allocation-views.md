@@ -300,7 +300,7 @@ Fix: align team boundary với architecture boundary. Inverse Conway.
 - **Conway's law**: architecture follows org chart. Inverse Conway = design org for desired architecture.
 - **Include cost** trong deployment view.
 
-## Tổng kết Cụm 7
+## Tổng kết Phần 7
 
 3 view chính từ SEI:
 
@@ -314,4 +314,4 @@ Plus ADR cho decision history.
 
 Practical minimum: System Context (C4) + Container (C4) + 2-3 sequence diagrams cho critical flows + ADR cho important decisions.
 
-Cụm tiếp: [Cụm 8 - Case Studies](../08-case-studies/01-overview.md), apply tất cả vào case thực.
+Phần tiếp: [Phần 8 - Case Studies](../08-case-studies/01-overview.md), apply tất cả vào case thực.

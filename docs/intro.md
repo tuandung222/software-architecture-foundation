@@ -30,12 +30,12 @@ Khoá này cố gắng xây cây cầu giữa hai thế giới đó. Ta sẽ v�
 
 Toàn bộ nội dung được sắp xếp theo một mạch rất cụ thể:
 
-1. **Bắt đầu từ code tốt**: Cụm 2 dạy cohesion, coupling và SOLID. Với Data Scientist, đây là bước chuyển từ notebook hoặc script dài sang code có module rõ ràng.
-2. **Lùi lại nhìn bức tranh lớn**: Cụm 3 dạy phân biệt architecture decision với design decision, và học cách phân tích trade-off.
-3. **Hiểu cái cần tối ưu**: Cụm 4 dạy Quality Attributes. Đây là phần cực quan trọng cho production ML vì accuracy không phải metric duy nhất.
-4. **Học các style tổ chức hệ thống**: Cụm 5 và 6 đi từ monolith, layered, pipeline tới service-based, microservices và event-driven.
-5. **Biết cách truyền đạt**: Cụm 7 dạy cách vẽ view và viết ADR. Kiến trúc không được truyền đạt rõ thì rất khó vận hành lâu dài.
-6. **Áp vào case study**: Cụm 8 cho thấy cách lập luận end-to-end trong các hệ thật.
+1. **Bắt đầu từ code tốt**: Phần 2 dạy cohesion, coupling và SOLID. Với Data Scientist, đây là bước chuyển từ notebook hoặc script dài sang code có module rõ ràng.
+2. **Lùi lại nhìn bức tranh lớn**: Phần 3 dạy phân biệt architecture decision với design decision, và học cách phân tích trade-off.
+3. **Hiểu cái cần tối ưu**: Phần 4 dạy Quality Attributes. Đây là phần cực quan trọng cho production ML vì accuracy không phải metric duy nhất.
+4. **Học các style tổ chức hệ thống**: Phần 5 và 6 đi từ monolith, layered, pipeline tới service-based, microservices và event-driven.
+5. **Biết cách truyền đạt**: Phần 7 dạy cách vẽ view và viết ADR. Kiến trúc không được truyền đạt rõ thì rất khó vận hành lâu dài.
+6. **Áp vào case study**: Phần 8 cho thấy cách lập luận end-to-end trong các hệ thật.
 
 Nói ngắn gọn: khoá không dạy bạn thuộc lòng pattern. Khoá dạy bạn nhìn một bài toán, hỏi đúng câu hỏi, chọn đúng trade-off, rồi giải thích quyết định đó cho người khác.
 
@@ -75,9 +75,9 @@ Nếu bạn muốn lộ trình riêng, hãy mở [Lộ trình cho Data Scientist
 
 ## Cấu trúc tài liệu
 
-Khoá gồm **chín cụm bài giảng** và **các tài nguyên tra cứu**.
+Khoá gồm **chín phần bài giảng** và **các tài nguyên tra cứu**.
 
-| Cụm | Tên | Số bài | Trọng tâm |
+| Phần | Tên | Số bài | Trọng tâm |
 |---|---|---:|---|
 | 1 | Giới thiệu Software Architecture | 4 | SA là gì, vì sao học, lộ trình |
 | 2 | Design Principles (SOLID) | 7 | Cohesion, coupling, 5 nguyên lý SOLID |
@@ -89,25 +89,25 @@ Khoá gồm **chín cụm bài giảng** và **các tài nguyên tra cứu**.
 | 8 | Case Studies | 5 | UAMS, Smart City, Production ML Feature Store, bài tập tổng hợp |
 | 9 | Seminar - Advanced Topics | 5 | IoT, Web3, MLOps, Digital Twin |
 
-Mỗi cụm bắt đầu bằng một bài overview. Nếu bạn đọc tuần tự, overview giúp bạn biết cụm này giải quyết vấn đề gì. Nếu bạn đọc tra cứu, overview giúp bạn nhanh chóng định vị bài cần đọc.
+Mỗi phần bắt đầu bằng một bài overview. Nếu bạn đọc tuần tự, overview giúp bạn biết phần này giải quyết vấn đề gì. Nếu bạn đọc tra cứu, overview giúp bạn nhanh chóng định vị bài cần đọc.
 
 ## Cách đọc tài liệu
 
 ### Người đọc lần đầu
 
-Đọc theo thứ tự tự nhiên: Cụm 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8 → 9. Đây là đường chắc nhất nếu bạn muốn xây nền tảng đầy đủ. Sau Cụm 4, bạn đã hiểu vì sao kiến trúc bị chi phối bởi Quality Attributes. Sau Cụm 6, bạn có đủ vocabulary để phân tích đa số system design ở mức trung bình. Sau Cụm 7 và 8, bạn biết cách trình bày lựa chọn kiến trúc cho team. Cụm 9 giúp bạn áp dụng nền tảng đó vào các domain hiện đại khó hơn như IoT, Web3, MLOps và Digital Twin.
+Đọc theo thứ tự tự nhiên: Phần 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8 → 9. Đây là đường chắc nhất nếu bạn muốn xây nền tảng đầy đủ. Sau Phần 4, bạn đã hiểu vì sao kiến trúc bị chi phối bởi Quality Attributes. Sau Phần 6, bạn có đủ vocabulary để phân tích đa số system design ở mức trung bình. Sau Phần 7 và 8, bạn biết cách trình bày lựa chọn kiến trúc cho team. Phần 9 giúp bạn áp dụng nền tảng đó vào các domain hiện đại khó hơn như IoT, Web3, MLOps và Digital Twin.
 
 ### Data Scientist muốn productionize ML
 
 Đừng bắt đầu bằng microservices. Hãy đi theo path này:
 
-1. Cụm 1.2 để hiểu quyết định nào là architectural.
-2. Cụm 3.3 để học trade-off.
-3. Cụm 4 để chuyển từ model metric sang system metric.
-4. Cụm 5.4 để hiểu pipeline architecture.
-5. Cụm 6.4 để hiểu event-driven và streaming.
-6. Cụm 7 để biết cách document ML/data systems.
-7. Cụm 8.3 để xem case real-time data/ML system.
+1. Bài 1.2 để hiểu quyết định nào là architectural.
+2. Bài 3.3 để học trade-off.
+3. Phần 4 để chuyển từ model metric sang system metric.
+4. Bài 5.4 để hiểu pipeline architecture.
+5. Bài 6.4 để hiểu event-driven và streaming.
+6. Phần 7 để biết cách document ML/data systems.
+7. Bài 8.3 để xem case real-time data/ML system.
 8. Bài 9.4 để xem MLOps như một production platform end-to-end.
 
 Path chi tiết nằm ở [Lộ trình cho Data Scientist](resources/data-scientist-learning-path.md).
@@ -136,6 +136,6 @@ Bốn nguyên tắc xuyên suốt:
 
 ## Bắt đầu từ đâu?
 
-Nếu bạn đọc lần đầu, bắt đầu với [Cụm 1: Tổng quan](01-introduction/01-overview.md). Nếu bạn đến từ Data Science và muốn đi đường ngắn hơn, mở ngay [Lộ trình cho Data Scientist](resources/data-scientist-learning-path.md). Nếu bạn đã biết Software Architecture và chỉ cần tra cứu, bắt đầu từ [Course Summary](resources/course-summary.md) hoặc [Glossary](resources/glossary.md).
+Nếu bạn đọc lần đầu, bắt đầu với [Phần 1: Tổng quan](01-introduction/01-overview.md). Nếu bạn đến từ Data Science và muốn đi đường ngắn hơn, mở ngay [Lộ trình cho Data Scientist](resources/data-scientist-learning-path.md). Nếu bạn đã biết Software Architecture và chỉ cần tra cứu, bắt đầu từ [Course Summary](resources/course-summary.md) hoặc [Glossary](resources/glossary.md).
 
 Chúc bạn học hiệu quả và biến được mô hình, pipeline, service của mình thành hệ thống production đáng tin cậy.

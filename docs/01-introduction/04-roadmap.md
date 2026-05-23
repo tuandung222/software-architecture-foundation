@@ -2,7 +2,7 @@
 id: 04-roadmap
 title: 1.4 Lộ trình đọc tài liệu
 sidebar_position: 4
-description: Sơ đồ phụ thuộc giữa các cụm, các lộ trình đọc khác nhau, đặc biệt có path riêng cho Data Scientist muốn học Software Architecture để đưa model và data pipeline vào production.
+description: Sơ đồ phụ thuộc giữa các phần, các lộ trình đọc khác nhau, đặc biệt có path riêng cho Data Scientist muốn học Software Architecture để đưa model và data pipeline vào production.
 ---
 
 # 1.4 Lộ trình đọc tài liệu
@@ -11,22 +11,22 @@ description: Sơ đồ phụ thuộc giữa các cụm, các lộ trình đọc 
 
 ## Trước khi chọn lộ trình
 
-Software Architecture là một môn học có tính mạng lưới. Bạn không học một khái niệm rồi đóng lại, mà liên tục quay lại khái niệm đó ở mức sâu hơn. Ví dụ, ban đầu bạn học **cohesion/coupling** ở cấp class. Sang Cụm 3, bạn gặp lại nó ở cấp module. Sang Cụm 6, bạn gặp lại ở cấp service. Sang Cụm 7, bạn phải vẽ được nó thành diagram.
+Software Architecture là một môn học có tính mạng lưới. Bạn không học một khái niệm rồi đóng lại, mà liên tục quay lại khái niệm đó ở mức sâu hơn. Ví dụ, ban đầu bạn học **cohesion/coupling** ở cấp class. Sang Phần 3, bạn gặp lại nó ở cấp module. Sang Phần 6, bạn gặp lại ở cấp service. Sang Phần 7, bạn phải vẽ được nó thành diagram.
 
-Vì vậy, lộ trình đọc không chỉ là thứ tự file. Nó là cách giảm tải nhận thức. Người đã quen backend có thể đọc thẳng từ Cụm 1 tới Cụm 8. Người đến từ Data Science nên đi qua một số điểm cầu trước, vì các khái niệm như interface, bounded context, deployment view hoặc distributed transaction không phải vocabulary thường ngày của DS.
+Vì vậy, lộ trình đọc không chỉ là thứ tự file. Nó là cách giảm tải nhận thức. Người đã quen backend có thể đọc thẳng từ Phần 1 tới Phần 8. Người đến từ Data Science nên đi qua một số điểm cầu trước, vì các khái niệm như interface, bounded context, deployment view hoặc distributed transaction không phải vocabulary thường ngày của DS.
 
-## Sơ đồ phụ thuộc giữa các cụm
+## Sơ đồ phụ thuộc giữa các phần
 
 ```mermaid
 graph LR
-    C1[Cụm 1<br/>Giới thiệu] --> C2[Cụm 2<br/>SOLID]
-    C1 --> C3[Cụm 3<br/>Architectural<br/>Thinking]
+    C1[Phần 1<br/>Giới thiệu] --> C2[Phần 2<br/>SOLID]
+    C1 --> C3[Phần 3<br/>Architectural<br/>Thinking]
     C2 --> C3
-    C3 --> C4[Cụm 4<br/>Quality<br/>Attributes]
-    C4 --> C5[Cụm 5<br/>Fundamental<br/>Styles]
-    C5 --> C6[Cụm 6<br/>Distributed<br/>Styles]
-    C4 --> C7[Cụm 7<br/>Documenting]
-    C5 --> C8[Cụm 8<br/>Case<br/>Studies]
+    C3 --> C4[Phần 4<br/>Quality<br/>Attributes]
+    C4 --> C5[Phần 5<br/>Fundamental<br/>Styles]
+    C5 --> C6[Phần 6<br/>Distributed<br/>Styles]
+    C4 --> C7[Phần 7<br/>Documenting]
+    C5 --> C8[Phần 8<br/>Case<br/>Studies]
     C6 --> C8
     C7 --> C8
 
@@ -53,19 +53,19 @@ Quy ước màu:
 
 Đối tượng: người muốn học nền tảng Software Architecture một cách nghiêm túc, có thể là developer, Tech Lead tương lai, ML Engineer muốn chuyển sang platform, hoặc học viên cao học.
 
-| Tuần | Cụm | Thời gian | Mục tiêu |
+| Tuần | Phần | Thời gian | Mục tiêu |
 |---|---|---:|---|
-| 1 | Cụm 1 | 1-2h | Set up vocabulary và framework tư duy |
-| 1-2 | Cụm 2 | 6-10h | Từ code khó sửa sang code có boundary rõ |
-| 3 | Cụm 3 | 4-6h | Biết phân biệt architecture decision và design decision |
-| 4 | Cụm 4 | 4-6h | Biết chọn và đo Quality Attributes |
-| 5 | Cụm 5 | 5-7h | Nắm monolith, layered, pipeline, microkernel |
-| 6 | Cụm 6 | 5-7h | Nắm service-based, microservices, event-driven, space-based |
-| 7 | Cụm 7 | 4-6h | Vẽ 3 view và viết ADR |
-| 8 | Cụm 8 | 6-10h | Áp toàn bộ vào case study |
+| 1 | Phần 1 | 1-2h | Set up vocabulary và framework tư duy |
+| 1-2 | Phần 2 | 6-10h | Từ code khó sửa sang code có boundary rõ |
+| 3 | Phần 3 | 4-6h | Biết phân biệt architecture decision và design decision |
+| 4 | Phần 4 | 4-6h | Biết chọn và đo Quality Attributes |
+| 5 | Phần 5 | 5-7h | Nắm monolith, layered, pipeline, microkernel |
+| 6 | Phần 6 | 5-7h | Nắm service-based, microservices, event-driven, space-based |
+| 7 | Phần 7 | 4-6h | Vẽ 3 view và viết ADR |
+| 8 | Phần 8 | 6-10h | Áp toàn bộ vào case study |
 | 9 | Resources | 1-2h | Ôn lại bằng summary, glossary, checklist |
 
-Tổng: khoảng 35-55 giờ. Đừng cố đọc hết trong một cuối tuần. Tốt nhất là đọc mỗi cụm rồi áp vào một hệ thống bạn biết: một web app, một data pipeline, một model serving system, hoặc một project công ty.
+Tổng: khoảng 35-55 giờ. Đừng cố đọc hết trong một cuối tuần. Tốt nhất là đọc mỗi phần rồi áp vào một hệ thống bạn biết: một web app, một data pipeline, một model serving system, hoặc một project công ty.
 
 ## Lộ trình B: Data Scientist to Software Architecture
 
@@ -98,7 +98,7 @@ Tổng: khoảng 13-16 giờ. Sau path này, bạn nên tự tin hơn khi bàn v
 |---|---|---:|
 | 1 | [Course Summary](../resources/course-summary.md) | 1-2h |
 | 2 | [Cross-reference](../resources/cross-reference.md) | 30m |
-| 3 | Cụm 4 overview + Cụm 5/6 overview | 1-2h |
+| 3 | Phần 4 overview + Phần 5/6 overview | 1-2h |
 | 4 | Bài cụ thể đang cần | tuỳ nhu cầu |
 | 5 | [Glossary](../resources/glossary.md) | 30m |
 
@@ -163,7 +163,7 @@ Mục tiêu cuối path này: bạn vẽ được kiến trúc cho churn predict
 
 ### Đừng chỉ đọc, hãy vẽ
 
-Software Architecture là kỹ năng applied. Đọc xong một style mà không vẽ topology thì rất dễ tưởng mình hiểu nhưng khi gặp project thật lại bí. Sau mỗi bài ở Cụm 5/6, hãy vẽ lại bằng tay:
+Software Architecture là kỹ năng applied. Đọc xong một style mà không vẽ topology thì rất dễ tưởng mình hiểu nhưng khi gặp project thật lại bí. Sau mỗi bài ở Phần 5/6, hãy vẽ lại bằng tay:
 
 - Component nào nhận input?
 - Component nào lưu state?
@@ -177,10 +177,10 @@ Với DS, hãy dùng project quen thuộc của bạn. Ví dụ: một pipeline 
 
 Microservices, event-driven, feature store, vector database, service mesh đều có chỗ dùng đúng. Nhưng không cái nào là thuốc chữa bách bệnh. Một cron job đơn giản có monitoring tốt đôi khi thắng một Kafka pipeline phức tạp nhưng không ai vận hành nổi.
 
-### Quay lại Cụm 4 nhiều lần
+### Quay lại Phần 4 nhiều lần
 
-Nếu bạn thấy phân vân giữa hai architecture style, thường là vì bạn chưa nói rõ Quality Attributes. Muốn freshness cao hay cost thấp? Muốn latency thấp hay explainability cao? Muốn consistency mạnh hay availability cao? Cụm 4 là nơi giúp bạn biến tranh luận cảm tính thành quyết định có lý do.
+Nếu bạn thấy phân vân giữa hai architecture style, thường là vì bạn chưa nói rõ Quality Attributes. Muốn freshness cao hay cost thấp? Muốn latency thấp hay explainability cao? Muốn consistency mạnh hay availability cao? Phần 4 là nơi giúp bạn biến tranh luận cảm tính thành quyết định có lý do.
 
 ## Tiếp theo
 
-Nếu bạn đi theo path chuẩn, bắt đầu với [Cụm 1: Tổng quan](01-overview.md). Nếu bạn đến từ Data Science, mở [Lộ trình cho Data Scientist](../resources/data-scientist-learning-path.md) trước, rồi quay lại các bài trong path B.
+Nếu bạn đi theo path chuẩn, bắt đầu với [Phần 1: Tổng quan](01-overview.md). Nếu bạn đến từ Data Science, mở [Lộ trình cho Data Scientist](../resources/data-scientist-learning-path.md) trước, rồi quay lại các bài trong path B.

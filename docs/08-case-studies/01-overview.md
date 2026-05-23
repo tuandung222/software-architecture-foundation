@@ -1,13 +1,13 @@
 ---
 id: 01-overview
-title: 8.1 Tổng quan Cụm 8
+title: 8.1 Tổng quan Phần 8
 sidebar_position: 1
-description: Áp toàn bộ kiến thức 7 cụm trước vào 3 case study end-to-end. UAMS, Smart City Traffic Detection, Production ML Feature Store, plus bộ exercise tự practice.
+description: Áp toàn bộ kiến thức 7 phần trước vào 3 case study end-to-end. UAMS, Smart City Traffic Detection, Production ML Feature Store, plus bộ exercise tự practice.
 ---
 
-# 8.1 Tổng quan Cụm 8: Case Studies
+# 8.1 Tổng quan Phần 8: Case Studies
 
-> **Tóm tắt một dòng**: 7 cụm trước cung cấp building block. Cụm này áp tất cả vào 3 case thực để bạn thấy cách lập luận "given context X, why this architecture not that" - skill thực sự của architect.
+> **Tóm tắt một dòng**: 7 phần trước cung cấp building block. Phần này áp tất cả vào 3 case thực để bạn thấy cách lập luận "given context X, why this architecture not that" - skill thực sự của architect.
 
 ## Nếu bạn đến từ Data Science
 
@@ -17,7 +17,7 @@ UAMS vẫn đáng đọc vì nó dạy phần business workflow, audit, data int
 
 ## Vì sao case study?
 
-Lý thuyết kiến trúc dễ học, áp dụng khó. Cụm 1-7 cho bạn vocabulary và principles. Nhưng câu hỏi thực sự khi làm architect là:
+Lý thuyết kiến trúc dễ học, áp dụng khó. Phần 1-7 cho bạn vocabulary và principles. Nhưng câu hỏi thực sự khi làm architect là:
 
 - "Hệ này nên monolith hay microservices?"
 - "Database nào? SQL hay NoSQL?"
@@ -63,33 +63,33 @@ Focus: production ML, feature freshness, online inference, auditability, privacy
 
 ### Bài tập
 
-Cuối cụm có bộ exercises để bạn tự apply.
+Cuối phần có bộ exercises để bạn tự apply.
 
 ## Cách áp dụng framework cho mỗi case
 
-Mỗi case sẽ đi qua 6 bước (synthesizing các cụm trước):
+Mỗi case sẽ đi qua 6 bước (synthesizing các phần trước):
 
-### Bước 1: Hiểu domain + functional requirements (Cụm 1)
+### Bước 1: Hiểu domain + functional requirements (Phần 1)
 
 Đào ra hệ làm gì, ai dùng, business context.
 
-### Bước 2: Identify Quality Attributes (Cụm 4)
+### Bước 2: Identify Quality Attributes (Phần 4)
 
 Top 5-7 QA priority. Operationalize.
 
-### Bước 3: Cân nhắc Style, Monolithic vs Distributed (Cụm 5.2)
+### Bước 3: Cân nhắc Style, Monolithic vs Distributed (Bài 5.2)
 
 Default monolithic; chỉ distributed nếu justify.
 
-### Bước 4: Choose specific Architecture Style (Cụm 5-6)
+### Bước 4: Choose specific Architecture Style (Phần 5-6)
 
 Match QA priorities với style trade-offs.
 
-### Bước 5: Component decomposition (Cụm 2.3 SRP + Cụm 3.4 + Cụm 4.4)
+### Bước 5: Component decomposition (Bài 2.3 SRP + Bài 3.4 + Bài 4.4)
 
 Bounded context, module boundary.
 
-### Bước 6: Document (Cụm 7)
+### Bước 6: Document (Phần 7)
 
 C4 Context + Container, key sequence, ADR for important decisions.
 
@@ -114,7 +114,7 @@ Cases viết theo phong cách "consulting walk-through", như consultant trình 
 
 Mỗi case dài ~3500-5000 chữ, đọc 1.5-2h. Đáng dành thời gian.
 
-## Bài trong cụm
+## Bài trong phần
 
 - **8.2 UAMS**: Academic Management System.
 - **8.3 Smart City Traffic**: Real-time incident detection.

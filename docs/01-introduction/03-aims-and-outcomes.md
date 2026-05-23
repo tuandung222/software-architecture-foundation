@@ -29,13 +29,13 @@ Sau khi hoàn thành khoá, bạn sẽ:
 
 Bạn sẽ phân biệt được:
 
-- Architectural decision vs Design decision vs Implementation detail (Bài 1.2 và Cụm 3 build kỹ).
+- Architectural decision vs Design decision vs Implementation detail (Bài 1.2 và Phần 3 build kỹ).
 - Architectural characteristic (cái bạn tối ưu) vs Architectural style (cách bạn tổ chức để tối ưu).
 - Trade-off đa chiều: vì sao "best architecture" không tồn tại trong vacuum.
 
 ### Mục tiêu 2: Áp dụng SOLID và các nguyên lý thiết kế cấp module
 
-Cụm 2 dạy bạn 5 nguyên lý SOLID kèm cohesion-coupling. Sau cụm này, bạn:
+Phần 2 dạy bạn 5 nguyên lý SOLID kèm cohesion-coupling. Sau phần này, bạn:
 
 - Nhận ra anti-pattern vi phạm SOLID trong code thực.
 - Refactor được code vi phạm SRP/OCP/LSP/ISP/DIP về dạng tuân thủ.
@@ -43,7 +43,7 @@ Cụm 2 dạy bạn 5 nguyên lý SOLID kèm cohesion-coupling. Sau cụm này, 
 
 ### Mục tiêu 3: Biết 9 architecture styles phổ biến
 
-Cụm 5-6 đi qua 9 style chính: Layered, Pipeline, Microkernel, Monolithic (đối chiếu), Service-based, Microservices, Event-Driven, Space-Based, và một số biến thể. Với mỗi style bạn sẽ biết:
+Phần 5-6 đi qua 9 style chính: Layered, Pipeline, Microkernel, Monolithic (đối chiếu), Service-based, Microservices, Event-Driven, Space-Based, và một số biến thể. Với mỗi style bạn sẽ biết:
 
 - Topology cốt lõi (vẽ được trên giấy).
 - Quality attributes mà nó tối ưu (vd: Microservices tối ưu scalability/deployability, sacrificing simplicity).
@@ -52,7 +52,7 @@ Cụm 5-6 đi qua 9 style chính: Layered, Pipeline, Microkernel, Monolithic (đ
 
 ### Mục tiêu 4: Đọc và viết documentation kiến trúc chuẩn
 
-Cụm 7 dạy 3 loại view (Module, Component-and-Connector, Allocation), đây là chuẩn de-facto của ngành. Sau cụm này bạn:
+Phần 7 dạy 3 loại view (Module, Component-and-Connector, Allocation), đây là chuẩn de-facto của ngành. Sau phần này bạn:
 
 - Đọc được architecture document bất kỳ và nhận ra đó là loại view nào.
 - Viết được architecture document cho hệ mình thiết kế, dùng đúng notation chuẩn.
@@ -60,7 +60,7 @@ Cụm 7 dạy 3 loại view (Module, Component-and-Connector, Allocation), đây
 
 ### Mục tiêu 5: Áp dụng vào case study thực
 
-Cụm 8 đi qua 3 case study chi tiết (UAMS, Smart City Traffic Detection, Production ML Feature Store) và một bộ bài tập tổng hợp. Sau cụm này bạn:
+Phần 8 đi qua 3 case study chi tiết (UAMS, Smart City Traffic Detection, Production ML Feature Store) và một bộ bài tập tổng hợp. Sau phần này bạn:
 
 - Tự thiết kế kiến trúc end-to-end cho hệ cỡ trung (50-500k user) dựa trên requirement.
 - Trình bày được kiến trúc đó cho người không-kỹ-thuật hiểu (vd: PM, business stakeholder).
@@ -68,7 +68,7 @@ Cụm 8 đi qua 3 case study chi tiết (UAMS, Smart City Traffic Detection, Pro
 
 ### Mục tiêu 6: Áp dụng nền tảng vào advanced domains
 
-Cụm 9 đưa bạn qua bốn seminar nâng cao: IoT, Web3, MLOps và Digital Twin. Sau cụm này bạn:
+Phần 9 đưa bạn qua bốn seminar nâng cao: IoT, Web3, MLOps và Digital Twin. Sau phần này bạn:
 
 - Nhìn được constraint đặc thù của từng domain và dịch chúng thành Quality Attributes.
 - Biết vì sao các hệ hiện đại thường là style mix, không phải một style duy nhất.
@@ -78,7 +78,7 @@ Cụm 9 đưa bạn qua bốn seminar nâng cao: IoT, Web3, MLOps và Digital Tw
 
 Kết quả học tập là phiên bản đo được của mục tiêu. Sau khi hoàn thành khoá, bạn có thể:
 
-| Mã | Kết quả | Cụm dạy |
+| Mã | Kết quả | Phần dạy |
 |---|---|---|
 | LO1 | Định nghĩa SA và phân biệt architectural vs design decisions | 1, 3 |
 | LO2 | Áp dụng 5 nguyên lý SOLID khi review/refactor code | 2 |
@@ -112,7 +112,7 @@ Ba "kiến trúc" này thực ra là cùng một idea (separation of business lo
 
 ### 4. Cloud-native specifics
 
-Service mesh (Istio, Linkerd), serverless (Lambda, Cloud Run), container orchestration (Kubernetes), API gateway... đều là các topic con của cloud architecture. Khoá này chỉ nhắc đến khi cần trong Cụm 6. Học sau: *Cloud Native Patterns* (Cornelia Davis) hoặc tài liệu chính thống của cloud provider.
+Service mesh (Istio, Linkerd), serverless (Lambda, Cloud Run), container orchestration (Kubernetes), API gateway... đều là các topic con của cloud architecture. Khoá này chỉ nhắc đến khi cần trong Phần 6. Học sau: *Cloud Native Patterns* (Cornelia Davis) hoặc tài liệu chính thống của cloud provider.
 
 ### 5. Performance engineering chi tiết
 

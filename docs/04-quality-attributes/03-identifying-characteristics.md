@@ -222,4 +222,4 @@ Fix: revisit QA mỗi quarter hoặc khi có major business change.
 - **CQA worksheet**: scenario-based, measurable.
 - **Sai lầm**: "mọi thứ quan trọng", QA không measurable, implicit không doc, conflict không resolve, không revisit.
 
-Bài tiếp (cuối Cụm 4): [Component-Based Thinking](04-component-based-thinking.md), map QA xuống component.
+Bài tiếp (cuối Phần 4): [Component-Based Thinking](04-component-based-thinking.md), map QA xuống component.

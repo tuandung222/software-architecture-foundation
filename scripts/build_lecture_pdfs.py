@@ -21,7 +21,7 @@ OUT_DIR = ROOT / "static" / "pdfs" / "lectures"
 # Mapping cluster -> (output filename, ordered list of source markdown files)
 CLUSTERS: list[tuple[str, str, list[Path]]] = [
     (
-        "Cụm 1 - Giới thiệu Software Architecture",
+        "Phần 1 - Giới thiệu Software Architecture",
         "cum-1-introduction-full.pdf",
         [
             DOCS / "intro.md",
@@ -32,7 +32,7 @@ CLUSTERS: list[tuple[str, str, list[Path]]] = [
         ],
     ),
     (
-        "Cụm 2 - Design Principles (SOLID)",
+        "Phần 2 - Design Principles (SOLID)",
         "cum-2-design-principles-full.pdf",
         [DOCS / "02-design-principles" / f for f in [
             "01-overview.md",
@@ -45,7 +45,7 @@ CLUSTERS: list[tuple[str, str, list[Path]]] = [
         ]],
     ),
     (
-        "Cụm 3 - Architectural Thinking",
+        "Phần 3 - Architectural Thinking",
         "cum-3-architectural-thinking-full.pdf",
         [DOCS / "03-architectural-thinking" / f for f in [
             "01-overview.md",
@@ -55,7 +55,7 @@ CLUSTERS: list[tuple[str, str, list[Path]]] = [
         ]],
     ),
     (
-        "Cụm 4 - Quality Attributes",
+        "Phần 4 - Quality Attributes",
         "cum-4-quality-attributes-full.pdf",
         [DOCS / "04-quality-attributes" / f for f in [
             "01-overview.md",
@@ -65,7 +65,7 @@ CLUSTERS: list[tuple[str, str, list[Path]]] = [
         ]],
     ),
     (
-        "Cụm 5 - Fundamental Architecture Styles",
+        "Phần 5 - Fundamental Architecture Styles",
         "cum-5-fundamental-styles-full.pdf",
         [DOCS / "05-fundamental-styles" / f for f in [
             "01-overview.md",
@@ -76,7 +76,7 @@ CLUSTERS: list[tuple[str, str, list[Path]]] = [
         ]],
     ),
     (
-        "Cụm 6 - Distributed Architecture Styles",
+        "Phần 6 - Distributed Architecture Styles",
         "cum-6-distributed-styles-full.pdf",
         [DOCS / "06-distributed-styles" / f for f in [
             "01-overview.md",
@@ -87,7 +87,7 @@ CLUSTERS: list[tuple[str, str, list[Path]]] = [
         ]],
     ),
     (
-        "Cụm 7 - Documenting Software Architecture",
+        "Phần 7 - Documenting Software Architecture",
         "cum-7-documenting-full.pdf",
         [DOCS / "07-documenting" / f for f in [
             "01-overview.md",
@@ -97,7 +97,7 @@ CLUSTERS: list[tuple[str, str, list[Path]]] = [
         ]],
     ),
     (
-        "Cụm 8 - Case Studies",
+        "Phần 8 - Case Studies",
         "cum-8-case-studies-full.pdf",
         [DOCS / "08-case-studies" / f for f in [
             "01-overview.md",
@@ -108,7 +108,7 @@ CLUSTERS: list[tuple[str, str, list[Path]]] = [
         ]],
     ),
     (
-        "Cụm 9 - Seminar Advanced Topics",
+        "Phần 9 - Seminar Advanced Topics",
         "cum-9-seminar-advanced-topics-full.pdf",
         [DOCS / "09-seminar-advanced-topics" / f for f in [
             "01-overview.md",

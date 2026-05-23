@@ -11,7 +11,7 @@ description: Scale cohesion-coupling từ class lên hệ thống. Vertical vs h
 
 ## Vì sao quan trọng
 
-Trong Cụm 2.2, bạn đã học cohesion-coupling ở mức class/module. Cụm này áp dụng cùng concept ở quy mô lớn hơn: chia hệ thống thành sub-system, service, hoặc bounded context.
+Trong Bài 2.2, bạn đã học cohesion-coupling ở mức class/module. Phần này áp dụng cùng concept ở quy mô lớn hơn: chia hệ thống thành sub-system, service, hoặc bounded context.
 
 Modularity sai ở mức hệ thống dẫn tới hai anti-pattern tệ nhất:
 
@@ -298,9 +298,9 @@ Counter-example: startup MVP với 3 developer chia thành 8 modules, over-engin
 - **Heuristics**: two-pizza team, change rate, data ownership, bounded context.
 - **Cẩn thận**: tách khi pain xuất hiện, không phòng ngừa.
 
-## Tổng kết Cụm 3
+## Tổng kết Phần 3
 
-Hết Cụm 3. Tóm tắt:
+Hết Phần 3. Tóm tắt:
 
 | Bài | Insight chính |
 |---|---|
@@ -308,4 +308,4 @@ Hết Cụm 3. Tóm tắt:
 | 3.3 Trade-off | Mọi quyết định có cost; ATAM-lite; tránh tối ưu một chiều |
 | 3.4 Modularity | Vertical > Horizontal; bounded context; tránh BBoM/distributed monolith |
 
-Tư duy architect đã được set up. Cụm tiếp [Quality Attributes](../04-quality-attributes/01-overview.md) sẽ bổ sung *cái cần tối ưu* cho trade-off analysis.
+Tư duy architect đã được set up. Phần tiếp [Quality Attributes](../04-quality-attributes/01-overview.md) sẽ bổ sung *cái cần tối ưu* cho trade-off analysis.

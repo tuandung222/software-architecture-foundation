@@ -2,20 +2,21 @@
 
 Thư mục này chứa toàn bộ file PDF của tài liệu để bạn dễ download/copy. GitHub render được link trực tiếp tới file PDF.
 
-## PDF gộp theo cụm (bản chính, đọc text)
+## PDF gộp theo phần (bản chính, đọc text)
 
 Sinh tự động từ markdown source qua `pandoc + xelatex`. Có mục lục, header/footer chuẩn, font Helvetica + Monaco (Vietnamese).
 
-| File | Cụm |
+| File | Phần |
 |---|---|
-| [`cum-1-introduction-full.pdf`](./cum-1-introduction-full.pdf) | Cụm 1 - Giới thiệu Software Architecture |
-| [`cum-2-design-principles-full.pdf`](./cum-2-design-principles-full.pdf) | Cụm 2 - SOLID + Cohesion/Coupling |
-| [`cum-3-architectural-thinking-full.pdf`](./cum-3-architectural-thinking-full.pdf) | Cụm 3 - Architectural Thinking |
-| [`cum-4-quality-attributes-full.pdf`](./cum-4-quality-attributes-full.pdf) | Cụm 4 - Quality Attributes |
-| [`cum-5-fundamental-styles-full.pdf`](./cum-5-fundamental-styles-full.pdf) | Cụm 5 - Fundamental Styles |
-| [`cum-6-distributed-styles-full.pdf`](./cum-6-distributed-styles-full.pdf) | Cụm 6 - Distributed Styles |
-| [`cum-7-documenting-full.pdf`](./cum-7-documenting-full.pdf) | Cụm 7 - Documenting Architecture |
-| [`cum-8-case-studies-full.pdf`](./cum-8-case-studies-full.pdf) | Cụm 8 - Case Studies (UAMS + Smart City) |
+| [`cum-1-introduction-full.pdf`](./cum-1-introduction-full.pdf) | Phần 1 - Giới thiệu Software Architecture |
+| [`cum-2-design-principles-full.pdf`](./cum-2-design-principles-full.pdf) | Phần 2 - SOLID + Cohesion/Coupling |
+| [`cum-3-architectural-thinking-full.pdf`](./cum-3-architectural-thinking-full.pdf) | Phần 3 - Architectural Thinking |
+| [`cum-4-quality-attributes-full.pdf`](./cum-4-quality-attributes-full.pdf) | Phần 4 - Quality Attributes |
+| [`cum-5-fundamental-styles-full.pdf`](./cum-5-fundamental-styles-full.pdf) | Phần 5 - Fundamental Styles |
+| [`cum-6-distributed-styles-full.pdf`](./cum-6-distributed-styles-full.pdf) | Phần 6 - Distributed Styles |
+| [`cum-7-documenting-full.pdf`](./cum-7-documenting-full.pdf) | Phần 7 - Documenting Architecture |
+| [`cum-8-case-studies-full.pdf`](./cum-8-case-studies-full.pdf) | Phần 8 - Case Studies |
+| [`cum-9-seminar-advanced-topics-full.pdf`](./cum-9-seminar-advanced-topics-full.pdf) | Phần 9 - Seminar Advanced Topics |
 | [`course-summary-full.pdf`](./course-summary-full.pdf) | Tóm tắt toàn khoá |
 
 ## `archive/` (tham chiếu nội bộ)

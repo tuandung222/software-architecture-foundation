@@ -1,11 +1,11 @@
 ---
 id: 01-overview
-title: 4.1 Tổng quan Cụm 4
+title: 4.1 Tổng quan Phần 4
 sidebar_position: 1
 description: Quality attributes là cái hệ thống cần tối ưu. Với Data Scientist, đây là bước chuyển từ model metric như accuracy sang system metric như latency, freshness, reproducibility và rollback.
 ---
 
-# 4.1 Tổng quan Cụm 4: Quality Attributes
+# 4.1 Tổng quan Phần 4: Quality Attributes
 
 > **Tóm tắt một dòng**: Functional requirement nói hệ thống phải làm gì, còn Quality Attribute nói hệ thống phải làm việc đó tốt đến mức nào. Với production ML, accuracy chỉ là một phần nhỏ. Bạn còn phải quan tâm latency, freshness, reliability, reproducibility, observability, privacy và cost.
 
@@ -24,7 +24,7 @@ Một tuần sau, hệ thống bắt đầu có vấn đề:
 
 Điều đáng chú ý là model không hề "sai" theo nghĩa Data Science truyền thống. Accuracy vẫn có thể tốt. Nhưng **hệ thống dùng model đó không đạt quality attributes cần thiết**.
 
-Đây là lý do Cụm 4 quan trọng. Software Architecture không chỉ hỏi "hệ thống có chức năng predict không?". Nó hỏi: predict có nhanh không, ổn định không, quan sát được không, giải thích được không, rollback được không, chi phí có chịu được không, và có an toàn dữ liệu không.
+Đây là lý do Phần 4 quan trọng. Software Architecture không chỉ hỏi "hệ thống có chức năng predict không?". Nó hỏi: predict có nhanh không, ổn định không, quan sát được không, giải thích được không, rollback được không, chi phí có chịu được không, và có an toàn dữ liệu không.
 
 ## Quality Attribute là gì?
 
@@ -55,7 +55,7 @@ Trong Data Science, bạn đã quen với metric. Vì vậy hãy nghĩ Quality A
 
 Điểm khác biệt là system metric thường liên quan tới nhiều component, không nằm trong một file training. Ví dụ p95 inference latency phụ thuộc vào API gateway, feature lookup, model runtime, CPU/GPU allocation, network, serialization và logging. Vì vậy QA là cầu nối giữa Data Science và Software Architecture.
 
-## Cụm 4 sẽ dạy gì?
+## Phần 4 sẽ dạy gì?
 
 ### Bài 4.2: Functional vs Non-functional Requirements
 
@@ -216,11 +216,11 @@ Trước khi sang bài tiếp theo, hãy tự trả lời:
 4. Nếu phải giảm cloud cost 50%, QA nào có thể bị ảnh hưởng?
 5. Bạn có trace được prediction từ model version, data version và code version không?
 
-## Cách đọc cụm này
+## Cách đọc phần này
 
-Đọc tuần tự 4.2 → 4.3 → 4.4. Nếu bạn đến từ Data Science, hãy đọc Cụm 4 trước khi đi quá sâu vào microservices. Nhiều quyết định distributed chỉ có ý nghĩa sau khi bạn biết rõ QA cần tối ưu.
+Đọc tuần tự 4.2 → 4.3 → 4.4. Nếu bạn đến từ Data Science, hãy đọc Phần 4 trước khi đi quá sâu vào microservices. Nhiều quyết định distributed chỉ có ý nghĩa sau khi bạn biết rõ QA cần tối ưu.
 
-Mục tiêu thực hành sau cụm:
+Mục tiêu thực hành sau phần:
 
 - List 5-7 QA ưu tiên cho một hệ bạn biết.
 - Viết mỗi QA thành metric đo được.

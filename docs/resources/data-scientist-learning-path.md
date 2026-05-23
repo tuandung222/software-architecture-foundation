@@ -27,7 +27,7 @@ Những câu hỏi này không còn là bài toán modelling thuần. Đây là 
 
 | Bạn quen trong DS/ML | Khái niệm tương ứng trong Software Architecture | Học ở đâu |
 |---|---|---|
-| Notebook biến thành script dài khó sửa | Cohesion, Coupling, SRP | Cụm 2 |
+| Notebook biến thành script dài khó sửa | Cohesion, Coupling, SRP | Phần 2 |
 | Thêm model mới không muốn sửa toàn bộ code | OCP, Microkernel | 2.4, 5.5 |
 | `fit/predict` giống nhau giữa nhiều estimator | LSP, interface contract | 2.5 |
 | Preprocessing, training, evaluation tách thành step | Pipeline Architecture | 5.4 |
@@ -65,7 +65,7 @@ Thời gian: 30-45 giờ.
 
 ### Giai đoạn 1: Code structure
 
-Đọc Cụm 2 đầy đủ. Mục tiêu không phải thuộc SOLID như lý thuyết OOP, mà là sửa được kiểu code rất quen trong DS:
+Đọc Phần 2 đầy đủ. Mục tiêu không phải thuộc SOLID như lý thuyết OOP, mà là sửa được kiểu code rất quen trong DS:
 
 ```text
 notebook.ipynb
@@ -83,7 +83,7 @@ Thứ cần đạt: biết tách thành modules như `data_loader`, `feature_bui
 
 ### Giai đoạn 2: Thinking in trade-offs
 
-Đọc Cụm 3 và Cụm 4. Đây là phần quan trọng nhất nếu bạn muốn làm production ML.
+Đọc Phần 3 và Phần 4. Đây là phần quan trọng nhất nếu bạn muốn làm production ML.
 
 Ví dụ một quyết định tưởng đơn giản: "Có nên dùng online inference không?" Không thể trả lời bằng cảm tính. Bạn cần so:
 
@@ -110,7 +110,7 @@ Không nên nhảy thẳng vào microservices. Rất nhiều ML platform tốt b
 
 ### Giai đoạn 4: Documentation và case study
 
-Đọc Cụm 7 và Cụm 8. Ưu tiên [8.4 Production ML Feature Store](../08-case-studies/05-production-ml-feature-store.md) nếu bạn muốn thấy một ML platform production được thiết kế từ Quality Attributes tới runtime flows. Mục tiêu: biết viết architecture doc cho ML system, không chỉ code.
+Đọc Phần 7 và Phần 8. Ưu tiên [8.4 Production ML Feature Store](../08-case-studies/05-production-ml-feature-store.md) nếu bạn muốn thấy một ML platform production được thiết kế từ Quality Attributes tới runtime flows. Mục tiêu: biết viết architecture doc cho ML system, không chỉ code.
 
 Một architecture doc tối thiểu cho ML system nên có:
 

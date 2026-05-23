@@ -1,30 +1,30 @@
 ---
 id: 01-overview
-title: 3.1 Tổng quan Cụm 3
+title: 3.1 Tổng quan Phần 3
 sidebar_position: 1
-description: Cụm 3 mở rộng tư duy từ code-level (Cụm 2) lên system-level. Học cách phân biệt architecture decisions với design decisions, phân tích trade-off đa chiều, và áp modularity ở quy mô lớn hơn.
+description: Phần 3 mở rộng tư duy từ code-level (Phần 2) lên system-level. Học cách phân biệt architecture decisions với design decisions, phân tích trade-off đa chiều, và áp modularity ở quy mô lớn hơn.
 ---
 
-# 3.1 Tổng quan Cụm 3: Architectural Thinking
+# 3.1 Tổng quan Phần 3: Architectural Thinking
 
-> **Tóm tắt một dòng**: Cụm 2 dạy bạn viết code tốt ở mức class/module. Cụm 3 dạy bạn *suy nghĩ như architect*, phân biệt cái gì là architectural, cân nhắc trade-off có hệ thống, và scale principles modularity từ module lên hệ thống.
+> **Tóm tắt một dòng**: Phần 2 dạy bạn viết code tốt ở mức class/module. Phần 3 dạy bạn *suy nghĩ như architect*, phân biệt cái gì là architectural, cân nhắc trade-off có hệ thống, và scale principles modularity từ module lên hệ thống.
 
 ## Nếu bạn đến từ Data Science
 
-Cụm 3 là bước chuyển từ tư duy "chọn model nào" sang "chọn hình dạng hệ thống nào". Một Data Scientist đã quen so sánh model bằng metric. Architect cũng so sánh option, nhưng metric là latency, cost, freshness, privacy, reliability và maintainability. Đây là cụm giúp bạn học cách lập luận khi không có một đáp án đúng tuyệt đối.
+Phần 3 là bước chuyển từ tư duy "chọn model nào" sang "chọn hình dạng hệ thống nào". Một Data Scientist đã quen so sánh model bằng metric. Architect cũng so sánh option, nhưng metric là latency, cost, freshness, privacy, reliability và maintainability. Đây là phần giúp bạn học cách lập luận khi không có một đáp án đúng tuyệt đối.
 
-## Vì sao có cụm này
+## Vì sao có phần này
 
-Bạn vừa hoàn thành Cụm 2, master SOLID. Có thể bạn nghĩ "vậy là biết kiến trúc rồi". Sai. SOLID là *necessary* (cần) nhưng không *sufficient* (đủ) cho kiến trúc tốt. Một codebase có thể tuân thủ 100% SOLID nhưng vẫn vỡ ở mức kiến trúc vì:
+Bạn vừa hoàn thành Phần 2, master SOLID. Có thể bạn nghĩ "vậy là biết kiến trúc rồi". Sai. SOLID là *necessary* (cần) nhưng không *sufficient* (đủ) cho kiến trúc tốt. Một codebase có thể tuân thủ 100% SOLID nhưng vẫn vỡ ở mức kiến trúc vì:
 
 1. **Chọn sai quy mô**. Microservices cho startup 5 người (over-engineer) hoặc monolith cho hệ enterprise 200 engineers (bottleneck).
 2. **Không cân nhắc trade-off**. Tối ưu performance hy sinh maintainability mà không nhận ra.
 3. **Boundary sai giữa các module/service**. Cohesion thấp ở mức hệ thống dù mỗi module nội bộ có cohesion cao.
 4. **Document không có**. Kiến trúc tồn tại trong đầu 1 người, evolve không kiểm soát.
 
-Cụm 3 fix tư duy về 3 vấn đề đầu (vấn đề 4 thuộc Cụm 7).
+Phần 3 fix tư duy về 3 vấn đề đầu (vấn đề 4 thuộc Phần 7).
 
-## Cụm 3 sẽ dạy gì
+## Phần 3 sẽ dạy gì
 
 Bốn bài:
 
@@ -43,7 +43,7 @@ Mọi quyết định kiến trúc đều có trade-off. Không có "best archit
 
 ### Bài 3.4: Modularity
 
-Scale cohesion-coupling từ class (Cụm 2.2) lên module/sub-system/service. Bài này đi qua:
+Scale cohesion-coupling từ class (Bài 2.2) lên module/sub-system/service. Bài này đi qua:
 
 - Tiêu chí nhận diện module boundary đúng (bounded context từ DDD ở mức đơn giản).
 - Sai lầm: "horizontal slicing" (chia theo layer: UI/Service/Repo) vs "vertical slicing" (chia theo feature/domain), và vì sao vertical thường tốt hơn ở mức kiến trúc.
@@ -59,16 +59,16 @@ Scale cohesion-coupling từ class (Cụm 2.2) lên module/sub-system/service. B
 
 Mỗi bài 3000-4500 chữ, đọc 1.5-2h.
 
-## Kết nối với cụm sau
+## Kết nối với phần sau
 
-- **Cụm 4 (Quality Attributes)** bổ sung *cái cần tối ưu* cho trade-off analysis ở 3.3.
-- **Cụm 5-6 (Architecture Styles)** áp khái niệm modularity ở 3.4 vào các style cụ thể (mỗi style là một cách chia module).
-- **Cụm 7 (Documenting)** tài liệu hoá kết quả của 3.2-3.3 thông qua ADR.
-- **Cụm 8 (Case Studies)** áp toàn bộ tư duy cụm 3 vào dự án thực.
+- **Phần 4 (Quality Attributes)** bổ sung *cái cần tối ưu* cho trade-off analysis ở 3.3.
+- **Phần 5-6 (Architecture Styles)** áp khái niệm modularity ở 3.4 vào các style cụ thể (mỗi style là một cách chia module).
+- **Phần 7 (Documenting)** tài liệu hoá kết quả của 3.2-3.3 thông qua ADR.
+- **Phần 8 (Case Studies)** áp toàn bộ tư duy phần 3 vào dự án thực.
 
-## Mindset shift sau Cụm 3
+## Mindset shift sau Phần 3
 
-Sau khi đọc xong cụm này, bạn sẽ:
+Sau khi đọc xong phần này, bạn sẽ:
 
 1. Đọc một PR/design proposal và phân biệt được câu hỏi nào là kiến trúc (đáng cân nhắc kỹ) và câu hỏi nào là implementation detail (để dev tự quyết).
 2. Khi gặp xung đột về design giữa 2 team, không vội "chọn 1 bên" mà liệt kê trade-off để team chọn theo priority business.

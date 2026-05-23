@@ -263,7 +263,7 @@ Trong microservices, "abstraction" có thể là OpenAPI spec, Protobuf definiti
 
 ### Plug-in System
 
-Kiến trúc Microkernel (Cụm 5.5) chính là DIP: core định nghĩa plug-in interface, plug-in implement interface. Core không biết về cụ thể plug-in.
+Kiến trúc Microkernel (Bài 5.5) chính là DIP: core định nghĩa plug-in interface, plug-in implement interface. Core không biết về cụ thể plug-in.
 
 ### Event-driven systems
 
@@ -339,9 +339,9 @@ Khi abstraction leak detail, swap implementation thành impossible, `MongoUserRe
 - Scale lên architecture: Hexagonal/Clean Architecture, plug-in system, event-driven.
 - Cẩn thận: không tạo interface phòng ngừa, không service locator, không leak detail qua abstraction.
 
-## Tổng kết Cụm 2
+## Tổng kết Phần 2
 
-Hết Cụm 2, bạn đã có toàn bộ design principles foundation. Tóm tắt:
+Hết Phần 2, bạn đã có toàn bộ design principles foundation. Tóm tắt:
 
 | Principle | Tóm tắt | Scale up |
 |---|---|---|
@@ -354,4 +354,4 @@ Hết Cụm 2, bạn đã có toàn bộ design principles foundation. Tóm tắ
 
 Tất cả 5 SOLID đều quy về cohesion cao + coupling thấp ở các góc khác nhau. Master 5 cái này, code và architecture của bạn sẽ thay đổi vĩnh viễn.
 
-Cụm tiếp theo: [Cụm 3: Architectural Thinking](../03-architectural-thinking/01-overview.md), mở rộng tư duy từ class lên hệ thống.
+Phần tiếp theo: [Phần 3: Architectural Thinking](../03-architectural-thinking/01-overview.md), mở rộng tư duy từ class lên hệ thống.

@@ -51,7 +51,7 @@ graph TD
 
 ## SRP scale lên service level
 
-Cụm 2.3 nói SRP: "mỗi module một actor". Microservices áp dụng SRP ở service level:
+Bài 2.3 nói SRP: "mỗi module một actor". Microservices áp dụng SRP ở service level:
 
 - Mỗi service own một bounded context (ngôn ngữ chung, một team).
 - Service thay đổi vì *một lý do* (business rule trong bounded context đó thay đổi).
@@ -250,7 +250,7 @@ Tối ưu cho large team + scale. Sacrificing simplicity + cost.
 
 Từ monolith hoặc service-based lên microservices:
 
-1. **Modular monolith** trước (Cụm 5.2).
+1. **Modular monolith** trước (Bài 5.2).
 2. **Extract first 1-2 services** (Strangler Fig).
 3. **Setup full DevOps stack** trước khi extract thứ 3.
 4. **Tách dần theo bounded context**.
@@ -266,7 +266,7 @@ Startup 10 người làm 30 services. Operational hell. Pivot lại to modular m
 
 ### Sai lầm 2: Distributed monolith
 
-Đã nói (Cụm 3.4). Microservices tách sai = distributed monolith.
+Đã nói (Bài 3.4). Microservices tách sai = distributed monolith.
 
 ### Sai lầm 3: Shared database
 

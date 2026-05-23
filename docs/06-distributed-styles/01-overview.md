@@ -1,13 +1,13 @@
 ---
 id: 01-overview
-title: 6.1 Tổng quan Cụm 6
+title: 6.1 Tổng quan Phần 6
 sidebar_position: 1
-description: Bốn distributed architecture style quan trọng nhất - Service-based, Microservices, Event-Driven, Space-Based. Khi nào dùng cái nào và đo trade-off so với Cụm 5.
+description: Bốn distributed architecture style quan trọng nhất - Service-based, Microservices, Event-Driven, Space-Based. Khi nào dùng cái nào và đo trade-off so với Phần 5.
 ---
 
-# 6.1 Tổng quan Cụm 6: Distributed Architecture Styles
+# 6.1 Tổng quan Phần 6: Distributed Architecture Styles
 
-> **Tóm tắt một dòng**: Cụm này dạy 4 style phân tán phổ biến nhất, từ "nhẹ" (Service-based) tới "phức tạp" (Space-Based). Mỗi style giải quyết một bài toán scale + decoupling cụ thể, với cost distributed khác nhau.
+> **Tóm tắt một dòng**: Phần này dạy 4 style phân tán phổ biến nhất, từ "nhẹ" (Service-based) tới "phức tạp" (Space-Based). Mỗi style giải quyết một bài toán scale + decoupling cụ thể, với cost distributed khác nhau.
 
 ## Nếu bạn đến từ Data Science
 
@@ -19,7 +19,7 @@ Thông thường, path an toàn là: modular package hoặc modular monolith, sa
 
 ```mermaid
 graph LR
-    M[Monolithic<br/>Cụm 5] --> SB[Service-based<br/>4-12 services]
+    M[Monolithic<br/>Phần 5] --> SB[Service-based<br/>4-12 services]
     SB --> MS[Microservices<br/>20-100 services]
     SB --> ED[Event-Driven<br/>Async messaging]
     MS --> ED
@@ -36,7 +36,7 @@ graph LR
 
 Space-Based là special case cho extreme load.
 
-## Bài trong cụm
+## Bài trong phần
 
 ### 6.2: Service-based Architecture
 

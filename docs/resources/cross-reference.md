@@ -2,7 +2,7 @@
 id: cross-reference
 title: Bản đồ phụ thuộc
 sidebar_position: 3
-description: Visual map của các concept trong khoá - cụm nào dùng concept từ cụm nào, shortcuts theo focus area, và sơ đồ phụ thuộc giữa các bài.
+description: Visual map của các concept trong khoá - phần nào dùng concept từ phần nào, shortcuts theo focus area, và sơ đồ phụ thuộc giữa các bài.
 ---
 
 # Bản đồ phụ thuộc
@@ -13,12 +13,12 @@ description: Visual map của các concept trong khoá - cụm nào dùng concep
 
 ```mermaid
 graph TD
-    %% Cụm 1
+    %% Phần 1
     C1_2[1.2 SA là gì]
     C1_3[1.3 Aims & outcomes]
     C1_4[1.4 Roadmap]
     
-    %% Cụm 2
+    %% Phần 2
     C2_2[2.2 Cohesion-Coupling]
     C2_3[2.3 SRP]
     C2_4[2.4 OCP]
@@ -26,39 +26,39 @@ graph TD
     C2_6[2.6 ISP]
     C2_7[2.7 DIP]
     
-    %% Cụm 3
+    %% Phần 3
     C3_2[3.2 Arch vs Design]
     C3_3[3.3 Trade-off]
     C3_4[3.4 Modularity]
     
-    %% Cụm 4
+    %% Phần 4
     C4_2[4.2 FR vs NFR]
     C4_3[4.3 Identifying QA]
     C4_4[4.4 Component]
     
-    %% Cụm 5
+    %% Phần 5
     C5_2[5.2 Mono vs Dist]
     C5_3[5.3 Layered]
     C5_4[5.4 Pipeline]
     C5_5[5.5 Microkernel]
     
-    %% Cụm 6
+    %% Phần 6
     C6_2[6.2 Service-based]
     C6_3[6.3 Microservices]
     C6_4[6.4 Event-Driven]
     C6_5[6.5 Space-Based]
     
-    %% Cụm 7
+    %% Phần 7
     C7_2[7.2 Module View]
     C7_3[7.3 C&C View]
     C7_4[7.4 Allocation View]
     
-    %% Cụm 8
+    %% Phần 8
     C8_2[8.2 UAMS Case]
     C8_3[8.3 Smart City]
     C8_4[8.4 Feature Store]
     
-    %% Cụm 9
+    %% Phần 9
     C9_2[9.2 IoT]
     C9_3[9.3 Web3]
     C9_4[9.4 MLOps]
@@ -132,7 +132,7 @@ graph TD
 
 ### SOLID principles
 
-| Principle | Use ở Cụm | Cách dùng |
+| Principle | Use ở Phần | Cách dùng |
 |---|---|---|
 | SRP | 3.4 | Modularity: 1 module 1 actor |
 | SRP | 6.3 | Microservice = 1 bounded context |
@@ -285,7 +285,7 @@ Nếu mục tiêu của bạn là đưa model/data pipeline vào production, đi
 
 ## Cross-cutting concerns
 
-Một số concept xuất hiện ở nhiều cụm vì cross-cutting:
+Một số concept xuất hiện ở nhiều phần vì cross-cutting:
 
 ### Conway's Law
 
@@ -319,4 +319,4 @@ Một số concept xuất hiện ở nhiều cụm vì cross-cutting:
 | Distributed | *Designing Data-Intensive Applications* (Kleppmann) | 5.2, 6 |
 | Microservices | *Microservices Patterns* (Richardson) | 6.3, 6.4 |
 
-Đọc thêm khi cần đào sâu một cụm cụ thể.
+Đọc thêm khi cần đào sâu một phần cụ thể.

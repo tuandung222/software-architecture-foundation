@@ -169,7 +169,7 @@ Fix: pre-compute aggregations. Push complex queries to read replica DB asynchron
 - **Cost cao**: infrastructure, expertise, complexity.
 - **Alternative simpler**: distributed cache (Redis) + sharded DB.
 
-## Tổng kết Cụm 6
+## Tổng kết Phần 6
 
 4 distributed styles:
 
@@ -182,4 +182,4 @@ Fix: pre-compute aggregations. Push complex queries to read replica DB asynchron
 
 **Default**: Service-based. Overlay Event-Driven cho async parts. Microservices khi thực sự cần. Space-based khi extreme.
 
-Cụm tiếp: [Cụm 7 - Documenting Architecture](../07-documenting/01-overview.md), kiến trúc không document là kiến trúc chết.
+Phần tiếp: [Phần 7 - Documenting Architecture](../07-documenting/01-overview.md), kiến trúc không document là kiến trúc chết.

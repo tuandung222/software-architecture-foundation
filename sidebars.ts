@@ -5,7 +5,7 @@ const sidebars: SidebarsConfig = {
     'intro',
     {
       type: 'category',
-      label: 'Cụm 1: Giới thiệu Software Architecture',
+      label: 'Phần 1: Giới thiệu Software Architecture',
       link: {type: 'doc', id: '01-introduction/01-overview'},
       collapsed: false,
       items: [
@@ -17,7 +17,7 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: 'Cụm 2: Design Principles (SOLID)',
+      label: 'Phần 2: Design Principles (SOLID)',
       link: {type: 'doc', id: '02-design-principles/01-overview'},
       collapsed: false,
       items: [
@@ -32,7 +32,7 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: 'Cụm 3: Architectural Thinking',
+      label: 'Phần 3: Architectural Thinking',
       link: {type: 'doc', id: '03-architectural-thinking/01-overview'},
       collapsed: false,
       items: [
@@ -44,7 +44,7 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: 'Cụm 4: Quality Attributes',
+      label: 'Phần 4: Quality Attributes',
       link: {type: 'doc', id: '04-quality-attributes/01-overview'},
       collapsed: false,
       items: [
@@ -56,7 +56,7 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: 'Cụm 5: Fundamental Architecture Styles',
+      label: 'Phần 5: Fundamental Architecture Styles',
       link: {type: 'doc', id: '05-fundamental-styles/01-overview'},
       collapsed: false,
       items: [
@@ -69,7 +69,7 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: 'Cụm 6: Distributed Architecture Styles',
+      label: 'Phần 6: Distributed Architecture Styles',
       link: {type: 'doc', id: '06-distributed-styles/01-overview'},
       collapsed: false,
       items: [
@@ -82,7 +82,7 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: 'Cụm 7: Documenting Architecture',
+      label: 'Phần 7: Documenting Architecture',
       link: {type: 'doc', id: '07-documenting/01-overview'},
       collapsed: false,
       items: [
@@ -94,7 +94,7 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: 'Cụm 8: Case Studies',
+      label: 'Phần 8: Case Studies',
       link: {type: 'doc', id: '08-case-studies/01-overview'},
       collapsed: false,
       items: [
@@ -107,7 +107,7 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: 'Cụm 9: Seminar - Advanced Topics',
+      label: 'Phần 9: Seminar - Advanced Topics',
       link: {type: 'doc', id: '09-seminar-advanced-topics/01-overview'},
       collapsed: false,
       items: [

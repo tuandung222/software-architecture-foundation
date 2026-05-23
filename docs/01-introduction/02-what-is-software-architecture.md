@@ -146,7 +146,7 @@ Vai trò "architect", bất kể chức danh, bao gồm:
 2. **Cân nhắc trade-off đa chiều**: không bao giờ có "best architecture", chỉ có "best for current context".
 3. **Truyền đạt và document**: để team hiểu *vì sao* quyết định kia, không chỉ *cái gì* được quyết.
 4. **Sẵn sàng review và adjust**: kiến trúc evolve, không có "set and forget".
-5. **Code đủ để hiểu pain**: architect xa rời code lâu sẽ ra quyết định lý thuyết, không thực dụng. Cụm 3 sẽ nói rõ.
+5. **Code đủ để hiểu pain**: architect xa rời code lâu sẽ ra quyết định lý thuyết, không thực dụng. Phần 3 sẽ nói rõ.
 
 ## Tóm tắt
 

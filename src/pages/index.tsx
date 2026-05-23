@@ -24,7 +24,7 @@ function HomepageHeader(): ReactNode {
           <Link
             className={`button button--secondary button--lg ${styles.heroButton}`}
             to="/docs/01-introduction/01-overview">
-            Vào Cụm 1
+            Vào Phần 1
           </Link>
         </div>
       </div>
@@ -60,10 +60,10 @@ function LectureGrid(): ReactNode {
     <section className={styles.gridSection}>
       <div className="container">
         <Heading as="h2" className={styles.sectionTitle}>
-          Tám cụm bài giảng
+          Chín phần bài giảng
         </Heading>
         <p className={styles.sectionSubtitle}>
-          Lộ trình từ nguyên lý thiết kế cơ bản tới các kiến trúc phân tán hiện đại và cách tài liệu hoá architecture cho team.
+          Lộ trình từ nguyên lý thiết kế cơ bản tới case study, seminar nâng cao và cách tài liệu hoá architecture cho team.
         </p>
         <div className={styles.grid}>
           <LectureCard
@@ -118,8 +118,15 @@ function LectureGrid(): ReactNode {
           <LectureCard
             number="08"
             title="Case Studies"
-            description="UAMS (Academic Management), Smart City Traffic Detection, áp toàn bộ kiến thức vào case thực + bài tập."
+            description="UAMS, Smart City, Production ML Feature Store, áp toàn bộ kiến thức vào case thực + bài tập."
             to="/docs/08-case-studies/01-overview"
+            status="ready"
+          />
+          <LectureCard
+            number="09"
+            title="Seminar - Advanced Topics"
+            description="Software Architecture for IoT, Web3, MLOps và Digital Twin, bốn domain hiện đại với constraint đặc thù."
+            to="/docs/09-seminar-advanced-topics/01-overview"
             status="ready"
           />
         </div>

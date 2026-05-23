@@ -221,13 +221,13 @@ Insight: service-based "ổn" trên mọi chiều, không "xuất sắc" ở chi
 
 Từ monolith lên service-based:
 
-### Bước 1: Modularize monolith (Cụm 3.4)
+### Bước 1: Modularize monolith (Bài 3.4)
 
 Tổ chức monolith thành strict modules. Build tool enforce import boundary.
 
 ### Bước 2: Extract first service
 
-Chọn module có pain rõ nhất (vd: scale separately needed) → tách thành service. Dùng Strangler Fig (Cụm 5.2).
+Chọn module có pain rõ nhất (vd: scale separately needed) → tách thành service. Dùng Strangler Fig (Bài 5.2).
 
 ### Bước 3: Setup infrastructure
 

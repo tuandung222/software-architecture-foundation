@@ -176,7 +176,7 @@ graph TD
     ES --> CC
 ```
 
-Components inside service follow layered (Cụm 5.3).
+Components inside service follow layered (Bài 5.3).
 
 ## 6. Documenting Key Decisions (ADRs)
 

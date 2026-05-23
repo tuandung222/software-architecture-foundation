@@ -2,7 +2,7 @@
 id: course-summary
 title: Tóm tắt toàn khoá
 sidebar_position: 1
-description: Tổng hợp toàn bộ 9 cụm trong 1 bài đọc nhanh. Phù hợp để ôn nhanh hoặc tra cứu cấp tốc trước khi đi vào bài cụ thể.
+description: Tổng hợp toàn bộ 9 phần trong 1 bài đọc nhanh. Phù hợp để ôn nhanh hoặc tra cứu cấp tốc trước khi đi vào bài cụ thể.
 ---
 
 # Tóm tắt toàn khoá Software Architecture Foundation
@@ -13,15 +13,15 @@ description: Tổng hợp toàn bộ 9 cụm trong 1 bài đọc nhanh. Phù h�
 
 ```mermaid
 graph TD
-    C1[Cụm 1<br/>Giới thiệu<br/>SA là gì]
-    C2[Cụm 2<br/>SOLID<br/>Code tốt = nền]
-    C3[Cụm 3<br/>Architectural<br/>Thinking]
-    C4[Cụm 4<br/>Quality<br/>Attributes]
-    C5[Cụm 5<br/>Fundamental<br/>Styles]
-    C6[Cụm 6<br/>Distributed<br/>Styles]
-    C7[Cụm 7<br/>Documenting<br/>views + ADR]
-    C8[Cụm 8<br/>Case<br/>Studies]
-    C9[Cụm 9<br/>Advanced<br/>Seminar]
+    C1[Phần 1<br/>Giới thiệu<br/>SA là gì]
+    C2[Phần 2<br/>SOLID<br/>Code tốt = nền]
+    C3[Phần 3<br/>Architectural<br/>Thinking]
+    C4[Phần 4<br/>Quality<br/>Attributes]
+    C5[Phần 5<br/>Fundamental<br/>Styles]
+    C6[Phần 6<br/>Distributed<br/>Styles]
+    C7[Phần 7<br/>Documenting<br/>views + ADR]
+    C8[Phần 8<br/>Case<br/>Studies]
+    C9[Phần 9<br/>Advanced<br/>Seminar]
     
     C1 --> C2
     C2 --> C3
@@ -38,7 +38,7 @@ graph TD
     C7 --> C9
 ```
 
-## Cụm 1: Giới thiệu
+## Phần 1: Giới thiệu
 
 ### Định nghĩa SA
 
@@ -58,7 +58,7 @@ Quyết định nào thoả cả 3 = architectural. Còn lại = design hoặc i
 
 3 paths: Chuyên sâu (30-40h), Ôn thi (5-8h), Tra cứu (on-demand). 4 shortcuts theo focus.
 
-## Cụm 2: SOLID
+## Phần 2: SOLID
 
 ### Cohesion-Coupling (Bài 2.2)
 
@@ -74,7 +74,7 @@ Mục tiêu vĩnh cửu: **high cohesion + low coupling**. Cohesion = phần t�
 | **ISP** (2.6) | Client không depend method không dùng | BFF, CQRS |
 | **DIP** (2.7) | Depend abstraction, không concretion | Hexagonal/Clean architecture |
 
-## Cụm 3: Architectural Thinking
+## Phần 3: Architectural Thinking
 
 ### Architecture vs Design (Bài 3.2)
 
@@ -88,7 +88,7 @@ Mọi quyết định có cost. ATAM-lite: list options → map QA → identify 
 
 **Vertical slicing (theo domain) > Horizontal slicing (theo layer)** cho team trung-lớn. Anti-pattern: Big Ball of Mud, Distributed Monolith, Death Star. Heuristics: two-pizza team, change rate, data ownership, bounded context.
 
-## Cụm 4: Quality Attributes
+## Phần 4: Quality Attributes
 
 ### FR vs NFR (Bài 4.2)
 
@@ -102,7 +102,7 @@ Mọi quyết định có cost. ATAM-lite: list options → map QA → identify 
 
 Cohesion principles: REP (Reuse), CCP (Common Closure), CRP (Common Reuse). Coupling: ADP (Acyclic), SDP (Stable Dependencies), SAP (Stable Abstractions). Main Sequence: balance.
 
-## Cụm 5: Fundamental Styles
+## Phần 5: Fundamental Styles
 
 ### Monolithic vs Distributed (Bài 5.2)
 
@@ -120,7 +120,7 @@ Filter + Pipe. Unix philosophy. Use: ETL, compiler, image processing.
 
 Core + Plug-ins. OCP at scale. Use: IDE, browser, CMS.
 
-## Cụm 6: Distributed Styles
+## Phần 6: Distributed Styles
 
 ### Service-based (Bài 6.2)
 
@@ -138,7 +138,7 @@ Async messaging, decoupling cực mạnh. Topologies: Mediator (orchestration) v
 
 In-memory grid + async DB. Extreme load (Black Friday). Niche.
 
-## Cụm 7: Documenting
+## Phần 7: Documenting
 
 ### 3 Views (Bass-Clements-Kazman)
 
@@ -160,7 +160,7 @@ Architecture Decision Record. 1-page, append-only, in git. Format: Context-Decis
 
 Architecture follows org chart. Inverse Conway: design org for desired architecture.
 
-## Cụm 8: Case Studies
+## Phần 8: Case Studies
 
 ### UAMS (8.2)
 
@@ -178,9 +178,9 @@ Production ML platform cho nhiều DS teams. **Service-based core + Pipeline + E
 
 8 bài tự practice: Food Delivery, Property Management SaaS, Stock Trading, IoT Manufacturing, Multi-region E-commerce migration, Churn Prediction, Real-time Fraud Detection, Feature Store.
 
-## Cụm 9: Seminar - Advanced Topics
+## Phần 9: Seminar - Advanced Topics
 
-Cụm 9 dùng toàn bộ foundation để phân tích bốn domain khó hơn. Đây là phần chuyển từ "biết style" sang "biết đọc constraint domain và thiết kế style mix hợp lý".
+Phần 9 dùng toàn bộ foundation để phân tích bốn domain khó hơn. Đây là phần chuyển từ "biết style" sang "biết đọc constraint domain và thiết kế style mix hợp lý".
 
 | Seminar | Trọng tâm | Style mix điển hình |
 |---|---|---|
@@ -211,11 +211,11 @@ Một model tốt offline chưa đủ. Production ML cần hệ thống có cont
 
 ### 1. Architecture = trade-off
 
-Không có "best architecture". Chỉ có "best given priorities". Cụm 3.3 là core skill.
+Không có "best architecture". Chỉ có "best given priorities". Bài 3.3 là core skill.
 
 ### 2. NFR drives architecture
 
-Cùng functional → vô số architecture khả thi. NFR quyết định cái nào fit. Cụm 4 là cốt lõi.
+Cùng functional → vô số architecture khả thi. NFR quyết định cái nào fit. Phần 4 là cốt lõi.
 
 ### 3. Style mix
 
@@ -223,11 +223,11 @@ Hệ thực thường mix nhiều style. UAMS = service-based. Smart City = EDA 
 
 ### 4. SOLID = foundation
 
-Code không tuân SOLID → architecture không cứu được. Cụm 2 là tiền đề.
+Code không tuân SOLID → architecture không cứu được. Phần 2 là tiền đề.
 
 ### 5. Document hoặc chết
 
-Kiến trúc trong đầu = bus factor 1. Cụm 7 không phải optional.
+Kiến trúc trong đầu = bus factor 1. Phần 7 không phải optional.
 
 ### 6. Match team size
 
@@ -235,7 +235,7 @@ Architecture should match team size + 1 stage (Bài 3.3). Đừng over-engineer.
 
 ## Bảng cheat sheet 1 trang
 
-| Vấn đề | Cụm | Insight chính |
+| Vấn đề | Phần | Insight chính |
 |---|---|---|
 | SA là gì | 1.2 | 3 tiêu chí: bao trùm + QA + đắt |
 | Code tốt | 2 | Cohesion cao + Coupling thấp + SOLID |
@@ -249,10 +249,10 @@ Architecture should match team size + 1 stage (Bài 3.3). Đừng over-engineer.
 
 ## Khi nào hỏi câu nào
 
-- "Hệ này tốt không?" → check 3 view + key decisions vs Cụm 4 QA.
-- "Sai ở đâu?" → Cụm 3.4 anti-pattern (BBoM, distributed monolith, sinkhole).
-- "Nên upgrade gì?" → identify pain (Cụm 4 missed QA) → migrate path (Cụm 5.2 Strangler Fig).
-- "Justify decision?" → write ADR (Cụm 7).
+- "Hệ này tốt không?" → check 3 view + key decisions vs Phần 4 QA.
+- "Sai ở đâu?" → Bài 3.4 anti-pattern (BBoM, distributed monolith, sinkhole).
+- "Nên upgrade gì?" → identify pain (Phần 4 missed QA) → migrate path (Bài 5.2 Strangler Fig).
+- "Justify decision?" → write ADR (Phần 7).
 
 ## Reading list cho sâu
 

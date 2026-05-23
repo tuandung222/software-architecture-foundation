@@ -95,7 +95,7 @@ Vì vậy lựa chọn Event-Driven + Pipeline + Microkernel không phải vì "
 
 ### Decision
 
-**Distributed, Event-Driven Architecture** (Cụm 6.4) overlay với **Microservices** (Cụm 6.3) cho detection services.
+**Distributed, Event-Driven Architecture** (Bài 6.4) overlay với **Microservices** (Bài 6.3) cho detection services.
 
 Justify:
 
@@ -197,10 +197,10 @@ graph TD
 
 ### Style mix
 
-- **Event-Driven (Cụm 6.4)**: backbone với Kafka.
-- **Microservices (Cụm 6.3)**: fine-grained detection services.
-- **Microkernel (Cụm 5.5)**: detection services là plug-ins to a "detection core", easy add new algorithm.
-- **Pipeline (Cụm 5.4)**: ingest → normalize → detect là pipeline.
+- **Event-Driven (Bài 6.4)**: backbone với Kafka.
+- **Microservices (Bài 6.3)**: fine-grained detection services.
+- **Microkernel (Bài 5.5)**: detection services là plug-ins to a "detection core", easy add new algorithm.
+- **Pipeline (Bài 5.4)**: ingest → normalize → detect là pipeline.
 
 Multiple styles compose. Architect chọn fit-for-purpose per layer.
 

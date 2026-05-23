@@ -7,20 +7,20 @@ description: 8 bài tập kiến trúc với hints chi tiết. Tự practice end
 
 # 8.5 Bài tập tổng hợp
 
-> **Tóm tắt một dòng**: 8 bài tập tự practice. Mỗi bài có context, requirements, và hints để bạn lập luận theo framework từ Cụm 1-7. Không có "đáp án đúng" - chỉ có "đáp án hợp lý cho context".
+> **Tóm tắt một dòng**: 8 bài tập tự practice. Mỗi bài có context, requirements, và hints để bạn lập luận theo framework từ Phần 1-7. Không có "đáp án đúng" - chỉ có "đáp án hợp lý cho context".
 
 ## Cách làm
 
 Cho mỗi bài tập:
 
 1. **Đọc context** + functional requirements.
-2. **Identify Top 5-7 Quality Attributes** (Cụm 4).
-3. **Quyết định monolithic vs distributed** (Cụm 5.2).
-4. **Choose architecture style** (Cụm 5-6).
-5. **Decompose components** (Cụm 4.4, 3.4).
-6. **Draft 3-5 ADRs** cho key decisions (Cụm 7.2).
-7. **Vẽ C4 Context + Container diagrams** (Cụm 7.2).
-8. **Identify trade-offs hy sinh** (Cụm 3.3).
+2. **Identify Top 5-7 Quality Attributes** (Phần 4).
+3. **Quyết định monolithic vs distributed** (Bài 5.2).
+4. **Choose architecture style** (Phần 5-6).
+5. **Decompose components** (Bài 4.4, 3.4).
+6. **Draft 3-5 ADRs** cho key decisions (Bài 7.2).
+7. **Vẽ C4 Context + Container diagrams** (Bài 7.2).
+8. **Identify trade-offs hy sinh** (Bài 3.3).
 
 Time budget: 2-3 giờ mỗi bài.
 
@@ -226,7 +226,7 @@ Major e-commerce expand từ Vietnam ra Southeast Asia (Thailand, Indonesia, Phi
 
 ### Hints
 
-- **Migration strategy**: Strangler Fig (Cụm 5.2).
+- **Migration strategy**: Strangler Fig (Bài 5.2).
 - **Multi-region deployment**: each country has DB; some services shared globally (recommendations).
 - **CDN**: critical for asset performance.
 - **Data residency**: dictate database location, search index, cache.
@@ -358,19 +358,19 @@ Feedback từ người có kinh nghiệm thực tế > self-study 10 giờ.
 - Apply framework end-to-end.
 - Discuss với mentor để identify gap.
 
-## Tổng kết Cụm 8 và toàn khoá
+## Tổng kết Phần 8 và toàn khoá
 
-Hết Cụm 8. Hết khoá.
+Hết Phần 8. Hết khoá.
 
 Tóm tắt journey:
 
-- **Cụm 1**: framework tư duy.
-- **Cụm 2**: foundation principles (SOLID, cohesion-coupling).
-- **Cụm 3**: tư duy architect (vs designer).
-- **Cụm 4**: cái cần tối ưu (QA).
-- **Cụm 5-6**: 9 styles để chọn.
-- **Cụm 7**: cách document.
-- **Cụm 8**: áp end-to-end vào case thực.
+- **Phần 1**: framework tư duy.
+- **Phần 2**: foundation principles (SOLID, cohesion-coupling).
+- **Phần 3**: tư duy architect (vs designer).
+- **Phần 4**: cái cần tối ưu (QA).
+- **Phần 5-6**: 9 styles để chọn.
+- **Phần 7**: cách document.
+- **Phần 8**: áp end-to-end vào case thực.
 
 Bạn đã có toolkit đầy đủ. Bước tiếp theo là *practice* trên dự án thật của bạn. Architecture là kỹ năng *applied*: chỉ đọc không đủ.
 

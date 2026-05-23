@@ -7,7 +7,7 @@ description: View về static structure code. Subtypes - decomposition, dependen
 
 # 7.2 Module Views
 
-> **Tóm tắt một dòng**: Module View show static structure của code - module nào tồn tại, depend module nào. Quan trọng cho developer hiểu codebase và cho architect verify modularity (Cụm 3.4).
+> **Tóm tắt một dòng**: Module View show static structure của code - module nào tồn tại, depend module nào. Quan trọng cho developer hiểu codebase và cho architect verify modularity (Bài 3.4).
 
 ## Nếu bạn đến từ Data Science
 

@@ -226,7 +226,7 @@ flowchart LR
 - Operational cost cao hơn.
 - Exactly-once hoặc at-least-once semantics cần được hiểu rõ.
 
-Đừng chọn streaming chỉ vì nghe hiện đại. Hãy quay lại Cụm 4: business có thật sự cần freshness theo giây/phút không?
+Đừng chọn streaming chỉ vì nghe hiện đại. Hãy quay lại Phần 4: business có thật sự cần freshness theo giây/phút không?
 
 ## Cách implement pipeline
 

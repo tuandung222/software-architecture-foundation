@@ -253,7 +253,7 @@ SRP scale lên thành nguyên lý kiến trúc:
 - **Module trong monolith = một module một domain**. Cùng ý.
 - **Database table = một table một entity**. Tách thành nhiều table khi có nhiều aspect độc lập (vd: tách `users` và `user_profiles` nếu chúng evolve khác nhau).
 
-Cụm 6 (Microservices) sẽ build trực tiếp trên insight này.
+Phần 6 (Microservices) sẽ build trực tiếp trên insight này.
 
 ## Tóm tắt
 
