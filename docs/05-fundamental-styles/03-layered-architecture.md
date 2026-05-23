@@ -42,7 +42,7 @@ Cons: boilerplate khi tầng giữa chỉ "pass-through".
 
 ### Open layer
 
-Một layer có thể be "open" — tầng trên có thể skip nó.
+Một layer có thể be "open", tầng trên có thể skip nó.
 
 Vd: introduce Shared Services layer mà Presentation có thể skip:
 
@@ -85,12 +85,12 @@ class UserRepo:
         return db.query("SELECT * FROM users WHERE id=?", id)
 ```
 
-3 tầng nhưng không tầng nào thực sự *thêm logic*. Đây là sinkhole — wasted abstraction.
+3 tầng nhưng không tầng nào thực sự *thêm logic*. Đây là sinkhole, wasted abstraction.
 
 Fix:
 
 - **Option A**: Allow open layers cho pass-through cases.
-- **Option B**: Drop layering cho read-heavy cases, use CQRS — write qua layered, read direct query.
+- **Option B**: Drop layering cho read-heavy cases, use CQRS, write qua layered, read direct query.
 - **Option C**: Reconsider style. Có thể layered không fit; xem service-based hoặc microkernel.
 
 ## Khi dùng Layered
@@ -100,7 +100,7 @@ Fix:
 - Hệ nhỏ-trung (< 50k LOC).
 - Team < 15 people.
 - Domain đơn giản (CRUD nặng).
-- Cần onboard nhanh — layered được dạy phổ biến.
+- Cần onboard nhanh, layered được dạy phổ biến.
 - Cần consistency với codebase legacy.
 
 ❌ **Không phù hợp khi**:
@@ -118,7 +118,7 @@ Fix:
 | Cost | ★★★★★ | 1 deploy, 1 DB |
 | Testability | ★★★ | OK nếu mỗi layer test với mock |
 | Modularity (technical) | ★★★ | Layered theo tech concern |
-| Modularity (domain) | ★ | Tệ — feature đụng mọi layer |
+| Modularity (domain) | ★ | Tệ, feature đụng mọi layer |
 | Scalability | ★ | Cannot scale parts separately |
 | Deployability | ★★ | 1 deploy = mọi thay đổi |
 | Performance | ★★★★ | In-process call fast |
@@ -197,19 +197,19 @@ Combine layered với hexagonal (Cụm 2.7 DIP). Business layer định nghĩa a
 
 Layered hơi twist: domain ở center, infrastructure ở ngoài. Dependency direction *vào trong* (DIP applied). Effectively layered with DIP enforced.
 
-Cụm này không đi sâu — đọc *Clean Architecture* (Robert Martin) sau khoá.
+Cụm này không đi sâu, đọc *Clean Architecture* (Robert Martin) sau khoá.
 
 ## Sai lầm thường gặp
 
 ### Sai lầm 1: Skip layers ad-hoc
 
-Code nhanh, controller gọi thẳng repository. Vài tháng sau, business layer chỉ là half-empty shell — không reliable để add logic.
+Code nhanh, controller gọi thẳng repository. Vài tháng sau, business layer chỉ là half-empty shell, không reliable để add logic.
 
 Fix: discipline. Default closed; document open layer rõ ràng.
 
 ### Sai lầm 2: Layered cho complex domain
 
-Hệ có 20 sub-domain. Layered chỉ có 3 tầng — không match domain complexity. Mỗi feature touch nhiều file.
+Hệ có 20 sub-domain. Layered chỉ có 3 tầng, không match domain complexity. Mỗi feature touch nhiều file.
 
 Fix: vertical slice (theo domain) + layered bên trong mỗi domain.
 
@@ -233,4 +233,4 @@ Fix: repository chỉ persistence. Cache trong service layer. Validation trong d
 - **Phù hợp**: hệ nhỏ-trung, domain đơn giản, team < 15.
 - **Trade-off**: simplicity + cost tối ưu; scalability + domain modularity hy sinh.
 
-Bài tiếp: [Pipeline Architecture](04-pipeline-architecture.md) — sequential transformation, Unix philosophy.
+Bài tiếp: [Pipeline Architecture](04-pipeline-architecture.md), sequential transformation, Unix philosophy.

@@ -22,7 +22,7 @@ Câu trả lời tuỳ context. Case study đi qua **lập luận end-to-end** c
 
 ## 2 Case Studies
 
-### Case 1: UAMS — University Academic Management System
+### Case 1: UAMS, University Academic Management System
 
 Context:
 
@@ -60,7 +60,7 @@ Mỗi case sẽ đi qua 6 bước (synthesizing các cụm trước):
 
 Top 5-7 QA priority. Operationalize.
 
-### Bước 3: Cân nhắc Style — Monolithic vs Distributed (Cụm 5.2)
+### Bước 3: Cân nhắc Style, Monolithic vs Distributed (Cụm 5.2)
 
 Default monolithic; chỉ distributed nếu justify.
 
@@ -76,7 +76,7 @@ Bounded context, module boundary.
 
 C4 Context + Container, key sequence, ADR for important decisions.
 
-Sau mỗi case sẽ có "What we'd do differently" — phần phản biện.
+Sau mỗi case sẽ có "What we'd do differently", phần phản biện.
 
 ## Sản phẩm cuối case
 
@@ -93,7 +93,7 @@ Khi bạn làm xong, output này là *template* cho architecture doc của proje
 
 ## Tone của cases
 
-Cases viết theo phong cách "consulting walk-through" — như consultant trình bày cho client. Bạn đọc như đang sit-in một consulting engagement.
+Cases viết theo phong cách "consulting walk-through", như consultant trình bày cho client. Bạn đọc như đang sit-in một consulting engagement.
 
 Mỗi case dài ~3500-5000 chữ, đọc 1.5-2h. Đáng dành thời gian.
 

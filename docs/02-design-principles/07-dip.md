@@ -1,11 +1,11 @@
 ---
 id: 07-dip
-title: 2.7 DIP — Dependency Inversion Principle
+title: 2.7 DIP, Dependency Inversion Principle
 sidebar_position: 7
 description: High-level module không depend low-level module, cả hai depend abstraction. Nguyên lý quan trọng nhất cho clean architecture, dependency injection và hexagonal architecture.
 ---
 
-# 2.7 DIP — Dependency Inversion Principle
+# 2.7 DIP, Dependency Inversion Principle
 
 > **Tóm tắt một dòng**: Đảo ngược direction dependency: thay vì module business logic depend trực tiếp vào module infrastructure (database, network), cả hai depend vào abstraction do business logic định nghĩa. Đây là nền tảng cho hexagonal/clean architecture và mọi DI framework.
 
@@ -275,7 +275,7 @@ class IOrderService: ...
 class OrderService(IOrderService): ...
 ```
 
-Mỗi class 1 interface, dù chỉ có 1 implementation. Đó là cargo cult — không lợi ích, chỉ tăng cognitive load.
+Mỗi class 1 interface, dù chỉ có 1 implementation. Đó là cargo cult, không lợi ích, chỉ tăng cognitive load.
 
 Quy tắc: interface chỉ tạo khi:
 
@@ -297,7 +297,7 @@ Constructor injection tốt hơn.
 
 ### Sai lầm 3: Lạm dụng abstract base class
 
-Trong Python/TypeScript, nhiều khi không cần ABC — duck typing đủ. Tạo ABC chỉ thêm boilerplate.
+Trong Python/TypeScript, nhiều khi không cần ABC, duck typing đủ. Tạo ABC chỉ thêm boilerplate.
 
 ```python
 # Quá tay
@@ -323,7 +323,7 @@ class UserRepository(ABC):
 
 `execute_sql` là detail của Postgres, không phải khái niệm business. Repository pattern đúng phải expose business-level method (`save_user`, `find_by_email`), không phải SQL.
 
-Khi abstraction leak detail, swap implementation thành impossible — `MongoUserRepository.execute_sql(sql)` không make sense.
+Khi abstraction leak detail, swap implementation thành impossible, `MongoUserRepository.execute_sql(sql)` không make sense.
 
 ## Tóm tắt
 
@@ -335,7 +335,7 @@ Khi abstraction leak detail, swap implementation thành impossible — `MongoUse
 
 ## Tổng kết Cụm 2
 
-Hết Cụm 2 — bạn đã có toàn bộ design principles foundation. Tóm tắt:
+Hết Cụm 2, bạn đã có toàn bộ design principles foundation. Tóm tắt:
 
 | Principle | Tóm tắt | Scale up |
 |---|---|---|
@@ -348,4 +348,4 @@ Hết Cụm 2 — bạn đã có toàn bộ design principles foundation. Tóm t
 
 Tất cả 5 SOLID đều quy về cohesion cao + coupling thấp ở các góc khác nhau. Master 5 cái này, code và architecture của bạn sẽ thay đổi vĩnh viễn.
 
-Cụm tiếp theo: [Cụm 3: Architectural Thinking](../03-architectural-thinking/01-overview.md) — mở rộng tư duy từ class lên hệ thống.
+Cụm tiếp theo: [Cụm 3: Architectural Thinking](../03-architectural-thinking/01-overview.md), mở rộng tư duy từ class lên hệ thống.

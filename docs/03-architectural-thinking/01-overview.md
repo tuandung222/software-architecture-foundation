@@ -7,11 +7,11 @@ description: Cụm 3 mở rộng tư duy từ code-level (Cụm 2) lên system-l
 
 # 3.1 Tổng quan Cụm 3: Architectural Thinking
 
-> **Tóm tắt một dòng**: Cụm 2 dạy bạn viết code tốt ở mức class/module. Cụm 3 dạy bạn *suy nghĩ như architect* — phân biệt cái gì là architectural, cân nhắc trade-off có hệ thống, và scale principles modularity từ module lên hệ thống.
+> **Tóm tắt một dòng**: Cụm 2 dạy bạn viết code tốt ở mức class/module. Cụm 3 dạy bạn *suy nghĩ như architect*, phân biệt cái gì là architectural, cân nhắc trade-off có hệ thống, và scale principles modularity từ module lên hệ thống.
 
 ## Vì sao có cụm này
 
-Bạn vừa hoàn thành Cụm 2 — master SOLID. Có thể bạn nghĩ "vậy là biết kiến trúc rồi". Sai. SOLID là *necessary* (cần) nhưng không *sufficient* (đủ) cho kiến trúc tốt. Một codebase có thể tuân thủ 100% SOLID nhưng vẫn vỡ ở mức kiến trúc vì:
+Bạn vừa hoàn thành Cụm 2, master SOLID. Có thể bạn nghĩ "vậy là biết kiến trúc rồi". Sai. SOLID là *necessary* (cần) nhưng không *sufficient* (đủ) cho kiến trúc tốt. Một codebase có thể tuân thủ 100% SOLID nhưng vẫn vỡ ở mức kiến trúc vì:
 
 1. **Chọn sai quy mô**. Microservices cho startup 5 người (over-engineer) hoặc monolith cho hệ enterprise 200 engineers (bottleneck).
 2. **Không cân nhắc trade-off**. Tối ưu performance hy sinh maintainability mà không nhận ra.
@@ -26,7 +26,7 @@ Bốn bài:
 
 ### Bài 3.2: Architecture vs Design
 
-Phân biệt quyết định nào là architectural (đắt khi sửa, ảnh hưởng QA), quyết định nào là design thuần (dễ sửa, scope module). Đưa framework 3 tiêu chí từ Bài 1.2 vào thực hành: làm bài tập nhận diện trên cases thật. Quan trọng: trình bày "Levels of Knowledge" — phân loại kiến thức của technologist thành 3 mức (stuff you know, stuff you know you don't know, stuff you don't know you don't know), giải thích vì sao architect cần đầu tư vào mức thứ hai.
+Phân biệt quyết định nào là architectural (đắt khi sửa, ảnh hưởng QA), quyết định nào là design thuần (dễ sửa, scope module). Đưa framework 3 tiêu chí từ Bài 1.2 vào thực hành: làm bài tập nhận diện trên cases thật. Quan trọng: trình bày "Levels of Knowledge", phân loại kiến thức của technologist thành 3 mức (stuff you know, stuff you know you don't know, stuff you don't know you don't know), giải thích vì sao architect cần đầu tư vào mức thứ hai.
 
 ### Bài 3.3: Trade-off Analysis
 
@@ -35,14 +35,14 @@ Mọi quyết định kiến trúc đều có trade-off. Không có "best archit
 - Framework ATAM-lite để liệt kê trade-off một cách có hệ thống.
 - Sai lầm phổ biến: chỉ đánh giá theo 1 chiều (vd: chỉ tối ưu performance, bỏ qua maintainability).
 - Cách present trade-off cho stakeholder không-kỹ-thuật (PM, business).
-- "Architecture is the stuff you can't Google" — quote nổi tiếng giải thích vì sao trade-off là essence của SA.
+- "Architecture is the stuff you can't Google", quote nổi tiếng giải thích vì sao trade-off là essence của SA.
 
 ### Bài 3.4: Modularity
 
 Scale cohesion-coupling từ class (Cụm 2.2) lên module/sub-system/service. Bài này đi qua:
 
 - Tiêu chí nhận diện module boundary đúng (bounded context từ DDD ở mức đơn giản).
-- Sai lầm: "horizontal slicing" (chia theo layer: UI/Service/Repo) vs "vertical slicing" (chia theo feature/domain) — và vì sao vertical thường tốt hơn ở mức kiến trúc.
+- Sai lầm: "horizontal slicing" (chia theo layer: UI/Service/Repo) vs "vertical slicing" (chia theo feature/domain), và vì sao vertical thường tốt hơn ở mức kiến trúc.
 - Pattern thường gặp: deathstar antipattern, big ball of mud, distributed monolith.
 - Áp dụng cho monolith (chia thành modules), cho microservices (chia thành services), cho mobile (chia thành features).
 

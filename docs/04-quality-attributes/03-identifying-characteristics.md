@@ -64,7 +64,7 @@ Như đã nói ở Bài 4.2, ngoài explicit, còn implicit. Default implicit ch
 - Maintainability: ai cũng có thể onboard.
 - Observability: logs + basic metrics.
 
-Implicit không cần "top 7" — nhưng cần *baseline*. Architect đảm bảo baseline được respected.
+Implicit không cần "top 7", nhưng cần *baseline*. Architect đảm bảo baseline được respected.
 
 ### Bước 4: Priority với business
 
@@ -178,7 +178,7 @@ Format compact để run workshop 60-90 phút:
 
 Mỗi row là một "QA scenario". Scenario cụ thể dễ test hơn QA abstract. Output workshop = bảng scenarios với measure rõ ràng.
 
-Reference: ATAM (Architecture Tradeoff Analysis Method) của SEI Carnegie Mellon — full version dùng cho hệ critical. Quality Attribute Workshop simplified dùng cho hệ thường.
+Reference: ATAM (Architecture Tradeoff Analysis Method) của SEI Carnegie Mellon, full version dùng cho hệ critical. Quality Attribute Workshop simplified dùng cho hệ thường.
 
 ## Sai lầm thường gặp
 
@@ -210,10 +210,10 @@ Fix: revisit QA mỗi quarter hoặc khi có major business change.
 
 ## Tóm tắt
 
-- **Top 5-7 QA** — không nhiều hơn.
+- **Top 5-7 QA**, không nhiều hơn.
 - **Pipeline**: read requirement → interview → identify implicit → priority workshop → operationalize.
 - **Hierarchy**: operational + structural + cross-cutting.
 - **CQA worksheet**: scenario-based, measurable.
 - **Sai lầm**: "mọi thứ quan trọng", QA không measurable, implicit không doc, conflict không resolve, không revisit.
 
-Bài tiếp (cuối Cụm 4): [Component-Based Thinking](04-component-based-thinking.md) — map QA xuống component.
+Bài tiếp (cuối Cụm 4): [Component-Based Thinking](04-component-based-thinking.md), map QA xuống component.

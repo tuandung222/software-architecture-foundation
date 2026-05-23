@@ -135,7 +135,7 @@ PR và issue welcome. Trước khi gửi PR:
 2. Chạy `python3 scripts/_scan_dollar.py` (escape `$` currency).
 3. Nếu sửa lecture → rebuild PDF.
 4. Giữ phong cách lecturer: trực giác trước, hình thức sau, ví dụ thực.
-5. Tránh em-dash `—`; dùng dấu phẩy, ngoặc, hoặc dấu hai chấm.
+5. Tránh em-dash `-`; dùng dấu phẩy, ngoặc, hoặc dấu hai chấm.
 
 ## License
 
@@ -148,4 +148,4 @@ Tự do dùng, sửa, chia sẻ với điều kiện ghi nguồn.
 
 ---
 
-**Sister course**: [Software Security Foundation](https://tuandung222.github.io/software-security-foundation/) — tài liệu nền tảng về An toàn Phần mềm (Formal Methods, BMC, SMT, Fuzzing).
+**Sister course**: [Software Security Foundation](https://tuandung222.github.io/software-security-foundation/), tài liệu nền tảng về An toàn Phần mềm (Formal Methods, BMC, SMT, Fuzzing).

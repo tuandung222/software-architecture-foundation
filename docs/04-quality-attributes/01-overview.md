@@ -7,7 +7,7 @@ description: Quality attributes (architecture characteristics) là cái cần t�
 
 # 4.1 Tổng quan Cụm 4: Quality Attributes
 
-> **Tóm tắt một dòng**: Bạn không thể tối ưu mọi thứ cùng lúc — phải chọn 3-7 quality attributes ưu tiên cho hệ thống của mình. Cụm này dạy cách identify, prioritize, và translate chúng thành quyết định kiến trúc cụ thể.
+> **Tóm tắt một dòng**: Bạn không thể tối ưu mọi thứ cùng lúc, phải chọn 3-7 quality attributes ưu tiên cho hệ thống của mình. Cụm này dạy cách identify, prioritize, và translate chúng thành quyết định kiến trúc cụ thể.
 
 ## Vì sao có cụm này
 
@@ -85,7 +85,7 @@ Theo Bass-Clements-Kazman, *Software Architecture in Practice* 4th ed:
 | Accessibility | Hỗ trợ disabilities |
 | Internationalization (i18n) | Đa ngôn ngữ |
 
-Tổng cộng ~20-30 QA phổ biến. Một hệ không thể tối ưu cả 30 — phải chọn 5-7 ưu tiên.
+Tổng cộng ~20-30 QA phổ biến. Một hệ không thể tối ưu cả 30, phải chọn 5-7 ưu tiên.
 
 ## "You can't pick all of them"
 

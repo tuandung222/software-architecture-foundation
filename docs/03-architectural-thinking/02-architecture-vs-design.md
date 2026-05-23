@@ -7,7 +7,7 @@ description: Phân biệt thực hành quyết định architectural với quy�
 
 # 3.2 Architecture vs Design
 
-> **Tóm tắt một dòng**: Không có ranh giới cứng giữa architecture và design — ranh giới phụ thuộc context. Heuristic thực hành: hỏi 3 câu (bao trùm? ảnh hưởng QA? đắt khi sửa?) cho mỗi quyết định để biết nó deserve cấp attention nào.
+> **Tóm tắt một dòng**: Không có ranh giới cứng giữa architecture và design, ranh giới phụ thuộc context. Heuristic thực hành: hỏi 3 câu (bao trùm? ảnh hưởng QA? đắt khi sửa?) cho mỗi quyết định để biết nó deserve cấp attention nào.
 
 ## Câu hỏi mở đầu
 
@@ -54,9 +54,9 @@ graph TD
     style I fill:#f0e8f8
 ```
 
-- **Architecture**: structure của toàn hệ — services, communication, data flow.
-- **Design**: structure bên trong một module — class, interface, pattern.
-- **Implementation**: cấu trúc bên trong một function — algorithm, naming, control flow.
+- **Architecture**: structure của toàn hệ, services, communication, data flow.
+- **Design**: structure bên trong một module, class, interface, pattern.
+- **Implementation**: cấu trúc bên trong một function, algorithm, naming, control flow.
 
 Mỗi cấp depend cấp trên. Architecture định nghĩa boundary; design điền vào chi tiết bên trong; implementation realise.
 
@@ -153,7 +153,7 @@ Kiến thức bạn *chưa bao giờ nghe đến*. Vd: junior developer chưa bi
 
 ## "Architecture is the stuff that's hard to Google"
 
-Quote nổi tiếng. Implication: với kiến thức đã có pattern Google được (vd: cách implement REST API, cách viết unit test), không cần architect. Architect cần thiết khi vấn đề *chưa có một câu trả lời chuẩn* — phải lập luận trade-off cho context cụ thể.
+Quote nổi tiếng. Implication: với kiến thức đã có pattern Google được (vd: cách implement REST API, cách viết unit test), không cần architect. Architect cần thiết khi vấn đề *chưa có một câu trả lời chuẩn*, phải lập luận trade-off cho context cụ thể.
 
 Ví dụ:
 
@@ -180,7 +180,7 @@ Bài 3.3 sẽ nói chi tiết hơn. Quy tắc thực hành: architect nên code 
 
 ### Sai lầm 1: Coi mọi diagram là architecture
 
-Vẽ một diagram không tự động làm nó "architecture". Architecture là *các quyết định khó sửa* — diagram chỉ là cách hiển thị một số quyết định.
+Vẽ một diagram không tự động làm nó "architecture". Architecture là *các quyết định khó sửa*, diagram chỉ là cách hiển thị một số quyết định.
 
 Một sequence diagram cho một use case là design, không phải architecture. Một deployment diagram cho cluster là architecture vì nó capture quyết định về tổ chức service.
 
@@ -204,4 +204,4 @@ Hiệu quả nghịch. Team mất thời gian tranh cãi việc nhỏ. Heuristic
 - **"Architecture is the stuff you can't Google"**: architect giải các vấn đề unique to context.
 - **Architect phải code**: 20-40% thời gian, để stay grounded.
 
-Bài tiếp: [Phân tích Trade-off](03-tradeoffs-analysis.md) — cách lập luận có hệ thống khi mọi quyết định có cost.
+Bài tiếp: [Phân tích Trade-off](03-tradeoffs-analysis.md), cách lập luận có hệ thống khi mọi quyết định có cost.

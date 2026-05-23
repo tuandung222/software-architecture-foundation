@@ -1,13 +1,13 @@
 ---
 id: 04-ocp
-title: 2.4 OCP — Open-Closed Principle
+title: 2.4 OCP, Open-Closed Principle
 sidebar_position: 4
 description: Module nên mở cho extension nhưng đóng cho modification. Cách đạt được điều này thông qua abstraction, polymorphism, và plug-in architecture. OCP ở mức code và mức kiến trúc.
 ---
 
-# 2.4 OCP — Open-Closed Principle
+# 2.4 OCP, Open-Closed Principle
 
-> **Tóm tắt một dòng**: OCP nói code đã viết và tested xong không nên phải sửa khi requirement mới đến — chỉ nên *thêm code mới*. Cách phổ biến: thiết kế các điểm extension bằng interface/abstraction, mở rộng qua polymorphism hoặc plug-in.
+> **Tóm tắt một dòng**: OCP nói code đã viết và tested xong không nên phải sửa khi requirement mới đến, chỉ nên *thêm code mới*. Cách phổ biến: thiết kế các điểm extension bằng interface/abstraction, mở rộng qua polymorphism hoặc plug-in.
 
 ## Định nghĩa
 
@@ -55,7 +55,7 @@ def calculate(self, order: Order) -> Money:
 
 Hai tháng sau, sếp thêm 'corporate' với rule phức tạp (depend vào volume). Bốn tháng sau, sếp thêm 'student' với rule depend vào ngày trong tuần. Cuối năm `calculate()` trở thành 200 dòng if-elif chain với bug khắp nơi.
 
-**Vấn đề**: Mỗi requirement mới đều phải sửa `DiscountCalculator.calculate()`. Code đã test xong cho 'regular' và 'vip' liên tục bị đụng đến — risk regression cao. Đây là OCP violation kinh điển.
+**Vấn đề**: Mỗi requirement mới đều phải sửa `DiscountCalculator.calculate()`. Code đã test xong cho 'regular' và 'vip' liên tục bị đụng đến, risk regression cao. Đây là OCP violation kinh điển.
 
 ### Tuân thủ OCP
 
@@ -109,7 +109,7 @@ calculator = DiscountCalculator({
 
 ### 1. Polymorphism qua interface/abstract class
 
-Như ví dụ trên — pattern phổ biến nhất, đặc biệt cho variation theo type.
+Như ví dụ trên, pattern phổ biến nhất, đặc biệt cho variation theo type.
 
 ### 2. Strategy pattern
 
@@ -121,7 +121,7 @@ Scale OCP lên architecture level. Vd: VS Code có core nhỏ + hàng nghìn plu
 
 ### 4. Hook / Callback
 
-Cho framework. Vd: WordPress có hook (action, filter); React có lifecycle hooks. Framework không biết business logic — user code "extend" thông qua hook.
+Cho framework. Vd: WordPress có hook (action, filter); React có lifecycle hooks. Framework không biết business logic, user code "extend" thông qua hook.
 
 ### 5. Configuration
 
@@ -147,9 +147,9 @@ Core hệ thống stable, được lock down. Mọi feature mới là plug-in ex
 
 Ví dụ:
 
-- **IDE**: Eclipse, VS Code, IntelliJ — core editor + plug-in ngôn ngữ.
-- **Browser**: Chrome — core engine + extension.
-- **CMS**: WordPress — core + theme + plug-in.
+- **IDE**: Eclipse, VS Code, IntelliJ, core editor + plug-in ngôn ngữ.
+- **Browser**: Chrome, core engine + extension.
+- **CMS**: WordPress, core + theme + plug-in.
 
 Bài 5.5 sẽ đi sâu.
 
@@ -231,7 +231,7 @@ Question: `charge` có throw exception không? Có retry tự động không? C�
 
 ### Sai lầm 4: OCP làm hỏng cohesion
 
-Khi tách quá nhiều abstraction, code rời rạc đến mức không hiểu flow. Đọc một use case phải jump qua 5 file. Đây là dấu hiệu over-OCP — cohesion giảm để cố tăng extensibility.
+Khi tách quá nhiều abstraction, code rời rạc đến mức không hiểu flow. Đọc một use case phải jump qua 5 file. Đây là dấu hiệu over-OCP, cohesion giảm để cố tăng extensibility.
 
 ## Tóm tắt
 
@@ -241,4 +241,4 @@ Khi tách quá nhiều abstraction, code rời rạc đến mức không hiểu 
 - Cẩn thận: OCP đắt, áp dụng khi có variation thực tế.
 - Cân bằng với YAGNI: rule of three.
 
-Bài tiếp: [LSP — Liskov Substitution Principle](05-lsp.md), về cách inheritance phải tuân thủ contract.
+Bài tiếp: [LSP, Liskov Substitution Principle](05-lsp.md), về cách inheritance phải tuân thủ contract.

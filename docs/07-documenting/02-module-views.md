@@ -151,7 +151,7 @@ Audience: developer. Mục đích: hiểu code structure trong container.
 
 ### Level 4: Code (optional)
 
-UML class diagram. Hiếm khi vẽ — code là source of truth.
+UML class diagram. Hiếm khi vẽ, code là source of truth.
 
 ### Tools cho C4
 
@@ -162,7 +162,7 @@ UML class diagram. Hiếm khi vẽ — code là source of truth.
 
 Recommendation: Structurizr DSL hoặc Mermaid + PlantUML.
 
-## ADR — Architecture Decision Record
+## ADR, Architecture Decision Record
 
 ADR doc dạng:
 
@@ -283,4 +283,4 @@ Fix: doc trong git. Code review verify doc updated. CI link checker.
 - **Practical minimum**: README + architecture.md + ADR + API spec + runbook.
 - **Tránh**: big upfront, diagram-only, no audience awareness, doc rot.
 
-Bài tiếp: [C&C Views](03-component-connector-views.md) — runtime structure.
+Bài tiếp: [C&C Views](03-component-connector-views.md), runtime structure.

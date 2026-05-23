@@ -7,7 +7,7 @@ description: Phân biệt Architecture Style vs Architecture Pattern. Bốn fund
 
 # 5.1 Tổng quan Cụm 5: Fundamental Architecture Styles
 
-> **Tóm tắt một dòng**: Architecture Style là "shape" tổng thể của hệ. Cụm này dạy 4 style fundamental (monolithic-friendly): Monolithic baseline, Layered, Pipeline, Microkernel — và quyết định cơ bản nhất: monolithic hay distributed.
+> **Tóm tắt một dòng**: Architecture Style là "shape" tổng thể của hệ. Cụm này dạy 4 style fundamental (monolithic-friendly): Monolithic baseline, Layered, Pipeline, Microkernel, và quyết định cơ bản nhất: monolithic hay distributed.
 
 ## Style vs Pattern
 
@@ -43,7 +43,7 @@ Plus Monolithic vs Distributed comparison (Bài 5.2).
 
 ### 5.2: Monolithic vs Distributed
 
-Trade-off cơ bản nhất. Vì sao monolithic là *default*, khi nào lên distributed. "Distributed Computing Fallacies" — 8 sai lầm phổ biến. Cost của distributed: latency, partial failure, debugging.
+Trade-off cơ bản nhất. Vì sao monolithic là *default*, khi nào lên distributed. "Distributed Computing Fallacies", 8 sai lầm phổ biến. Cost của distributed: latency, partial failure, debugging.
 
 ### 5.3: Layered Architecture
 
@@ -59,7 +59,7 @@ Core (kernel) + Plug-ins. OCP at scale. Examples: VS Code, Eclipse, Chrome, Word
 
 ## Tại sao chỉ 3 style + Monolithic baseline ở Cụm 5?
 
-Cụm 5 cover **fundamental styles** — những style mà toàn hệ chạy trong 1 process (typical monolith), hoặc 1 process với plug-ins. Cụm 6 cover **distributed styles** — nhiều process/network.
+Cụm 5 cover **fundamental styles**, những style mà toàn hệ chạy trong 1 process (typical monolith), hoặc 1 process với plug-ins. Cụm 6 cover **distributed styles**, nhiều process/network.
 
 Reason tách: monolithic thinking và distributed thinking khác nhau cơ bản. Distributed thêm cost mới (network, partial failure, eventual consistency) cần cách reasoning mới.
 

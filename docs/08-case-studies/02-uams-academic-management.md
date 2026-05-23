@@ -5,7 +5,7 @@ sidebar_position: 2
 description: Walk-through end-to-end case study của hệ Academic Management System cho university. QA identification, style selection, component decomposition, key ADRs.
 ---
 
-# 8.2 UAMS — University Academic Management System
+# 8.2 UAMS, University Academic Management System
 
 > **Tóm tắt một dòng**: Case study lập luận end-to-end cho hệ academic management. Conclusion - Service-based architecture với 6 services, shared PostgreSQL với schema-per-service, sync HTTP cho internal call, sync API + sync admin UI. Tổng cost dự kiến $1500/tháng cho 50k students.
 
@@ -339,4 +339,4 @@ UAMS case demonstrates:
 
 Pragmatic, not perfect. Apt for context.
 
-Bài tiếp: [Smart City Traffic Detection](03-smart-city-traffic.md) — context completely different.
+Bài tiếp: [Smart City Traffic Detection](03-smart-city-traffic.md), context completely different.

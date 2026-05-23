@@ -7,7 +7,7 @@ description: Khoá học định cho bạn kỹ năng gì khi kết thúc, vì s
 
 # 1.3 Mục tiêu và kết quả học tập
 
-> **Tóm tắt một dòng**: Khoá này muốn bạn ra trường biết tên 9 architecture styles phổ biến, đọc được documentation kiến trúc bất kỳ, và lập luận được trade-off khi chọn architecture cho dự án mới — chứ không cố làm bạn thành expert ở mọi pattern.
+> **Tóm tắt một dòng**: Khoá này muốn bạn ra trường biết tên 9 architecture styles phổ biến, đọc được documentation kiến trúc bất kỳ, và lập luận được trade-off khi chọn architecture cho dự án mới, chứ không cố làm bạn thành expert ở mọi pattern.
 
 ## Vì sao cần nói rõ mục tiêu?
 
@@ -46,7 +46,7 @@ Cụm 5-6 đi qua 9 style chính: Layered, Pipeline, Microkernel, Monolithic (đ
 
 ### Mục tiêu 4: Đọc và viết documentation kiến trúc chuẩn
 
-Cụm 7 dạy 3 loại view (Module, Component-and-Connector, Allocation) — đây là chuẩn de-facto của ngành. Sau cụm này bạn:
+Cụm 7 dạy 3 loại view (Module, Component-and-Connector, Allocation), đây là chuẩn de-facto của ngành. Sau cụm này bạn:
 
 - Đọc được architecture document bất kỳ và nhận ra đó là loại view nào.
 - Viết được architecture document cho hệ mình thiết kế, dùng đúng notation chuẩn.
@@ -54,7 +54,7 @@ Cụm 7 dạy 3 loại view (Module, Component-and-Connector, Allocation) — đ
 
 ### Mục tiêu 5: Áp dụng vào case study thực
 
-Cụm 8 đi qua 2 case study chi tiết (UAMS — Academic Management System, Smart City Traffic Detection) và một bộ bài tập tổng hợp. Sau cụm này bạn:
+Cụm 8 đi qua 2 case study chi tiết (UAMS, Academic Management System, Smart City Traffic Detection) và một bộ bài tập tổng hợp. Sau cụm này bạn:
 
 - Tự thiết kế kiến trúc end-to-end cho hệ cỡ trung (50-500k user) dựa trên requirement.
 - Trình bày được kiến trúc đó cho người không-kỹ-thuật hiểu (vd: PM, business stakeholder).
@@ -77,7 +77,7 @@ Kết quả học tập là phiên bản đo được của mục tiêu. Sau khi
 | LO9 | Thiết kế end-to-end kiến trúc cho hệ cỡ trung trong 2-3 giờ | 8 |
 | LO10 | Đọc, đánh giá, và phản biện architecture của hệ có sẵn | All |
 
-Bộ LO này khá tham vọng. Đạt được toàn bộ đòi hỏi 30-50 giờ học nghiêm túc + 10-20 giờ thực hành. Đừng vội nản nếu sau lần đọc đầu tiên chưa đạt — kiến trúc là kỹ năng tích luỹ.
+Bộ LO này khá tham vọng. Đạt được toàn bộ đòi hỏi 30-50 giờ học nghiêm túc + 10-20 giờ thực hành. Đừng vội nản nếu sau lần đọc đầu tiên chưa đạt, kiến trúc là kỹ năng tích luỹ.
 
 ## Không nằm trong scope
 
@@ -101,11 +101,11 @@ Service mesh (Istio, Linkerd), serverless (Lambda, Cloud Run), container orchest
 
 ### 5. Performance engineering chi tiết
 
-Khoá có nói về performance là một quality attribute, nhưng không đi sâu vào: caching strategies, database tuning, load testing methodology, profiling tools. Học sau: *Designing Data-Intensive Applications* (Martin Kleppmann) — sách gối đầu giường về scaling.
+Khoá có nói về performance là một quality attribute, nhưng không đi sâu vào: caching strategies, database tuning, load testing methodology, profiling tools. Học sau: *Designing Data-Intensive Applications* (Martin Kleppmann), sách gối đầu giường về scaling.
 
 ### 6. Security architecture chi tiết
 
-Tương tự, security được nhắc đến nhưng không sâu. Nếu quan tâm security thực sự, học một khoá riêng hoặc xem qua [Software Security Foundation](https://tuandung222.github.io/software-security-foundation/) — sister course của khoá này.
+Tương tự, security được nhắc đến nhưng không sâu. Nếu quan tâm security thực sự, học một khoá riêng hoặc xem qua [Software Security Foundation](https://tuandung222.github.io/software-security-foundation/), sister course của khoá này.
 
 ## Lộ trình học tiếp sau khoá
 
@@ -113,20 +113,20 @@ Sau khi hoàn thành khoá này, đây là lộ trình gợi ý theo focus area:
 
 ### Nếu bạn đi hướng Architect chuyên nghiệp
 
-1. Đọc *Fundamentals of Software Architecture* (Mark Richards, Neal Ford) — sách chính của ngành.
-2. Đọc *Software Architecture: The Hard Parts* (Neal Ford, Mark Richards) — phần distributed deeply.
+1. Đọc *Fundamentals of Software Architecture* (Mark Richards, Neal Ford), sách chính của ngành.
+2. Đọc *Software Architecture: The Hard Parts* (Neal Ford, Mark Richards), phần distributed deeply.
 3. Học DDD qua *Domain-Driven Design Distilled* (Vaughn Vernon).
 4. Bắt đầu viết ADR thật trong dự án của bạn.
 
 ### Nếu bạn đi hướng Tech Lead
 
-1. Đọc *The Software Architect Elevator* (Gregor Hohpe) — về vai trò architect trong tổ chức.
-2. Đọc *Team Topologies* (Skelton, Pais) — về cách tổ chức team xung quanh architecture.
+1. Đọc *The Software Architect Elevator* (Gregor Hohpe), về vai trò architect trong tổ chức.
+2. Đọc *Team Topologies* (Skelton, Pais), về cách tổ chức team xung quanh architecture.
 3. Practice trade-off analysis trên dự án thật của team mình.
 
 ### Nếu bạn đi hướng Distributed Systems
 
-1. Đọc *Designing Data-Intensive Applications* (Martin Kleppmann) — bible của ngành.
+1. Đọc *Designing Data-Intensive Applications* (Martin Kleppmann), bible của ngành.
 2. Học Kafka, gRPC, distributed consensus (Raft, Paxos).
 3. Practice với một hệ thật (vd: build một service mesh nhỏ).
 
@@ -143,4 +143,4 @@ Sau khi hoàn thành khoá này, đây là lộ trình gợi ý theo focus area:
 - Sau khoá, có 4 lộ trình tiếp theo tuỳ focus area.
 - Đạt được toàn bộ LO đòi hỏi 30-50 giờ học + thực hành.
 
-Bài tiếp: [Lộ trình đọc tài liệu](04-roadmap.md) — chọn cách đọc phù hợp với bạn.
+Bài tiếp: [Lộ trình đọc tài liệu](04-roadmap.md), chọn cách đọc phù hợp với bạn.

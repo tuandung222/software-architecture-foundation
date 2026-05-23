@@ -55,7 +55,7 @@ Trade-off với layered:
 
 - **Complexity**: phải design plug-in API cẩn thận, manage lifecycle (load, init, dispose).
 - **Performance**: cross-plug-in call có overhead (interface dispatch, marshal data).
-- **Security**: plug-in third-party có thể malicious — cần sandboxing.
+- **Security**: plug-in third-party có thể malicious, cần sandboxing.
 
 ## Examples thực tế
 
@@ -221,7 +221,7 @@ Vd: Browser extension permissions, Android app permissions.
 | Deployability | ★★★★ | Plug-in deploy/update độc lập |
 | Complexity | ★★ | Plug-in API design + lifecycle phức tạp |
 
-Microkernel tối ưu cho **extensibility** — sacrificing performance + simplicity.
+Microkernel tối ưu cho **extensibility**, sacrificing performance + simplicity.
 
 ## Khi dùng Microkernel
 
@@ -314,4 +314,4 @@ Hết Cụm 5. Tóm tắt 3 styles:
 
 Plus **Monolithic vs Distributed** baseline (Bài 5.2).
 
-Cụm tiếp: [Cụm 6 - Distributed Styles](../06-distributed-styles/01-overview.md) — bốn style phân tán quan trọng nhất.
+Cụm tiếp: [Cụm 6 - Distributed Styles](../06-distributed-styles/01-overview.md), bốn style phân tán quan trọng nhất.

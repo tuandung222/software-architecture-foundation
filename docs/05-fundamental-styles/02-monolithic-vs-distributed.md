@@ -7,7 +7,7 @@ description: Quyết định cơ bản nhất khi thiết kế hệ. Vì sao mon
 
 # 5.2 Monolithic vs Distributed
 
-> **Tóm tắt một dòng**: Monolithic = toàn hệ chạy 1 process; Distributed = nhiều process qua network. Monolithic luôn nên là default. Distributed *chỉ* khi có lý do mạnh — vì nó thêm 5x complexity và 5x operational cost.
+> **Tóm tắt một dòng**: Monolithic = toàn hệ chạy 1 process; Distributed = nhiều process qua network. Monolithic luôn nên là default. Distributed *chỉ* khi có lý do mạnh, vì nó thêm 5x complexity và 5x operational cost.
 
 ## Định nghĩa
 
@@ -75,14 +75,14 @@ Nếu *không* match ≥ 2 điểm trên → monolithic vẫn ổn.
 
 Peter Deutsch + James Gosling (Sun Microsystems, 1994) liệt kê 8 sai lầm developer mới hay tin về distributed system:
 
-1. **The network is reliable** — Sai. Packet drops, switches fail, cable bị đào lên.
-2. **Latency is zero** — Sai. Network call 1-100ms vs local call < 1us.
-3. **Bandwidth is infinite** — Sai. Có limit, có cost.
-4. **The network is secure** — Sai. MITM, sniffing nếu không TLS.
-5. **Topology doesn't change** — Sai. Nodes lên xuống, IPs thay đổi.
-6. **There is one administrator** — Sai. Multiple teams config, có conflict.
-7. **Transport cost is zero** — Sai. Network cost cao, đặc biệt cross-region.
-8. **The network is homogeneous** — Sai. Heterogeneous protocol, latency, OS.
+1. **The network is reliable**, Sai. Packet drops, switches fail, cable bị đào lên.
+2. **Latency is zero**, Sai. Network call 1-100ms vs local call < 1us.
+3. **Bandwidth is infinite**, Sai. Có limit, có cost.
+4. **The network is secure**, Sai. MITM, sniffing nếu không TLS.
+5. **Topology doesn't change**, Sai. Nodes lên xuống, IPs thay đổi.
+6. **There is one administrator**, Sai. Multiple teams config, có conflict.
+7. **Transport cost is zero**, Sai. Network cost cao, đặc biệt cross-region.
+8. **The network is homogeneous**, Sai. Heterogeneous protocol, latency, OS.
 
 Mỗi fallacy = một class bug trong production. Distributed system architect phải handle cả 8.
 
@@ -96,7 +96,7 @@ Local call = nanoseconds. HTTP/gRPC call = 1-10ms in best case, 100ms+ across re
 
 ### Cost 2: Partial failure
 
-Monolith: hoặc tất cả lên, hoặc tất cả down. Distributed: service A down, B up — phải handle gracefully (circuit breaker, fallback).
+Monolith: hoặc tất cả lên, hoặc tất cả down. Distributed: service A down, B up, phải handle gracefully (circuit breaker, fallback).
 
 ### Cost 3: Eventual consistency
 
@@ -127,8 +127,8 @@ Mỗi inter-service call cần TLS, auth (mTLS hoặc JWT). Cert rotation, secre
 |---|---|---|
 | Performance | High (in-process) | Medium-Low (network) |
 | Scalability (uniform) | Vertical scale only | Horizontal scale per service |
-| Scalability (varied) | Cannot scale parts | Excellent — scale only hot parts |
-| Availability | All or nothing | Partial — fault isolated |
+| Scalability (varied) | Cannot scale parts | Excellent, scale only hot parts |
+| Availability | All or nothing | Partial, fault isolated |
 | Maintainability | Easy when small, hard when large | Harder per service but easier across team |
 | Deployability | 1 deploy = all changes | Independent deploys |
 | Testability | Easy (in-process) | Hard (E2E + contract test) |
@@ -138,9 +138,9 @@ Mỗi inter-service call cần TLS, auth (mTLS hoặc JWT). Cert rotation, secre
 | Cost (small) | Low ($50-500/mo) | High ($500-5000/mo) |
 | Cost (large) | High (1 huge server) | Optimized (scale only needed parts) |
 
-Insight: trade-off đảo theo scale. Monolithic tốt ở scale nhỏ, distributed tốt ở scale lớn — crossover khoảng 20-50 engineers + 100k+ users.
+Insight: trade-off đảo theo scale. Monolithic tốt ở scale nhỏ, distributed tốt ở scale lớn, crossover khoảng 20-50 engineers + 100k+ users.
 
-## Modular Monolith — middle ground
+## Modular Monolith, middle ground
 
 Trước khi nhảy lên distributed, considermodular monolith:
 
@@ -164,7 +164,7 @@ Khi đã có monolith và cần lên distributed, đừng rewrite from scratch (
 
 1. Build API gateway/proxy in front of monolith.
 2. Cứ feature mới, build microservice mới, route traffic qua gateway.
-3. Dần "strangle" monolith — chuyển features hiện có thành microservice từng phần.
+3. Dần "strangle" monolith, chuyển features hiện có thành microservice từng phần.
 4. Sau N năm, monolith biến mất.
 
 Pattern này safe, gradual, không big-bang rewrite.
@@ -195,8 +195,8 @@ Build distributed mà không có distributed tracing/centralized logging. Debug 
 
 - **Monolithic default**. Distributed chỉ khi có lý do mạnh.
 - **Cost của distributed**: latency, partial failure, consistency, ops, testing, security.
-- **8 fallacies** của distributed computing — đọc kỹ.
+- **8 fallacies** của distributed computing, đọc kỹ.
 - **Modular monolith** là middle ground tốt.
 - **Strangler Fig** để migrate monolith → distributed an toàn.
 
-Bài tiếp: [Layered Architecture](03-layered-architecture.md) — style phổ biến nhất historical.
+Bài tiếp: [Layered Architecture](03-layered-architecture.md), style phổ biến nhất historical.

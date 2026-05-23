@@ -18,8 +18,8 @@ Khoá này được biên soạn để giải quyết đúng vấn đề đó. T
 1. **Bắt đầu bằng nguyên lý nhỏ** (Cụm 2: SOLID, Cohesion-Coupling) vì kiến trúc tốt luôn bắt đầu từ code tốt.
 2. **Lùi lại để nhìn bức tranh lớn** (Cụm 3: Architectural Thinking) để hiểu vì sao kiến trúc khác thiết kế.
 3. **Hiểu cái cần tối ưu** (Cụm 4: Quality Attributes) trước khi chọn cách tối ưu.
-4. **Học các công cụ chuẩn** (Cụm 5-6: Architecture Styles) — từ đơn giản tới phức tạp.
-5. **Biết cách truyền đạt** (Cụm 7: Documenting) — kiến trúc không tài liệu hoá là kiến trúc chết.
+4. **Học các công cụ chuẩn** (Cụm 5-6: Architecture Styles), từ đơn giản tới phức tạp.
+5. **Biết cách truyền đạt** (Cụm 7: Documenting), kiến trúc không tài liệu hoá là kiến trúc chết.
 6. **Áp toàn bộ vào case thực** (Cụm 8: Case Studies) để xem khi nào dùng cái gì.
 
 ## Đối tượng người đọc
@@ -30,7 +30,7 @@ Khoá này được viết với giả định bạn đã có:
 - Hiểu cơ bản về OOP (class, interface, inheritance), HTTP/REST, database SQL/NoSQL.
 - Đã từng làm việc trong team từ 3 người trở lên (vì đó là lúc kiến trúc bắt đầu quan trọng).
 
-Nếu bạn còn thiếu một trong các yếu tố trên, các bài đầu vẫn đọc được nhưng phần code minh hoạ có thể hơi khó. Đừng vội bỏ — hãy quay lại sau khi đã có kinh nghiệm.
+Nếu bạn còn thiếu một trong các yếu tố trên, các bài đầu vẫn đọc được nhưng phần code minh hoạ có thể hơi khó. Đừng vội bỏ, hãy quay lại sau khi đã có kinh nghiệm.
 
 Đối tượng phù hợp nhất:
 
@@ -76,8 +76,8 @@ Vào thẳng cụm hoặc bài cần xem. Mỗi bài tự đứng độc lập (
 Bốn nguyên tắc xuyên suốt:
 
 1. **Trực giác trước hình thức**. Mỗi khái niệm mới đều bắt đầu bằng một câu hỏi đời thường hoặc ví dụ ngắn, rồi mới định nghĩa chặt. Đọc bạn sẽ thấy nhịp điệu kiểu "Hãy tưởng tượng bạn đang xây..." trước khi gặp định nghĩa SOLID hay event sourcing.
-2. **Ví dụ chạy được, không phải pseudo-code**. Code minh hoạ dùng Python, TypeScript, Java thật — không lý thuyết suông kiểu "giả sử class A...". Bạn có thể copy chạy thử.
-3. **Trade-off luôn rõ ràng**. Không có "best practice" tuyệt đối. Mỗi style/pattern/principle đều có *khi nào nên dùng*, *khi nào không*, và *cái giá bạn phải trả*. Một software architect giỏi không thuộc nhiều pattern hơn — họ chọn đúng pattern hơn.
+2. **Ví dụ chạy được, không phải pseudo-code**. Code minh hoạ dùng Python, TypeScript, Java thật, không lý thuyết suông kiểu "giả sử class A...". Bạn có thể copy chạy thử.
+3. **Trade-off luôn rõ ràng**. Không có "best practice" tuyệt đối. Mỗi style/pattern/principle đều có *khi nào nên dùng*, *khi nào không*, và *cái giá bạn phải trả*. Một software architect giỏi không thuộc nhiều pattern hơn, họ chọn đúng pattern hơn.
 4. **Tài liệu hoá là first-class**. Cụm 7 nguyên một cụm dành cho documenting vì kiến trúc không truyền đạt được là kiến trúc chỉ tồn tại trong đầu một người, và sẽ chết khi người đó rời team.
 
 ## Quy ước hiển thị

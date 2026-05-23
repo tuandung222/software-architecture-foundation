@@ -1,13 +1,13 @@
 ---
 id: 05-lsp
-title: 2.5 LSP — Liskov Substitution Principle
+title: 2.5 LSP, Liskov Substitution Principle
 sidebar_position: 5
 description: Subtype phải thay thế được supertype mà không phá behavior của client. Vì sao "Square is-a Rectangle" là sai trong code, ngay cả khi đúng trong toán học.
 ---
 
-# 2.5 LSP — Liskov Substitution Principle
+# 2.5 LSP, Liskov Substitution Principle
 
-> **Tóm tắt một dòng**: Nếu code đang dùng kiểu `T`, bạn pass vào instance của subtype `S` (kế thừa `T`) thì code phải vẫn chạy đúng — nếu không, `S` không xứng là subtype của `T` dù compiler chấp nhận.
+> **Tóm tắt một dòng**: Nếu code đang dùng kiểu `T`, bạn pass vào instance của subtype `S` (kế thừa `T`) thì code phải vẫn chạy đúng, nếu không, `S` không xứng là subtype của `T` dù compiler chấp nhận.
 
 ## Phát biểu gốc
 
@@ -284,4 +284,4 @@ LSP không chỉ về functional behavior. Performance, memory, network calls c�
 - Scale lên architecture: API versioning, schema migration, plug-in stability.
 - Cẩn thận: LSP không check được bởi compiler; cần design review + behavioral test.
 
-Bài tiếp: [ISP — Interface Segregation Principle](06-isp.md), về cách thiết kế interface nhỏ và focused.
+Bài tiếp: [ISP, Interface Segregation Principle](06-isp.md), về cách thiết kế interface nhỏ và focused.

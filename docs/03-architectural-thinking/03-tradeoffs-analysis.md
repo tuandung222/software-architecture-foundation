@@ -7,7 +7,7 @@ description: Mọi quyết định kiến trúc đều có trade-off. Framework 
 
 # 3.3 Phân tích Trade-off
 
-> **Tóm tắt một dòng**: Không có "best architecture" — chỉ có "best given priorities". Job của architect là liệt kê trade-off có hệ thống, không phải pick một option và defend nó. Cùng dạy về cân bằng vai trò architect với hands-on coding.
+> **Tóm tắt một dòng**: Không có "best architecture", chỉ có "best given priorities". Job của architect là liệt kê trade-off có hệ thống, không phải pick một option và defend nó. Cùng dạy về cân bằng vai trò architect với hands-on coding.
 
 ## Câu hỏi nền tảng
 
@@ -15,9 +15,9 @@ description: Mọi quyết định kiến trúc đều có trade-off. Framework 
 
 Mỗi quyết định architecture đều có:
 
-- **Lợi ích** (benefits) — cái nó cải thiện.
-- **Chi phí** (costs) — cái nó hy sinh hoặc thêm vào.
-- **Risk** — điều có thể đi sai.
+- **Lợi ích** (benefits), cái nó cải thiện.
+- **Chi phí** (costs), cái nó hy sinh hoặc thêm vào.
+- **Risk**, điều có thể đi sai.
 
 Architect chuyên nghiệp không "tin" vào style/pattern nào. Họ liệt kê 3 yếu tố trên cho mỗi option, present cho team/stakeholder, hỗ trợ chọn dựa trên *priority hiện tại* của business.
 
@@ -33,7 +33,7 @@ Architect ngây thơ chỉ list lợi ích → quyết định sai.
 
 ### Lý do 2: Chi phí phân tán theo thời gian
 
-Chọn microservices thấy đau ngay tuần 1 (setup phức tạp), nhưng cũng đau ở tháng 24 (operational overhead). Phần lớn cost ở tháng 24 — và architect ngây thơ không cân nhắc khi quyết định ở tuần 1.
+Chọn microservices thấy đau ngay tuần 1 (setup phức tạp), nhưng cũng đau ở tháng 24 (operational overhead). Phần lớn cost ở tháng 24, và architect ngây thơ không cân nhắc khi quyết định ở tuần 1.
 
 ### Lý do 3: Stakeholder khác nhau ưu tiên khác nhau
 
@@ -41,7 +41,7 @@ CTO ưu tiên scalability (long-term). PM ưu tiên time-to-market (short-term).
 
 ### Lý do 4: Khó định lượng
 
-"Maintainability" khó đo bằng số. So sánh "monolith maintainable hơn microservices vì simpler" với "microservices maintainable hơn monolith vì module boundary cứng" — không có metric nào quyết định.
+"Maintainability" khó đo bằng số. So sánh "monolith maintainable hơn microservices vì simpler" với "microservices maintainable hơn monolith vì module boundary cứng", không có metric nào quyết định.
 
 ## Framework ATAM-lite
 
@@ -49,7 +49,7 @@ ATAM (Architecture Tradeoff Analysis Method) là phương pháp formal của SEI
 
 ### Bước 1: Liệt kê options (3-5 cái)
 
-Đừng so 2 options — nó dễ trở thành "tôi vs anh" và mất objectivity. List 3-5 options bao gồm "do nothing" và "naive solution" làm baseline.
+Đừng so 2 options, nó dễ trở thành "tôi vs anh" và mất objectivity. List 3-5 options bao gồm "do nothing" và "naive solution" làm baseline.
 
 Ví dụ cho câu hỏi "Nên dùng cache cho hệ tìm kiếm không?":
 
@@ -246,7 +246,7 @@ Architect vừa làm microservices ở công ty cũ thành công → đề xuấ
 
 ### Sai lầm 4: "Default to complex"
 
-Khi không chắc, chọn solution phức tạp "for future flexibility". Sai. Default nên là *simplest thing that works* — phức tạp khi cần justify được.
+Khi không chắc, chọn solution phức tạp "for future flexibility". Sai. Default nên là *simplest thing that works*, phức tạp khi cần justify được.
 
 ## Tóm tắt
 
@@ -257,4 +257,4 @@ Khi không chắc, chọn solution phức tạp "for future flexibility". Sai. D
 - **Architect coding 20-40%**: stay grounded.
 - **Right-size architecture**: match team size + 1 stage.
 
-Bài tiếp: [Modularity](04-modularity.md) — scale cohesion-coupling lên mức hệ thống.
+Bài tiếp: [Modularity](04-modularity.md), scale cohesion-coupling lên mức hệ thống.

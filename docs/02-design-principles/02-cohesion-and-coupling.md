@@ -13,11 +13,11 @@ description: "Hai khái niệm cốt lõi nhất trong modular design. Cohesion 
 
 Bạn được giao maintain một codebase mới. Hai ngày sau, sếp yêu cầu thêm tính năng X. Bạn mở module dự định sửa và thấy nó:
 
-- Có 47 method, trong đó chỉ 3 method liên quan tới X. 44 method còn lại là validation, logging, email sending, PDF export, tax calculation... — nói chung là "tất cả mọi thứ".
+- Có 47 method, trong đó chỉ 3 method liên quan tới X. 44 method còn lại là validation, logging, email sending, PDF export, tax calculation..., nói chung là "tất cả mọi thứ".
 - Để hiểu logic của 3 method liên quan, bạn phải đọc 5 module khác mà nó import, mỗi module lại depend vào 3-5 module khác.
 - Sau 4 giờ đọc code, bạn vẫn không chắc sửa method có gây side effect ở chỗ nào không.
 
-Codebase trên có cohesion thấp (module ôm đồm) và coupling cao (đụng đến 1 thứ phải hiểu 10 thứ). Đó là code khó maintain — không phải vì developer dở, mà vì *structure* sai. Cohesion và coupling là hai chỉ số quan trọng nhất để chẩn đoán "structure sai" ở mức module.
+Codebase trên có cohesion thấp (module ôm đồm) và coupling cao (đụng đến 1 thứ phải hiểu 10 thứ). Đó là code khó maintain, không phải vì developer dở, mà vì *structure* sai. Cohesion và coupling là hai chỉ số quan trọng nhất để chẩn đoán "structure sai" ở mức module.
 
 ## Cohesion là gì?
 
@@ -27,7 +27,7 @@ Constantine và Yourdon (1979) phân cohesion thành 7 mức, từ thấp nhất
 
 ### 1. Coincidental cohesion (tệ nhất)
 
-Các phần tử ở cùng module hoàn toàn ngẫu nhiên — không có lý do logic nào. Ví dụ: một file `utils.py` chứa `parse_date`, `send_email`, `calculate_tax`, `compress_image`. Chúng không liên quan nhau, chỉ "tiện" đặt cùng chỗ.
+Các phần tử ở cùng module hoàn toàn ngẫu nhiên, không có lý do logic nào. Ví dụ: một file `utils.py` chứa `parse_date`, `send_email`, `calculate_tax`, `compress_image`. Chúng không liên quan nhau, chỉ "tiện" đặt cùng chỗ.
 
 ```python
 # Coincidental cohesion - tệ
@@ -73,19 +73,19 @@ Acceptable cho startup script, nhưng không nên dùng làm pattern cho busines
 
 ### 4. Procedural cohesion (trung bình)
 
-Các phần tử cùng module vì cùng *thuộc một thủ tục* — chạy nối tiếp nhau. Ví dụ: `process_order` gọi `validate_input → check_stock → reserve_inventory → charge_card → ship`. Mỗi step không liên quan trực tiếp tới step trước về mặt data, nhưng cùng thuộc một workflow.
+Các phần tử cùng module vì cùng *thuộc một thủ tục*, chạy nối tiếp nhau. Ví dụ: `process_order` gọi `validate_input → check_stock → reserve_inventory → charge_card → ship`. Mỗi step không liên quan trực tiếp tới step trước về mặt data, nhưng cùng thuộc một workflow.
 
 ### 5. Communicational cohesion (khá)
 
-Các phần tử cùng module vì cùng *thao tác trên một loại data*. Ví dụ: một class `OrderReport` có `generate_csv()`, `generate_pdf()`, `generate_excel()` — tất cả cùng tạo report từ Order entity.
+Các phần tử cùng module vì cùng *thao tác trên một loại data*. Ví dụ: một class `OrderReport` có `generate_csv()`, `generate_pdf()`, `generate_excel()`, tất cả cùng tạo report từ Order entity.
 
 ### 6. Sequential cohesion (tốt)
 
-Các phần tử cùng module vì *output của cái này là input của cái kia*. Ví dụ: pipeline xử lý ảnh: `load → resize → grayscale → save` — mỗi step nhận output của step trước.
+Các phần tử cùng module vì *output của cái này là input của cái kia*. Ví dụ: pipeline xử lý ảnh: `load → resize → grayscale → save`, mỗi step nhận output của step trước.
 
 ### 7. Functional cohesion (tốt nhất)
 
-Mọi phần tử cùng module hợp tác để *làm đúng một việc, không gì khác*. Class `TaxCalculator` chỉ tính thuế — load data, save data, format output đều ở module khác.
+Mọi phần tử cùng module hợp tác để *làm đúng một việc, không gì khác*. Class `TaxCalculator` chỉ tính thuế, load data, save data, format output đều ở module khác.
 
 ```python
 class TaxCalculator:
@@ -173,7 +173,7 @@ config.DB_CONNECTION.execute(...)  # depend on global
 
 ### 6. Content coupling (tệ nhất)
 
-Một module truy cập *trực tiếp internal* của module khác — gọi private method, đọc private field qua reflection, monkey-patch class của module khác.
+Một module truy cập *trực tiếp internal* của module khác, gọi private method, đọc private field qua reflection, monkey-patch class của module khác.
 
 ```python
 # module_b.py
@@ -229,11 +229,11 @@ Năm nguyên lý SOLID đều quy về cohesion cao + coupling thấp ở các g
 
 | SOLID | Cohesion | Coupling | Góc nhìn |
 |---|---|---|---|
-| **SRP** | ↑ | — | Mỗi module một mục đích |
-| **OCP** | — | ↓ | Extend không sửa code cũ |
-| **LSP** | — | ↓ | Subtype substitutable → loose coupling |
+| **SRP** | ↑ |, | Mỗi module một mục đích |
+| **OCP** |, | ↓ | Extend không sửa code cũ |
+| **LSP** |, | ↓ | Subtype substitutable → loose coupling |
 | **ISP** | ↑ | ↓ | Interface nhỏ, client chỉ depend cái cần |
-| **DIP** | — | ↓ | Depend vào abstraction, không vào concretion |
+| **DIP** |, | ↓ | Depend vào abstraction, không vào concretion |
 
 Bạn có thể coi SOLID là *operational rules* cho mục tiêu trừu tượng "high cohesion + low coupling". SOLID dễ áp dụng hơn vì có rule rõ ràng; cohesion-coupling khó áp dụng trực tiếp vì là khái niệm trừu tượng.
 
@@ -253,7 +253,7 @@ Heuristic: chỉ tách ra interface khi:
 2. Cần mock cho test.
 3. Boundary giữa 2 team / 2 service / 2 deployment.
 
-Đừng tách interface "phòng ngừa" — đó là over-engineering.
+Đừng tách interface "phòng ngừa", đó là over-engineering.
 
 ## Tóm tắt
 
@@ -264,4 +264,4 @@ Heuristic: chỉ tách ra interface khi:
 - SOLID là operational rules để đạt mục tiêu này.
 - Cẩn thận over-engineering khi cố giảm coupling.
 
-Bài tiếp: [SRP — Single Responsibility Principle](03-srp.md), nguyên lý đầu tiên trong SOLID và thường bị hiểu sai nhất.
+Bài tiếp: [SRP, Single Responsibility Principle](03-srp.md), nguyên lý đầu tiên trong SOLID và thường bị hiểu sai nhất.

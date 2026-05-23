@@ -220,13 +220,13 @@ Architecture should match team size + 1 stage (Bài 3.3). Đừng over-engineer.
 
 | Topic | Recommended book |
 |---|---|
-| Foundation | *Fundamentals of Software Architecture* — Mark Richards, Neal Ford |
-| Comprehensive | *Software Architecture in Practice* (4th ed) — Bass, Clements, Kazman |
-| Distributed | *Designing Data-Intensive Applications* — Martin Kleppmann |
-| Microservices | *Microservices Patterns* — Chris Richardson |
-| Clean code | *Clean Architecture* — Robert C. Martin |
-| Organizational | *Team Topologies* — Skelton, Pais |
-| Role | *The Software Architect Elevator* — Gregor Hohpe |
+| Foundation | *Fundamentals of Software Architecture*, Mark Richards, Neal Ford |
+| Comprehensive | *Software Architecture in Practice* (4th ed), Bass, Clements, Kazman |
+| Distributed | *Designing Data-Intensive Applications*, Martin Kleppmann |
+| Microservices | *Microservices Patterns*, Chris Richardson |
+| Clean code | *Clean Architecture*, Robert C. Martin |
+| Organizational | *Team Topologies*, Skelton, Pais |
+| Role | *The Software Architect Elevator*, Gregor Hohpe |
 
 ## Final advice
 

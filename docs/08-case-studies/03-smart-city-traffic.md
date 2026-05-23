@@ -72,7 +72,7 @@ Per day: ~700 million events. Per year: ~250 billion. Storage massive.
 
 ### Considerations
 
-- **Scale**: 7-20k events/s — monolithic single instance không feasible.
+- **Scale**: 7-20k events/s, monolithic single instance không feasible.
 - **Heterogeneous sources**: different ingestion logic, parallel.
 - **Real-time detection**: cần stream processing.
 - **Extensibility**: add detection algo dễ → plug-in style.
@@ -183,7 +183,7 @@ graph TD
 
 - **Event-Driven (Cụm 6.4)**: backbone với Kafka.
 - **Microservices (Cụm 6.3)**: fine-grained detection services.
-- **Microkernel (Cụm 5.5)**: detection services là plug-ins to a "detection core" — easy add new algorithm.
+- **Microkernel (Cụm 5.5)**: detection services là plug-ins to a "detection core", easy add new algorithm.
 - **Pipeline (Cụm 5.4)**: ingest → normalize → detect là pipeline.
 
 Multiple styles compose. Architect chọn fit-for-purpose per layer.
@@ -256,7 +256,7 @@ Apache Kafka as event broker for entire pipeline.
 - Pulsar: newer, less ecosystem.
 
 ## Consequences
-- Ops complexity (Kafka cluster management) — invest in tooling.
+- Ops complexity (Kafka cluster management), invest in tooling.
 - Need schema registry (Confluent or Apicurio).
 ```
 
@@ -268,7 +268,7 @@ Detection logic implemented as plug-in microservices that subscribe to traffic-e
 
 ## Rationale
 - New detection algorithms common (city evolves rules).
-- Each algorithm runs independently — fault isolation.
+- Each algorithm runs independently, fault isolation.
 - Can be deployed by different teams.
 
 ## Consequences
@@ -399,6 +399,6 @@ Smart City case demonstrates:
 - **Microkernel** for extensibility (add algorithms).
 - **TimescaleDB + BigQuery** for hot/cold data split.
 
-Both UAMS và Smart City đều "correct" — vì serve different contexts. Skill: chọn đúng combination.
+Both UAMS và Smart City đều "correct", vì serve different contexts. Skill: chọn đúng combination.
 
-Bài tiếp: [Exercise Set](04-exercise-set.md) — bạn tự practice.
+Bài tiếp: [Exercise Set](04-exercise-set.md), bạn tự practice.

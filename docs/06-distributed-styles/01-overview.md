@@ -90,4 +90,4 @@ Tools mature: Spring Cloud (Java), Kubernetes ecosystem (cloud-agnostic), AWS Ap
 | Operational cost | Medium | High | High | Very high |
 | Best for | Enterprise medium | Large scale, complex domain | Decoupling, real-time | Extreme load |
 
-Bài tiếp: [Service-based Architecture](02-service-based.md) — pragmatic middle ground.
+Bài tiếp: [Service-based Architecture](02-service-based.md), pragmatic middle ground.

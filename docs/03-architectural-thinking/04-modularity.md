@@ -35,9 +35,9 @@ Khi chia hệ, mỗi module nên thoả:
 
 1. **Internal high cohesion**: mọi thứ trong module cùng phục vụ một mục đích.
 2. **External low coupling**: module giao tiếp với module khác qua minimal, well-defined interface.
-3. **Domain alignment**: module map vào một "thing" có ý nghĩa với business — không phải vào technical concern.
+3. **Domain alignment**: module map vào một "thing" có ý nghĩa với business, không phải vào technical concern.
 
-Tiêu chí 3 là cốt lõi của khái niệm **bounded context** trong Domain-Driven Design. Module nên reflect business — không reflect tech stack.
+Tiêu chí 3 là cốt lõi của khái niệm **bounded context** trong Domain-Driven Design. Module nên reflect business, không reflect tech stack.
 
 ## Vertical vs Horizontal Slicing
 
@@ -201,14 +201,14 @@ com.company.app/
 └── users/            # Module Users
 ```
 
-Quy tắc: code trong `orders/` không import trực tiếp từ `payments/domain/*` — chỉ từ `payments/api/*`. Build tool có thể enforce qua module-info.java (Java 9+).
+Quy tắc: code trong `orders/` không import trực tiếp từ `payments/domain/*`, chỉ từ `payments/api/*`. Build tool có thể enforce qua module-info.java (Java 9+).
 
 ### Trong microservices
 
 Mỗi service = một module. Boundary = network call. Quy tắc same:
 
 - Service Orders không truy cập database của Payments.
-- Service Orders không gọi internal API của Payments — chỉ gọi public API/event.
+- Service Orders không gọi internal API của Payments, chỉ gọi public API/event.
 - Mỗi service có own database (database-per-service pattern).
 
 ### Trong mobile apps
@@ -266,7 +266,7 @@ Tách module thêm:
 
 Nguyên tắc: tách khi pain xuất hiện. Đừng modularize prophylactically.
 
-Counter-example: startup MVP với 3 developer chia thành 8 modules — over-engineering. 1 monolith file 5000 dòng OK cho MVP, tách khi grow.
+Counter-example: startup MVP với 3 developer chia thành 8 modules, over-engineering. 1 monolith file 5000 dòng OK cho MVP, tách khi grow.
 
 ## Tóm tắt
 

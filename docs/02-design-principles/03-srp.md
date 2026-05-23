@@ -1,13 +1,13 @@
 ---
 id: 03-srp
-title: 2.3 SRP — Single Responsibility Principle
+title: 2.3 SRP, Single Responsibility Principle
 sidebar_position: 3
-description: SRP không phải "mỗi class chỉ làm một việc" như đa số người nghĩ. Định nghĩa modern của Robert Martin là về actors — mỗi module chỉ nên có một lý do để thay đổi vì một stakeholder.
+description: SRP không phải "mỗi class chỉ làm một việc" như đa số người nghĩ. Định nghĩa modern của Robert Martin là về actors, mỗi module chỉ nên có một lý do để thay đổi vì một stakeholder.
 ---
 
-# 2.3 SRP — Single Responsibility Principle
+# 2.3 SRP, Single Responsibility Principle
 
-> **Tóm tắt một dòng**: SRP nói "Mỗi module nên có duy nhất một lý do để thay đổi", với "lý do" là một *actor* (một nhóm stakeholder có cùng yêu cầu) — không phải là "một function" hay "một concept" như thường bị giảng sai.
+> **Tóm tắt một dòng**: SRP nói "Mỗi module nên có duy nhất một lý do để thay đổi", với "lý do" là một *actor* (một nhóm stakeholder có cùng yêu cầu), không phải là "một function" hay "một concept" như thường bị giảng sai.
 
 ## Phiên bản hay bị giảng sai
 
@@ -15,7 +15,7 @@ Mở Google search "Single Responsibility Principle" và bạn sẽ thấy 90% b
 
 > "A class should do only one thing."
 
-Định nghĩa này gần như vô dụng vì "one thing" có thể là bất cứ scope nào. Một class `User` có method `getName()` và `getEmail()` — hai method, hai "thing". Vi phạm SRP? Không. Một class `Calculator` có 10 method tính toán khác nhau — vi phạm? Không.
+Định nghĩa này gần như vô dụng vì "one thing" có thể là bất cứ scope nào. Một class `User` có method `getName()` và `getEmail()`, hai method, hai "thing". Vi phạm SRP? Không. Một class `Calculator` có 10 method tính toán khác nhau, vi phạm? Không.
 
 Vấn đề: định nghĩa này không cho bạn rule kiểm tra được. Nó dẫn tới hệ quả tai hại: developer chia class quá nhỏ ("god classes" thành "fragment classes"), code phình ra hàng trăm class siêu nhỏ, gây overhead cognitive cao mà không giảm bug.
 
@@ -33,7 +33,7 @@ Ví dụ trong một hệ payroll:
 - **HR Manager** muốn export danh sách lương để gửi ngân hàng.
 - **DBA** muốn migrate database schema.
 
-Cả ba đều có thể yêu cầu "sửa class Employee", nhưng họ là *ba actor khác nhau* — yêu cầu của họ có thể *xung đột*. CFO muốn thay đổi cách tính cost (vd: phân bổ benefit theo phòng); HR muốn thay đổi format export; DBA muốn thay đổi cách lưu data. Nếu class `Employee` chứa cả ba logic này, ba yêu cầu có thể đụng nhau trong cùng một method.
+Cả ba đều có thể yêu cầu "sửa class Employee", nhưng họ là *ba actor khác nhau*, yêu cầu của họ có thể *xung đột*. CFO muốn thay đổi cách tính cost (vd: phân bổ benefit theo phòng); HR muốn thay đổi format export; DBA muốn thay đổi cách lưu data. Nếu class `Employee` chứa cả ba logic này, ba yêu cầu có thể đụng nhau trong cùng một method.
 
 SRP nói: **mỗi class nên phục vụ đúng một actor**. Có 3 actor → cần 3 class.
 
@@ -66,7 +66,7 @@ class Employee:
 
 Ba method, ba actor. Vấn đề:
 
-1. **Bug do shared state**: CFO yêu cầu "tính lương theo gross hours" và HR yêu cầu "report theo net hours". Cả hai method dùng `self.hours_worked` — đổi một bên dễ phá bên kia.
+1. **Bug do shared state**: CFO yêu cầu "tính lương theo gross hours" và HR yêu cầu "report theo net hours". Cả hai method dùng `self.hours_worked`, đổi một bên dễ phá bên kia.
 2. **Merge conflict**: Team CFO sửa `calculate_pay`, team HR sửa `report_hours`, cùng file → merge conflict.
 3. **Test phức tạp**: test `calculate_pay` cần setup state mà `report_hours` cũng đụng.
 
@@ -199,7 +199,7 @@ SRP có giá. Trước khi tách class, hỏi 3 câu:
 
 ### Câu 1: Có thực sự 2+ actor không?
 
-Nếu một class `Calculator` thuộc 100% domain tính toán, dùng bởi 1 team — không cần tách dù có 20 method.
+Nếu một class `Calculator` thuộc 100% domain tính toán, dùng bởi 1 team, không cần tách dù có 20 method.
 
 ### Câu 2: Lifespan dự án bao lâu?
 
@@ -225,7 +225,7 @@ class UserAgeCalculator:
     def calculate(self, user): return ...
 ```
 
-Đó không phải SRP — đó là over-decomposition.
+Đó không phải SRP, đó là over-decomposition.
 
 ### Sai lầm 2: Coi "module" = "class"
 
@@ -233,7 +233,7 @@ SRP áp dụng cho mọi unit of code: function, class, module, package, service
 
 ### Sai lầm 3: Coi "responsibility" = "task"
 
-Một class có thể làm nhiều task (method) miễn là cùng cho một actor. `TaxCalculator` có thể có `calculate_income_tax()`, `calculate_vat()`, `calculate_corporate_tax()` — tất cả cho actor CFO/Finance, không vi phạm SRP.
+Một class có thể làm nhiều task (method) miễn là cùng cho một actor. `TaxCalculator` có thể có `calculate_income_tax()`, `calculate_vat()`, `calculate_corporate_tax()`, tất cả cho actor CFO/Finance, không vi phạm SRP.
 
 ### Sai lầm 4: Bỏ qua context
 
@@ -257,4 +257,4 @@ Cụm 6 (Microservices) sẽ build trực tiếp trên insight này.
 - Cẩn thận over-engineering: tách khi có pain, không tách phòng ngừa.
 - Scale lên architecture: microservice = SRP ở mức service.
 
-Bài tiếp: [OCP — Open-Closed Principle](04-ocp.md), về cách mở rộng code mà không sửa code cũ.
+Bài tiếp: [OCP, Open-Closed Principle](04-ocp.md), về cách mở rộng code mà không sửa code cũ.

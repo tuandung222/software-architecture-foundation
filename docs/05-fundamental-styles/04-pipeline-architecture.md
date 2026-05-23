@@ -64,13 +64,13 @@ cat access.log | grep "404" | awk '{print $7}' | sort | uniq -c | sort -rn | hea
 
 Pipeline này:
 
-1. `cat access.log` — producer.
-2. `grep "404"` — tester (only 404 errors).
-3. `awk '{print $7}'` — transformer (extract URL).
-4. `sort` — transformer (sort).
-5. `uniq -c` — transformer (count duplicates).
-6. `sort -rn` — transformer (sort by count desc).
-7. `head -10` — tester (top 10 only).
+1. `cat access.log`, producer.
+2. `grep "404"`, tester (only 404 errors).
+3. `awk '{print $7}'`, transformer (extract URL).
+4. `sort`, transformer (sort).
+5. `uniq -c`, transformer (count duplicates).
+6. `sort -rn`, transformer (sort by count desc).
+7. `head -10`, tester (top 10 only).
 
 Mỗi command đơn giản. Compose thành workflow mạnh. SRP và OCP scaled lên hệ.
 
@@ -176,7 +176,7 @@ Source code → Lexer → Parser → AST → Type Checker →
   Code Generator → Assembler → Linker → Binary
 ```
 
-Mỗi pass là một filter. Output của filter này là input cho filter sau. LLVM nổi tiếng vì design pipeline cực kỳ modular — viết optimizer mới = drop in một filter.
+Mỗi pass là một filter. Output của filter này là input cho filter sau. LLVM nổi tiếng vì design pipeline cực kỳ modular, viết optimizer mới = drop in một filter.
 
 ### ETL Pipeline (Airflow, Luigi)
 
@@ -293,4 +293,4 @@ Style này phù hợp với layered hoặc service-based hơn. Pipeline phù h�
 - **Use cases**: ETL, compiler, image processing, CI/CD, log processing.
 - **Trade-off**: composability + reusability tối ưu; phức tạp khi cần state hoặc branch logic.
 
-Bài tiếp: [Microkernel Architecture](05-microkernel-architecture.md) — OCP ở scale lớn, core + plug-in.
+Bài tiếp: [Microkernel Architecture](05-microkernel-architecture.md), OCP ở scale lớn, core + plug-in.

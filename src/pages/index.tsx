@@ -76,7 +76,7 @@ function LectureGrid(): ReactNode {
           <LectureCard
             number="02"
             title="Design Principles (SOLID)"
-            description="Cohesion/coupling cùng năm nguyên lý SOLID: SRP, OCP, LSP, ISP, DIP — kèm anti-pattern và refactor."
+            description="Cohesion/coupling cùng năm nguyên lý SOLID: SRP, OCP, LSP, ISP, DIP, kèm anti-pattern và refactor."
             to="/docs/02-design-principles/01-overview"
             status="ready"
           />
@@ -97,28 +97,28 @@ function LectureGrid(): ReactNode {
           <LectureCard
             number="05"
             title="Fundamental Styles"
-            description="Monolithic vs Distributed, Layered, Pipeline, Microkernel — bốn style nền tảng và khi nào dùng."
+            description="Monolithic vs Distributed, Layered, Pipeline, Microkernel, bốn style nền tảng và khi nào dùng."
             to="/docs/05-fundamental-styles/01-overview"
             status="ready"
           />
           <LectureCard
             number="06"
             title="Distributed Styles"
-            description="Service-based, Microservices, Event-Driven, Space-Based — bốn style phân tán phổ biến nhất."
+            description="Service-based, Microservices, Event-Driven, Space-Based, bốn style phân tán phổ biến nhất."
             to="/docs/06-distributed-styles/01-overview"
             status="ready"
           />
           <LectureCard
             number="07"
             title="Documenting Architecture"
-            description="Module views, Component-and-Connector views, Allocation views — ba góc nhìn chính khi tài liệu hoá."
+            description="Module views, Component-and-Connector views, Allocation views, ba góc nhìn chính khi tài liệu hoá."
             to="/docs/07-documenting/01-overview"
             status="ready"
           />
           <LectureCard
             number="08"
             title="Case Studies"
-            description="UAMS (Academic Management), Smart City Traffic Detection — áp toàn bộ kiến thức vào case thực + bài tập."
+            description="UAMS (Academic Management), Smart City Traffic Detection, áp toàn bộ kiến thức vào case thực + bài tập."
             to="/docs/08-case-studies/01-overview"
             status="ready"
           />

@@ -24,7 +24,7 @@ Cho mỗi bài tập:
 
 Time budget: 2-3 giờ mỗi bài.
 
-Tốt nhất là làm với 1-2 đồng nghiệp + present cho nhau. SA là kỹ năng *socialized* — debate giúp identify weak reasoning.
+Tốt nhất là làm với 1-2 đồng nghiệp + present cho nhau. SA là kỹ năng *socialized*, debate giúp identify weak reasoning.
 
 ---
 
@@ -57,7 +57,7 @@ Startup Việt Nam build platform giao đồ ăn (như GrabFood, ShopeeFood).
 - **Scale trajectory**: design cho phase 1, planned migration to phase 2.
 - **Real-time tracking**: WebSocket + location streaming.
 - **Order workflow**: state machine (placed → confirmed → preparing → ready → picked → delivered).
-- **Multi-sided platform**: 3 user types (customer, restaurant, driver) — consider BFF pattern.
+- **Multi-sided platform**: 3 user types (customer, restaurant, driver), consider BFF pattern.
 
 ### Things to consider
 
@@ -107,7 +107,7 @@ SaaS giúp building owner quản lý apartment complex (như Yardi, RealPage but
 
 ### Things to consider
 
-- Scale 50-500 customers — service-based likely sufficient.
+- Scale 50-500 customers, service-based likely sufficient.
 - Multi-tenancy strategy có ảnh hưởng lớn đến architecture.
 - Compliance audit log.
 
@@ -147,13 +147,13 @@ Startup fintech build platform giao dịch chứng khoán (Robinhood-style).
 ### Hints
 
 - **Price ticker**: WebSocket streaming. Pub-sub pattern. Redis pub/sub or Kafka?
-- **Order matching engine**: critical path — likely in-house cho fairness/latency.
+- **Order matching engine**: critical path, likely in-house cho fairness/latency.
 - **Historical data**: time-series DB (TimescaleDB, InfluxDB).
 - **Compliance**: event sourcing (cho audit + replay)?
 
 ### Things to consider
 
-- This is "harder" than typical app — financial, real-time, regulated.
+- This is "harder" than typical app, financial, real-time, regulated.
 - Space-Based architecture có relevant không (for matching engine)?
 - Disaster recovery critical.
 
@@ -180,7 +180,7 @@ Manufacturing company want monitor 50 factories worldwide. Each factory has 200 
 
 ### Constraints
 
-- Some factories có poor internet — edge processing cần thiết.
+- Some factories có poor internet, edge processing cần thiết.
 - Latency: anomaly detection within 60s.
 - Cost-sensitive (industrial budget, not tech startup).
 - Compliance: ISO 27001.
@@ -233,7 +233,7 @@ Major e-commerce expand từ Vietnam ra Southeast Asia (Thailand, Indonesia, Phi
 
 ### Things to consider
 
-- This is the hardest exercise — combine migration + multi-region + compliance.
+- This is the hardest exercise, combine migration + multi-region + compliance.
 - Hybrid: legacy monolith + new microservices.
 - Plan over 24-36 months.
 

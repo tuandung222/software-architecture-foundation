@@ -60,7 +60,7 @@ graph TD
 | Operational cost | Medium | High |
 | Time to first deploy | 1-3 tháng | 6-12 tháng |
 
-Service-based là "microservices lite" — get majority of benefits, pay minority of cost.
+Service-based là "microservices lite", get majority of benefits, pay minority of cost.
 
 ## Khi dùng Service-based
 
@@ -265,4 +265,4 @@ Fix: circuit breaker mọi inter-service call. Library: Hystrix, Resilience4j, P
 - **Migration path**: monolith → modular monolith → extract services gradually.
 - **Tránh**: over-fragment, horizontal slicing, schema chaos, no observability, no circuit breaker.
 
-Bài tiếp: [Microservices](03-microservices.md) — next step khi service-based không đủ.
+Bài tiếp: [Microservices](03-microservices.md), next step khi service-based không đủ.

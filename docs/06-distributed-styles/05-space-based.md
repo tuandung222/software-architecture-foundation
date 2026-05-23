@@ -51,7 +51,7 @@ graph TD
 
 ## Tên gọi "space-based"
 
-"Space" = "tuple space" — distributed shared memory concept từ 1980s (Linda language). PUs share một "space" of data qua replication. Mọi PU thấy cùng data như nếu chúng truy cập shared memory.
+"Space" = "tuple space", distributed shared memory concept từ 1980s (Linda language). PUs share một "space" of data qua replication. Mọi PU thấy cùng data như nếu chúng truy cập shared memory.
 
 ## Cách hoạt động
 
@@ -176,4 +176,4 @@ Fix: pre-compute aggregations. Push complex queries to read replica DB asynchron
 
 **Default**: Service-based. Overlay Event-Driven cho async parts. Microservices khi thực sự cần. Space-based khi extreme.
 
-Cụm tiếp: [Cụm 7 - Documenting Architecture](../07-documenting/01-overview.md) — kiến trúc không document là kiến trúc chết.
+Cụm tiếp: [Cụm 7 - Documenting Architecture](../07-documenting/01-overview.md), kiến trúc không document là kiến trúc chết.

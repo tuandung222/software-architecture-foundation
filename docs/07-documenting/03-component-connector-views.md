@@ -261,4 +261,4 @@ Fix: include diagram update in PR template for major changes.
 - **Always label connectors** với type (HTTP/Kafka/gRPC/...).
 - **Tránh**: vẽ mọi sequence, mixed abstraction, outdated.
 
-Bài tiếp: [Allocation Views](04-allocation-views.md) — physical deployment.
+Bài tiếp: [Allocation Views](04-allocation-views.md), physical deployment.

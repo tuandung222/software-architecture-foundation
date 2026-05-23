@@ -7,7 +7,7 @@ description: Vì sao NFR (quality attributes) thường quan trọng hơn functi
 
 # 4.2 Functional vs Non-functional Requirements
 
-> **Tóm tắt một dòng**: Functional requirement nói "hệ phải làm X"; Quality attribute nói "hệ phải làm X *tốt cỡ nào*". Architecture được quyết định bởi QA chứ không phải bởi functional requirement — vì cùng functionality có thể được implement bằng vô số architecture khác nhau.
+> **Tóm tắt một dòng**: Functional requirement nói "hệ phải làm X"; Quality attribute nói "hệ phải làm X *tốt cỡ nào*". Architecture được quyết định bởi QA chứ không phải bởi functional requirement, vì cùng functionality có thể được implement bằng vô số architecture khác nhau.
 
 ## Câu hỏi mở đầu
 
@@ -27,7 +27,7 @@ Team B architect:
 - Multi-region active-active deployment.
 - Cost: $15,000/tháng.
 
-Cả hai đều "đáp ứng functional requirement" — user có thể browse, add to cart, checkout. Nhưng architecture khác nhau 500 lần về cost. Tại sao?
+Cả hai đều "đáp ứng functional requirement", user có thể browse, add to cart, checkout. Nhưng architecture khác nhau 500 lần về cost. Tại sao?
 
 Vì *non-functional requirement* khác nhau:
 
@@ -40,7 +40,7 @@ Vì *non-functional requirement* khác nhau:
 
 ### Functional Requirement (FR)
 
-> "What the system must do." — Hành vi observable mà hệ phải có.
+> "What the system must do.", Hành vi observable mà hệ phải có.
 
 Ví dụ:
 - "User có thể đăng ký account bằng email + password."
@@ -51,7 +51,7 @@ FR pass/fail qua acceptance test: hành vi xảy ra hoặc không.
 
 ### Non-functional Requirement (NFR)
 
-> "How well the system must do it." — Constraint trên cách hệ behave.
+> "How well the system must do it.", Constraint trên cách hệ behave.
 
 Ví dụ:
 - "API response p99 < 200ms cho 95% endpoints."
@@ -59,7 +59,7 @@ Ví dụ:
 - "Hỗ trợ 10,000 concurrent users."
 - "Code 80%+ unit test coverage."
 
-NFR đo qua benchmark, monitoring, code metric. Có thể "đạt mức nào đó" — không pass/fail binary.
+NFR đo qua benchmark, monitoring, code metric. Có thể "đạt mức nào đó", không pass/fail binary.
 
 ### Architecture Characteristic (Mark Richards)
 
@@ -73,11 +73,11 @@ Mark Richards trong *Fundamentals of Software Architecture* dùng từ "architec
 
 Phân tích 3 tiêu chí:
 
-**1. Non-domain**: không thuộc về business logic. Vd "Order phải có tax" là domain rule. "Order processing latency < 200ms" là non-domain — không nói về domain order, nói về *cách* processing.
+**1. Non-domain**: không thuộc về business logic. Vd "Order phải có tax" là domain rule. "Order processing latency < 200ms" là non-domain, không nói về domain order, nói về *cách* processing.
 
-**2. Structural impact**: yêu cầu thay đổi structure của hệ. Vd "100 concurrent user" có thể serve bởi single server. "10M concurrent user" require horizontal scaling, load balancer, có lẽ CDN — structure khác hoàn toàn.
+**2. Structural impact**: yêu cầu thay đổi structure của hệ. Vd "100 concurrent user" có thể serve bởi single server. "10M concurrent user" require horizontal scaling, load balancer, có lẽ CDN, structure khác hoàn toàn.
 
-**3. Critical**: nếu không đạt, hệ fail. Vd: "Pinterest cần search latency < 100ms" — nếu 5 giây thì user rời ngay. "Internal admin tool 2-second latency OK" — không critical.
+**3. Critical**: nếu không đạt, hệ fail. Vd: "Pinterest cần search latency < 100ms", nếu 5 giây thì user rời ngay. "Internal admin tool 2-second latency OK", không critical.
 
 Mọi NFR architectural đều thoả 3 tiêu chí. Một số NFR không thoả tiêu chí 2 (vd "code 80% test coverage" không structural) → không architectural.
 
@@ -85,17 +85,17 @@ Mọi NFR architectural đều thoả 3 tiêu chí. Một số NFR không thoả
 
 ### Explicit
 
-Stakeholder nói rõ trong requirement doc. Vd: "API p99 < 200ms" — viết trong SLA.
+Stakeholder nói rõ trong requirement doc. Vd: "API p99 < 200ms", viết trong SLA.
 
 ### Implicit
 
 Stakeholder không nói nhưng *vẫn expect*. Vd:
 
-- User expect "hệ không bị hack" — security implicit (trừ khi product là hack tool, ha ha).
-- User expect "data không bị mất khi crash" — reliability implicit.
-- Developer expect "build < 5 phút" — maintainability implicit.
+- User expect "hệ không bị hack", security implicit (trừ khi product là hack tool, ha ha).
+- User expect "data không bị mất khi crash", reliability implicit.
+- Developer expect "build < 5 phút", maintainability implicit.
 
-Architect job: identify implicit characteristics. Stakeholder không có ngôn ngữ để articulate chúng — architect đào ra.
+Architect job: identify implicit characteristics. Stakeholder không có ngôn ngữ để articulate chúng, architect đào ra.
 
 Pattern: với mỗi feature, hỏi:
 
@@ -170,7 +170,7 @@ Performance test cần load generator. Scalability cần production-like environ
 
 Business muốn "everything fast and cheap". Architect job: present trade-off, force prioritization.
 
-Tool: ATAM, CQA (Continuous Quality Assurance) workshop — sẽ học ở 4.3.
+Tool: ATAM, CQA (Continuous Quality Assurance) workshop, sẽ học ở 4.3.
 
 ### Conflict nhau
 
@@ -204,4 +204,4 @@ NFR phải justify bằng business impact. "p99 < 200ms vì study cho thấy m�
 - **Implicit characteristics**: architect đào ra từ stakeholder.
 - **NFR khó**: measure, test, negotiate, conflict.
 
-Bài tiếp: [Identifying Architecture Characteristics](03-identifying-characteristics.md) — kỹ thuật extract NFR từ requirement.
+Bài tiếp: [Identifying Architecture Characteristics](03-identifying-characteristics.md), kỹ thuật extract NFR từ requirement.

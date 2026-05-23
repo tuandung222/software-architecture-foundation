@@ -215,7 +215,7 @@ Choose tuỳ team prefer. Choreography phổ biến hơn trong microservices com
 
 Microservices = eventual consistency (most case). Implications:
 
-- "Inventory shows 5, but you ordered, then someone else ordered too" — both succeed, after 100ms one is reverted.
+- "Inventory shows 5, but you ordered, then someone else ordered too", both succeed, after 100ms one is reverted.
 - User experience phải handle stale data ("processing...", optimistic UI).
 - Business team phải hiểu data có thể stale 100ms-30s.
 
@@ -294,4 +294,4 @@ Fix: 2-pizza team (5-8 người) own 2-5 service. Knowledge shared.
 - **Eventual consistency** là norm.
 - **Trade-off**: extreme team independence + scalability, sacrificing simplicity + cost.
 
-Bài tiếp: [Event-Driven Architecture](04-event-driven.md) — async pattern overlay.
+Bài tiếp: [Event-Driven Architecture](04-event-driven.md), async pattern overlay.

@@ -24,14 +24,14 @@ Examples cụ thể:
 - Trong Python: wheel / module.
 - Trong microservices: deployed service.
 
-Key property: **independently deployable**. Component có boundary rõ — vào ra qua interface công khai. Bên trong là chi tiết.
+Key property: **independently deployable**. Component có boundary rõ, vào ra qua interface công khai. Bên trong là chi tiết.
 
 Component khác:
 
 - **Class**: nhỏ hơn. Một component thường chứa nhiều class.
 - **Module** (theo nghĩa code organization): tương đương component ở một số ngữ cảnh, nhưng "module" thường mức code, "component" thường mức deployment.
 
-## Component vs Module — phân biệt
+## Component vs Module, phân biệt
 
 Nuance:
 
@@ -87,15 +87,15 @@ Mỗi approach có pros/cons. Quyết định theo: số workflow cross-entity, 
 
 Ba nguyên tắc cho việc *cái gì nên ở cùng component*:
 
-### REP — Reuse/Release Equivalence Principle
+### REP, Reuse/Release Equivalence Principle
 
 > "The granule of reuse is the granule of release."
 
-Diễn đạt: bất cứ thứ gì bạn release together (cùng version) phải reusable together. Người dùng component không thể chọn release một phần của component — họ get tất cả hoặc không gì.
+Diễn đạt: bất cứ thứ gì bạn release together (cùng version) phải reusable together. Người dùng component không thể chọn release một phần của component, họ get tất cả hoặc không gì.
 
 Hệ quả: classes trong component nên có *common purpose*. Vd: `react-router` package chỉ chứa routing-related code, không lẫn `react-i18n`.
 
-### CCP — Common Closure Principle
+### CCP, Common Closure Principle
 
 > "Gather into components those classes that change for the same reasons and at the same times."
 
@@ -105,7 +105,7 @@ Hệ quả: chia component theo *axis of change*. Vd: nếu UI hay thay đổi s
 
 Note: CCP scale up SRP từ class lên component.
 
-### CRP — Common Reuse Principle
+### CRP, Common Reuse Principle
 
 > "Don't force users of a component to depend on things they don't need."
 
@@ -134,7 +134,7 @@ graph TD
     P --- R
 ```
 
-3 cạnh không thể đều đạt 100% — phải balance. Nguyên tắc:
+3 cạnh không thể đều đạt 100%, phải balance. Nguyên tắc:
 
 - Early stage: prioritize CCP + REP (tooling/team focus on flexibility).
 - Mature stage: shift to CRP (tooling/team focus on stability).
@@ -143,7 +143,7 @@ graph TD
 
 Ba nguyên tắc cho *cách component depend lẫn nhau*:
 
-### ADP — Acyclic Dependencies Principle
+### ADP, Acyclic Dependencies Principle
 
 > "Allow no cycles in the component dependency graph."
 
@@ -155,7 +155,7 @@ Fix:
 - **Move dependency**: tách class gây cycle ra component khác.
 - **Dependency Inversion**: introduce abstraction để break cycle (DIP từ Bài 2.7).
 
-### SDP — Stable Dependencies Principle
+### SDP, Stable Dependencies Principle
 
 > "Depend in the direction of stability."
 
@@ -170,7 +170,7 @@ Lý do: nếu stable component depend volatile, mỗi lần volatile thay đổi
 - `I = 0`: maximally stable (chỉ bị depend, không depend ai).
 - `I = 1`: maximally unstable.
 
-### SAP — Stable Abstractions Principle
+### SAP, Stable Abstractions Principle
 
 > "A component should be as abstract as it is stable."
 
@@ -184,9 +184,9 @@ Lý do: stable component không nên chứa code chi tiết (vì khó thay đổ
 
 SDP + SAP cho relationship I vs A:
 
-- Pain zone: `I = 0, A = 0` — stable concrete (rigid, khó thay đổi).
-- Useless zone: `I = 1, A = 1` — unstable abstract (no purpose).
-- Main sequence: `I + A = 1` — ideal line.
+- Pain zone: `I = 0, A = 0`, stable concrete (rigid, khó thay đổi).
+- Useless zone: `I = 1, A = 1`, unstable abstract (no purpose).
+- Main sequence: `I + A = 1`, ideal line.
 
 ```
 A
@@ -233,7 +233,7 @@ Quy tắc: zero tolerance cho cycle ở component level. Detect + fix immediatel
 
 - **Component** = independently deployable unit, lớn hơn class.
 - **Identify**: entity-based hoặc workflow-based (thường mix).
-- **Cohesion principles**: REP (release together), CCP (change together), CRP (use together) — trade-off.
+- **Cohesion principles**: REP (release together), CCP (change together), CRP (use together), trade-off.
 - **Coupling principles**: ADP (no cycle), SDP (depend toward stable), SAP (stable = abstract).
 - **Main Sequence**: balance I + A = 1.
 

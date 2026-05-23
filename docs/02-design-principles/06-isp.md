@@ -1,11 +1,11 @@
 ---
 id: 06-isp
-title: 2.6 ISP — Interface Segregation Principle
+title: 2.6 ISP, Interface Segregation Principle
 sidebar_position: 6
 description: Client không nên bị force depend vào method nó không dùng. Thà nhiều interface nhỏ và focused hơn một interface to ôm đồm. Áp dụng ở mức kiến trúc với BFF pattern.
 ---
 
-# 2.6 ISP — Interface Segregation Principle
+# 2.6 ISP, Interface Segregation Principle
 
 > **Tóm tắt một dòng**: Đừng force client phụ thuộc vào method nó không dùng. Tách interface lớn thành nhiều interface nhỏ và focused, mỗi cái phục vụ một role/use case cụ thể.
 
@@ -74,7 +74,7 @@ Client cần làm việc → require `Workable`. Client cần feed → require `
 Đặt tên interface theo *role* (vai trò) chứ không phải theo *type*. Vd:
 
 - Sai: `class IUser` chứa mọi method liên quan user.
-- Đúng: `class IAuthenticatable`, `class IBillable`, `class INotifiable` — mỗi role một interface.
+- Đúng: `class IAuthenticatable`, `class IBillable`, `class INotifiable`, mỗi role một interface.
 
 ### Pattern 2: Capability interfaces
 
@@ -132,7 +132,7 @@ UI chỉ depend `UserDisplayService`, không bị couple với admin/analytics l
 
 ## ISP ở mức Architecture
 
-### BFF — Backend for Frontend pattern
+### BFF, Backend for Frontend pattern
 
 Cùng business logic backend phục vụ nhiều client (web, mobile, admin). Mỗi client có *use case khác nhau*:
 
@@ -158,7 +158,7 @@ Mỗi BFF cung cấp API tailor-made cho client. Core services không cần bi�
 
 Tương tự BFF nhưng ở mức gateway. Gateway có thể aggregate nhiều microservice thành response phù hợp client. Mỗi endpoint của gateway = một role-specific interface.
 
-### CQRS — Command Query Responsibility Segregation
+### CQRS, Command Query Responsibility Segregation
 
 Tách read API (queries) khỏi write API (commands). Mỗi side có interface riêng:
 
@@ -184,7 +184,7 @@ Cân nhắc:
 
 - **Áp ISP** khi có ≥ 2 client với nhu cầu khác nhau.
 - **Bỏ qua** khi interface chỉ phục vụ 1 client (split không có ích).
-- **Bỏ qua** khi method trong interface đều có cohesion cao (vd: `BankAccount` có `deposit`, `withdraw`, `get_balance` — tất cả phục vụ "bank account" role, không tách).
+- **Bỏ qua** khi method trong interface đều có cohesion cao (vd: `BankAccount` có `deposit`, `withdraw`, `get_balance`, tất cả phục vụ "bank account" role, không tách).
 
 Nguyên tắc: ISP fix khi *client thực sự bị force* depend vào method không dùng. Không "phòng ngừa".
 
@@ -192,7 +192,7 @@ Nguyên tắc: ISP fix khi *client thực sự bị force* depend vào method kh
 
 ### Sai lầm 1: Single-method interfaces khắp nơi
 
-Java codebase thường có `IFooReader`, `IFooWriter`, `IFooDeleter`, `IFooUpdater` cho mỗi entity. Đó không phải ISP — đó là over-decomposition. Method có cohesion cao nên gom chung.
+Java codebase thường có `IFooReader`, `IFooWriter`, `IFooDeleter`, `IFooUpdater` cho mỗi entity. Đó không phải ISP, đó là over-decomposition. Method có cohesion cao nên gom chung.
 
 ### Sai lầm 2: Coi ISP đồng nghĩa với "interface nhỏ"
 
@@ -215,4 +215,4 @@ SRP về *responsibility* (lý do thay đổi). ISP về *interface* (phương t
 - Scale lên architecture: BFF, API Gateway, CQRS.
 - Cẩn thận: ISP đo theo client need, không theo kích thước.
 
-Bài tiếp (cuối cùng SOLID): [DIP — Dependency Inversion Principle](07-dip.md), nguyên lý quan trọng nhất ở mức architecture.
+Bài tiếp (cuối cùng SOLID): [DIP, Dependency Inversion Principle](07-dip.md), nguyên lý quan trọng nhất ở mức architecture.

@@ -120,7 +120,7 @@ graph TD
 
 Phù hợp markdown documentation.
 
-## ADR — Architecture Decision Record
+## ADR, Architecture Decision Record
 
 Đã giới thiệu Bài 3.3. Format:
 

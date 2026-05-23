@@ -159,7 +159,7 @@ Trade-off: user có thể thấy stale data short term. Business phải accept e
 
 Past tense: `OrderPlaced`, không `PlaceOrder`. Event = something happened.
 
-Command (request to do something): `PlaceOrder` — này là command, không phải event.
+Command (request to do something): `PlaceOrder`, này là command, không phải event.
 
 ### Event content
 
@@ -328,4 +328,4 @@ Fix: idempotent consumer. Track processed event IDs. Vd: insert row only if ID n
 - **Mạnh cho**: integration, real-time, scale, audit.
 - **Tránh**: dùng cho sync query, tightly-coupled events, no ordering, no idempotency.
 
-Bài tiếp: [Space-Based Architecture](05-space-based.md) — extreme load architecture.
+Bài tiếp: [Space-Based Architecture](05-space-based.md), extreme load architecture.

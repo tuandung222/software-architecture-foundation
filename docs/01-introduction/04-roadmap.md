@@ -73,10 +73,10 @@ Tổng: ~35-55 giờ trong 8-9 tuần (4-7h/tuần). Khuyến khích đi cùng m
 |---|---|---|
 | 1 | [Course Summary](../resources/course-summary.md) | 1-2h |
 | 2 | [Exam Checklist](../resources/exam-checklist.md) | 30 phút |
-| 3 | Cụm 2 (SOLID) — chỉ overview + 5 SOLID files | 1.5h |
-| 4 | Cụm 5+6 — chỉ overview + 1-2 style chính | 1.5h |
-| 5 | Cụm 7 — chỉ overview + 4+1 model nhanh | 30 phút |
-| 6 | [Glossary](../resources/glossary.md) — scan để spot weak terms | 1h |
+| 3 | Cụm 2 (SOLID), chỉ overview + 5 SOLID files | 1.5h |
+| 4 | Cụm 5+6, chỉ overview + 1-2 style chính | 1.5h |
+| 5 | Cụm 7, chỉ overview + 4+1 model nhanh | 30 phút |
+| 6 | [Glossary](../resources/glossary.md), scan để spot weak terms | 1h |
 
 Tổng: ~5-8 giờ. Hiệu quả nếu bạn đã quen với khái niệm và chỉ cần refresh.
 
@@ -86,7 +86,7 @@ Tổng: ~5-8 giờ. Hiệu quả nếu bạn đã quen với khái niệm và ch
 
 - Vào [Glossary](../resources/glossary.md) để tìm thuật ngữ → click vào link bài chi tiết.
 - Vào [Cross-reference](../resources/cross-reference.md) để xem bản đồ chủ đề.
-- Vào bài cụ thể bất kỳ — mỗi bài được viết tự-độc-lập với prerequisites được nhắc lại ngắn gọn.
+- Vào bài cụ thể bất kỳ, mỗi bài được viết tự-độc-lập với prerequisites được nhắc lại ngắn gọn.
 
 Không có thời gian cố định. Phù hợp khi cần check một concept hoặc compare 2-3 styles.
 
@@ -96,34 +96,34 @@ Nếu bạn chỉ quan tâm một focus area cụ thể, đây là sequence tố
 
 ### Shortcut 1: "Tôi chỉ muốn hiểu microservices" (8-12 giờ)
 
-1. [Cụm 1.2: SA là gì?](02-what-is-software-architecture.md) — 30 phút.
-2. [Cụm 3: Architectural Thinking](../03-architectural-thinking/01-overview.md) — 4-6h.
-3. [Cụm 4: Quality Attributes](../04-quality-attributes/01-overview.md) — chỉ overview + identifying. 2h.
-4. [Cụm 5.2: Monolithic vs Distributed](../05-fundamental-styles/02-monolithic-vs-distributed.md) — 1h.
-5. [Cụm 6.3: Microservices](../06-distributed-styles/03-microservices.md) + 6.4 Event-Driven — 2-3h.
+1. [Cụm 1.2: SA là gì?](02-what-is-software-architecture.md), 30 phút.
+2. [Cụm 3: Architectural Thinking](../03-architectural-thinking/01-overview.md), 4-6h.
+3. [Cụm 4: Quality Attributes](../04-quality-attributes/01-overview.md), chỉ overview + identifying. 2h.
+4. [Cụm 5.2: Monolithic vs Distributed](../05-fundamental-styles/02-monolithic-vs-distributed.md), 1h.
+5. [Cụm 6.3: Microservices](../06-distributed-styles/03-microservices.md) + 6.4 Event-Driven, 2-3h.
 
 ### Shortcut 2: "Tôi muốn dạy team cách document architecture" (4-6 giờ)
 
-1. [Cụm 1.2: SA là gì?](02-what-is-software-architecture.md) — 30 phút.
-2. [Cụm 4.3: Identifying characteristics](../04-quality-attributes/03-identifying-characteristics.md) — 1h.
-3. Cả [Cụm 7: Documenting](../07-documenting/01-overview.md) — 4-6h.
-4. Practice viết ADR cho 1 quyết định gần nhất trong team — 1h.
+1. [Cụm 1.2: SA là gì?](02-what-is-software-architecture.md), 30 phút.
+2. [Cụm 4.3: Identifying characteristics](../04-quality-attributes/03-identifying-characteristics.md), 1h.
+3. Cả [Cụm 7: Documenting](../07-documenting/01-overview.md), 4-6h.
+4. Practice viết ADR cho 1 quyết định gần nhất trong team, 1h.
 
 ### Shortcut 3: "Tôi muốn master SOLID và improve code quality team" (10-15 giờ)
 
-1. [Cụm 1.2: SA là gì?](02-what-is-software-architecture.md) — 30 phút.
-2. Cả [Cụm 2: Design Principles](../02-design-principles/01-overview.md) — 6-10h.
-3. [Cụm 3.4: Modularity](../03-architectural-thinking/04-modularity.md) — 1.5h.
-4. Practice refactor 5-10 đoạn code thật vi phạm SOLID — 3-5h.
+1. [Cụm 1.2: SA là gì?](02-what-is-software-architecture.md), 30 phút.
+2. Cả [Cụm 2: Design Principles](../02-design-principles/01-overview.md), 6-10h.
+3. [Cụm 3.4: Modularity](../03-architectural-thinking/04-modularity.md), 1.5h.
+4. Practice refactor 5-10 đoạn code thật vi phạm SOLID, 3-5h.
 
 ### Shortcut 4: "Tôi chuẩn bị interview Senior/Staff Engineer" (15-20 giờ)
 
-1. Cụm 1 đầy đủ — 1-2h.
-2. Cụm 2 SOLID — 4-6h.
-3. Cụm 3 + 4 — 6-8h (quan trọng cho behavior-level questions).
-4. Cụm 5 + 6 — 4-6h (system design questions thường hỏi style trade-off).
-5. Cụm 7.1 + 7.2 — 1.5h.
-6. [Course Summary](../resources/course-summary.md) — 1-2h.
+1. Cụm 1 đầy đủ, 1-2h.
+2. Cụm 2 SOLID, 4-6h.
+3. Cụm 3 + 4, 6-8h (quan trọng cho behavior-level questions).
+4. Cụm 5 + 6, 4-6h (system design questions thường hỏi style trade-off).
+5. Cụm 7.1 + 7.2, 1.5h.
+6. [Course Summary](../resources/course-summary.md), 1-2h.
 
 ## Lưu ý khi học
 
@@ -133,11 +133,11 @@ SA là kỹ năng *applied*. Đọc lý thuyết suông sẽ quên rất nhanh. 
 
 - Áp dụng vào ít nhất một dự án bạn đang làm hoặc đã làm.
 - Vẽ topology trên giấy (không gõ vào tool).
-- Giải thích lại cho đồng nghiệp/bạn cùng học — nếu giải thích không trôi nghĩa là bạn chưa hiểu.
+- Giải thích lại cho đồng nghiệp/bạn cùng học, nếu giải thích không trôi nghĩa là bạn chưa hiểu.
 
 ### Đừng ngại quay lại
 
-Đọc lần đầu xong Cụm 6 mà chưa hiểu thật sự là chuyện bình thường. Quay lại Cụm 4 (quality attributes) thường giúp click. SA có nhiều khái niệm circular — phải đi qua vài lần để thấm.
+Đọc lần đầu xong Cụm 6 mà chưa hiểu thật sự là chuyện bình thường. Quay lại Cụm 4 (quality attributes) thường giúp click. SA có nhiều khái niệm circular, phải đi qua vài lần để thấm.
 
 ### Đừng bị quyến rũ bởi trends
 
