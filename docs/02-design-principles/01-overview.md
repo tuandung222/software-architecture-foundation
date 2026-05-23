@@ -22,6 +22,14 @@ Nghĩa là:
 
 SOLID đảm bảo bricks tốt. Architecture (Cụm 3-7) đảm bảo xếp đúng. Cả hai đều cần, và SOLID phải đến trước vì nó là tiền đề.
 
+## Nếu bạn đến từ Data Science
+
+Với Data Scientist, SOLID có thể nghe như một chủ đề thuần OOP, xa lạ với notebook và pipeline. Nhưng hãy nhìn vào một tình huống rất quen: một notebook training ban đầu chỉ vài cell, sau đó lớn dần thành 2000 dòng. Nó vừa đọc dữ liệu, clean, join, feature engineering, train model, tune hyperparameter, evaluate, save artifact, tạo chart và export report. Mỗi lần sửa một bước nhỏ, bạn sợ làm hỏng bước khác.
+
+Đó chính là vấn đề SOLID muốn giải quyết ở cấp code. SRP giúp tách `data_loader`, `feature_builder`, `trainer`, `evaluator`. OCP giúp thêm model mới mà không sửa evaluator. LSP giúp mọi model tuân thủ cùng contract `fit/predict`. ISP giúp không ép model nào cũng phải có `explain()` nếu nó không hỗ trợ. DIP giúp training logic không phụ thuộc cứng vào S3, BigQuery hay MLflow.
+
+Nói cách khác: SOLID là cây cầu từ notebook prototype sang package ML production có thể test, review và maintain.
+
 ## Cụm 2 sẽ dạy gì?
 
 Cụm này có 7 bài, chia hai phần:

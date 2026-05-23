@@ -9,6 +9,12 @@ description: Module nên mở cho extension nhưng đóng cho modification. Các
 
 > **Tóm tắt một dòng**: OCP nói code đã viết và tested xong không nên phải sửa khi requirement mới đến, chỉ nên *thêm code mới*. Cách phổ biến: thiết kế các điểm extension bằng interface/abstraction, mở rộng qua polymorphism hoặc plug-in.
 
+## Nếu bạn đến từ Data Science
+
+OCP xuất hiện khi bạn muốn thêm model mới mà không sửa toàn bộ pipeline. Hôm nay bạn dùng logistic regression, tuần sau thử XGBoost, tháng sau thử neural network. Nếu mỗi lần thêm model bạn phải sửa evaluator, trainer, registry và serving code, hệ thống chưa closed for modification.
+
+Một thiết kế tốt định nghĩa contract chung, ví dụ `fit`, `predict`, `predict_proba`, `metadata`. Model mới chỉ cần implement contract đó. Pipeline không cần biết bên trong là sklearn, LightGBM hay PyTorch. Đây là OCP ở dạng rất thực tế cho ML.
+
 ## Định nghĩa
 
 Bertrand Meyer phát biểu OCP lần đầu năm 1988:

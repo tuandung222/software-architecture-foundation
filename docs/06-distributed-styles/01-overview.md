@@ -9,6 +9,12 @@ description: Bốn distributed architecture style quan trọng nhất - Service-
 
 > **Tóm tắt một dòng**: Cụm này dạy 4 style phân tán phổ biến nhất, từ "nhẹ" (Service-based) tới "phức tạp" (Space-Based). Mỗi style giải quyết một bài toán scale + decoupling cụ thể, với cost distributed khác nhau.
 
+## Nếu bạn đến từ Data Science
+
+Distributed styles hấp dẫn vì nghe giống production-ready, nhưng cũng là nơi DS team dễ over-engineer nhất. Một ML platform nhỏ không cần bắt đầu bằng Kubernetes, Kafka, 30 microservices và service mesh. Hãy hỏi Quality Attributes trước: cần freshness theo giây hay theo ngày? Load bao nhiêu? Team có người trực production không? Có cần independent deploy từng component không?
+
+Thông thường, path an toàn là: modular package hoặc modular monolith, sau đó service-based, sau đó mới microservices/event-driven cho phần thật sự cần scale hoặc decoupling.
+
 ## Distributed style ladder
 
 ```mermaid

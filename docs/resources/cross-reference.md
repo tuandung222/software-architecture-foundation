@@ -190,6 +190,19 @@ Path: 5.2 → 3.4 → 6.2 → 6.3 → 8.2 (counter-example: don't go full micros
 
 Time: ~8 giờ
 
+## Shortcut path cho Data Scientist
+
+Nếu mục tiêu của bạn là đưa model/data pipeline vào production, đi theo path này:
+
+1. [SA là gì](../01-introduction/02-what-is-software-architecture.md): hiểu decision nào thật sự là architecture.
+2. [Trade-off Analysis](../03-architectural-thinking/03-tradeoffs-analysis.md): cân accuracy, latency, freshness, cost.
+3. [Quality Attributes](../04-quality-attributes/01-overview.md): chuyển từ model metric sang system metric.
+4. [Pipeline Architecture](../05-fundamental-styles/04-pipeline-architecture.md): production hoá ETL/training/scoring.
+5. [Event-Driven](../06-distributed-styles/04-event-driven.md): hiểu streaming feature và realtime detection.
+6. [C&C Views](../07-documenting/03-component-connector-views.md): vẽ online inference runtime flow.
+7. [Smart City case](../08-case-studies/03-smart-city-traffic.md): xem một hệ data/ML realtime end-to-end.
+8. [Lộ trình cho Data Scientist](data-scientist-learning-path.md): checklist và bài tập riêng.
+
 ## Khái niệm dễ confused
 
 ### Architecture vs Design

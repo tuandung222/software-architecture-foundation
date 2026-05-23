@@ -9,6 +9,12 @@ description: Style phổ biến nhất lịch sử. Topology UI/Business/Persist
 
 > **Tóm tắt một dòng**: Hệ chia thành tầng theo technical concern (UI, Business, Data). Đơn giản, được hiểu rộng, nhưng dễ rơi vào "sinkhole anti-pattern" và khó scale theo domain.
 
+## Nếu bạn đến từ Data Science
+
+Layered Architecture có thể map sang model serving khá tự nhiên. Presentation layer là HTTP API hoặc batch entrypoint. Business layer là inference logic: validate request, lấy feature, gọi model, format result. Persistence layer là nơi đọc model artifact, feature store, metadata database hoặc object storage.
+
+Điểm cần tránh là để API layer biết quá nhiều chi tiết model và storage. Nếu endpoint trực tiếp load file pickle, query warehouse, transform feature và return response, bạn đang trộn layer. Khi muốn đổi model registry hoặc feature store, API sẽ bị sửa nhiều.
+
 ## Topology
 
 ```mermaid

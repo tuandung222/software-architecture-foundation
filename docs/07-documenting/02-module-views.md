@@ -9,6 +9,12 @@ description: View về static structure code. Subtypes - decomposition, dependen
 
 > **Tóm tắt một dòng**: Module View show static structure của code - module nào tồn tại, depend module nào. Quan trọng cho developer hiểu codebase và cho architect verify modularity (Cụm 3.4).
 
+## Nếu bạn đến từ Data Science
+
+Module View giúp biến project ML từ một thư mục notebook lộn xộn thành cấu trúc có ý nghĩa. Ví dụ `data`, `features`, `training`, `evaluation`, `registry`, `serving`, `monitoring` là các module có trách nhiệm khác nhau. Khi nhìn module view, người mới biết code feature nằm đâu, code inference nằm đâu, và boundary nào không nên phá.
+
+Nếu module view không rõ, training và serving thường copy logic của nhau. Đó là nguồn gốc của training-serving skew.
+
 ## Module là gì trong context view này
 
 Module = implementation unit. Có thể là:

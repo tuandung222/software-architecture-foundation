@@ -9,6 +9,12 @@ description: Subtype phải thay thế được supertype mà không phá behavi
 
 > **Tóm tắt một dòng**: Nếu code đang dùng kiểu `T`, bạn pass vào instance của subtype `S` (kế thừa `T`) thì code phải vẫn chạy đúng, nếu không, `S` không xứng là subtype của `T` dù compiler chấp nhận.
 
+## Nếu bạn đến từ Data Science
+
+LSP có thể hiểu qua sklearn estimator. Khi bạn viết code dùng `model.predict(X)`, bạn kỳ vọng bất kỳ model nào thay vào cũng trả về số lượng prediction khớp với số dòng input, không mutate `X` bất ngờ, và không yêu cầu caller biết chi tiết nội bộ. Nếu một model con phá kỳ vọng đó, nó không substitutable.
+
+Trong production, LSP giúp serving code an toàn hơn. Nếu mọi model version tuân thủ cùng inference contract, bạn có thể deploy model mới mà không sửa API layer. Nếu contract bị phá, lỗi thường xuất hiện ở runtime, đúng lúc user thật đang gọi hệ thống.
+
 ## Phát biểu gốc
 
 Barbara Liskov (Turing Award 2008) phát biểu năm 1987:

@@ -41,6 +41,29 @@ graph TD
 - **Sync communication**: HTTP/gRPC giữa services. Có thể overlay async với event.
 - **API Gateway** ở front: routing, auth, rate limiting.
 
+## Nếu bạn đến từ Data Science
+
+Service-based thường là điểm bắt đầu thực tế nhất cho ML platform vừa và nhỏ. Bạn không cần 50 microservices để productionize model. Thường 4-8 service coarse-grained là đủ:
+
+```mermaid
+graph TD
+    UI[Internal UI] --> API[API Gateway]
+    API --> FS[Feature Service]
+    API --> TR[Training Orchestrator]
+    API --> MR[Model Registry Service]
+    API --> SV[Serving Service]
+    API --> MO[Monitoring Service]
+    FS --> DB[(Shared Metadata DB)]
+    TR --> DB
+    MR --> DB
+    SV --> DB
+    MO --> DB
+```
+
+Trong topology này, team vẫn có boundary rõ: feature team own Feature Service, platform team own Registry/Serving, data team own Training Orchestrator. Nhưng operational cost vẫn thấp hơn full microservices vì database và deployment model chưa bị tách quá mịn.
+
+Nếu team DS/ML của bạn nhỏ hơn 15 người, hãy rất cẩn thận trước khi chọn microservices. Service-based hoặc modular monolith thường là bước trưởng thành hơn.
+
 ## So với Monolith
 
 - Service deploy độc lập (team velocity).

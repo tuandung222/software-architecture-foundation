@@ -106,6 +106,26 @@ description: Bảng checklist để bạn tự kiểm tra mức master sau khi �
 - [ ] Mentor 1 mid-level engineer về 1 SOLID principle.
 - [ ] Write architecture document cho 1 service hoàn chỉnh (intro + 3 views + 5 ADR).
 
+## Production ML / Data Scientist checklist
+
+Dùng phần này nếu bạn đến từ Data Science và muốn tự đánh giá khả năng áp dụng architecture vào ML/data systems.
+
+- [ ] Tôi phân biệt được model metric và system Quality Attribute.
+- [ ] Tôi giải thích được vì sao accuracy cao chưa đủ để productionize model.
+- [ ] Tôi so sánh được batch inference, online inference và hybrid inference.
+- [ ] Tôi viết được freshness SLA cho feature quan trọng.
+- [ ] Tôi biết feature store giải quyết training-serving skew như thế nào.
+- [ ] Tôi vẽ được training pipeline dưới dạng Pipeline Architecture.
+- [ ] Tôi vẽ được online prediction flow bằng C&C View.
+- [ ] Tôi biết model registry cần lưu model version, data version, feature schema và metric.
+- [ ] Tôi biết rollback model version cần component nào hỗ trợ.
+- [ ] Tôi biết khi nào Kafka/streaming là cần thiết, khi nào batch job đủ.
+- [ ] Tôi biết log prediction thế nào để audit mà không leak PII.
+- [ ] Tôi biết monitoring production ML cần latency, error rate, drift, feature null rate và business metric.
+- [ ] Tôi nhận ra distributed monolith trong một ML platform tách service sai boundary.
+- [ ] Tôi viết được ADR cho quyết định batch vs online inference.
+- [ ] Tôi thiết kế được architecture sơ bộ cho churn prediction, fraud detection hoặc recommendation serving.
+
 ## Self-scoring
 
 | Score | Meaning |

@@ -21,6 +21,21 @@ Mỗi quyết định architecture đều có:
 
 Architect chuyên nghiệp không "tin" vào style/pattern nào. Họ liệt kê 3 yếu tố trên cho mỗi option, present cho team/stakeholder, hỗ trợ chọn dựa trên *priority hiện tại* của business.
 
+## Nếu bạn đến từ Data Science
+
+Trong Data Science, bạn đã quen với trade-off, chỉ là bạn thường gọi nó bằng tên khác. Bạn cân precision và recall. Bạn cân bias và variance. Bạn cân model complexity và overfitting. Software Architecture cũng vậy, nhưng trade-off nằm ở mức hệ thống.
+
+Ví dụ, câu hỏi "có nên deploy model online không?" không thể trả lời bằng câu "online hiện đại hơn". Bạn phải so các option:
+
+| Option | Lợi ích | Giá phải trả |
+|---|---|---|
+| Batch scoring mỗi đêm | Rẻ, đơn giản, dễ audit | Prediction stale, không realtime |
+| Online inference CPU | Fresh hơn, tích hợp API dễ | Cần quản lý latency, autoscaling, uptime |
+| Online inference GPU | Chạy model lớn nhanh hơn | Cost cao, scheduling khó, cold start |
+| Hybrid batch + online rerank | Cân bằng tốt | Logic và monitoring phức tạp hơn |
+
+Đây là cùng tư duy với model selection, nhưng đơn vị tối ưu không còn là AUC. Đơn vị tối ưu là latency, freshness, cost, reliability, explainability, privacy và khả năng vận hành.
+
 ## Vì sao trade-off khó
 
 Vài lý do trade-off thường bị làm sai:

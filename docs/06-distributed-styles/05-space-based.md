@@ -9,6 +9,12 @@ description: Style cho extreme load và elasticity. In-memory data grid + async 
 
 > **Tóm tắt một dòng**: Style đặc thù cho extreme load - mọi data nằm in-memory được replicate qua nodes, DB chỉ sync background. Loại bỏ DB bottleneck nhưng cost cao và niche. Phù hợp Black Friday, ticket sales, real-time auction.
 
+## Nếu bạn đến từ Data Science
+
+Space-Based Architecture là niche, nhưng bạn có thể hiểu nó qua online feature serving ở scale rất lớn. Nếu mỗi prediction phải lookup nhiều feature trong vài mili-giây, team có thể đặt feature hot trong memory grid/cache thay vì query database trực tiếp. Application đọc từ memory space, còn database sync phía sau.
+
+Đổi lại, consistency khó hơn. Feature trong memory có thể trễ so với source of truth. Vì vậy style này chỉ hợp khi latency/throughput cực kỳ quan trọng và business chấp nhận eventual consistency.
+
 ## Vấn đề mà Space-Based giải
 
 Hầu hết web app gặp bottleneck ở database khi load tăng. Even với connection pool, read replica, sharding, DB vẫn là điểm yếu khi load thực sự cao.

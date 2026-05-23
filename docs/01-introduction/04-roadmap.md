@@ -2,16 +2,20 @@
 id: 04-roadmap
 title: 1.4 Lộ trình đọc tài liệu
 sidebar_position: 4
-description: Sơ đồ phụ thuộc giữa các cụm, ba lộ trình đọc khác nhau (chuyên sâu, ôn thi, tra cứu) cùng ước lượng thời gian và shortcuts theo focus area.
+description: Sơ đồ phụ thuộc giữa các cụm, các lộ trình đọc khác nhau, đặc biệt có path riêng cho Data Scientist muốn học Software Architecture để đưa model và data pipeline vào production.
 ---
 
 # 1.4 Lộ trình đọc tài liệu
 
-> **Tóm tắt một dòng**: Có ba lộ trình tuỳ vào mục đích (chuyên sâu 30-40h, ôn thi 5-8h, tra cứu nhanh on-demand), và 4 shortcut paths cho ai chỉ quan tâm một focus area (microservices, documenting, design principles, hoặc preparation for senior interview).
+> **Tóm tắt một dòng**: Không phải ai cũng nên đọc khoá theo cùng một thứ tự. Nếu bạn là Data Scientist, hãy ưu tiên Quality Attributes, Pipeline Architecture, Event-Driven Architecture và Documenting trước khi đi sâu vào microservices.
+
+## Trước khi chọn lộ trình
+
+Software Architecture là một môn học có tính mạng lưới. Bạn không học một khái niệm rồi đóng lại, mà liên tục quay lại khái niệm đó ở mức sâu hơn. Ví dụ, ban đầu bạn học **cohesion/coupling** ở cấp class. Sang Cụm 3, bạn gặp lại nó ở cấp module. Sang Cụm 6, bạn gặp lại ở cấp service. Sang Cụm 7, bạn phải vẽ được nó thành diagram.
+
+Vì vậy, lộ trình đọc không chỉ là thứ tự file. Nó là cách giảm tải nhận thức. Người đã quen backend có thể đọc thẳng từ Cụm 1 tới Cụm 8. Người đến từ Data Science nên đi qua một số điểm cầu trước, vì các khái niệm như interface, bounded context, deployment view hoặc distributed transaction không phải vocabulary thường ngày của DS.
 
 ## Sơ đồ phụ thuộc giữa các cụm
-
-Trước khi chọn lộ trình, hãy nhìn xem các cụm phụ thuộc nhau ra sao:
 
 ```mermaid
 graph LR
@@ -38,117 +42,145 @@ graph LR
 
 Quy ước màu:
 
-- **Xanh nhạt**: warm-up (đọc nhẹ).
-- **Vàng cam**: design level (SOLID + thinking).
-- **Xanh lá**: characteristics (NFR + ATAM).
-- **Tím**: structural styles.
-- **Hồng**: communication (documenting).
-- **Vàng**: application (case studies).
+- **Xanh nhạt**: warm-up, đọc nhẹ để dựng khung.
+- **Vàng cam**: design level, từ code tốt tới tư duy kiến trúc.
+- **Xanh lá**: characteristics, tức cái hệ thống cần tối ưu.
+- **Tím**: structural styles, tức cách tổ chức hệ thống.
+- **Hồng**: communication, tức cách truyền đạt kiến trúc.
+- **Vàng**: application, tức case study và bài tập.
 
-## Ba lộ trình chính
+## Lộ trình A: Chuyên sâu đầy đủ
 
-### Lộ trình A: Chuyên sâu (chuẩn, 30-50 giờ)
-
-Đối tượng: học viên cao học cần điểm cao, lập trình viên chuẩn bị thăng tiến lên Tech Lead/Architect.
+Đối tượng: người muốn học nền tảng Software Architecture một cách nghiêm túc, có thể là developer, Tech Lead tương lai, ML Engineer muốn chuyển sang platform, hoặc học viên cao học.
 
 | Tuần | Cụm | Thời gian | Mục tiêu |
-|---|---|---|---|
-| 1 | Cụm 1 | 1-2h | Set up framework tư duy |
-| 1-2 | Cụm 2 | 6-10h | Master SOLID, refactor 5-10 đoạn code thật |
-| 3 | Cụm 3 | 4-6h | Trade-off thinking, distinguish arch vs design |
-| 4 | Cụm 4 | 4-6h | Identify QA cho 2-3 hệ thực tế bạn đang dùng |
-| 5 | Cụm 5 | 5-7h | Vẽ topology 4 fundamental styles |
-| 6 | Cụm 6 | 5-7h | Vẽ topology 4 distributed styles, so sánh |
-| 7 | Cụm 7 | 4-6h | Vẽ 3 view cho hệ bạn đang làm, viết 2 ADR |
-| 8 | Cụm 8 | 6-10h | Làm cả 2 case study + bộ exercise |
-| 9 | Course Summary | 1-2h | Tổng hợp, ôn lại weak spots |
+|---|---|---:|---|
+| 1 | Cụm 1 | 1-2h | Set up vocabulary và framework tư duy |
+| 1-2 | Cụm 2 | 6-10h | Từ code khó sửa sang code có boundary rõ |
+| 3 | Cụm 3 | 4-6h | Biết phân biệt architecture decision và design decision |
+| 4 | Cụm 4 | 4-6h | Biết chọn và đo Quality Attributes |
+| 5 | Cụm 5 | 5-7h | Nắm monolith, layered, pipeline, microkernel |
+| 6 | Cụm 6 | 5-7h | Nắm service-based, microservices, event-driven, space-based |
+| 7 | Cụm 7 | 4-6h | Vẽ 3 view và viết ADR |
+| 8 | Cụm 8 | 6-10h | Áp toàn bộ vào case study |
+| 9 | Resources | 1-2h | Ôn lại bằng summary, glossary, checklist |
 
-Tổng: ~35-55 giờ trong 8-9 tuần (4-7h/tuần). Khuyến khích đi cùng một dự án thật để áp dụng từng cụm.
+Tổng: khoảng 35-55 giờ. Đừng cố đọc hết trong một cuối tuần. Tốt nhất là đọc mỗi cụm rồi áp vào một hệ thống bạn biết: một web app, một data pipeline, một model serving system, hoặc một project công ty.
 
-### Lộ trình B: Ôn thi (nhanh, 5-8 giờ)
+## Lộ trình B: Data Scientist to Software Architecture
 
-Đối tượng: đã có background SA, cần ôn nhanh cho thi cử hoặc phỏng vấn.
+Đối tượng: Data Scientist, ML Engineer, Data Engineer muốn hiểu architecture để đưa model và data pipeline vào production.
+
+### Vì sao path này khác?
+
+Nếu bạn đến từ DS, bạn đã quen với pipeline, data quality, metric, experiment, model artifact. Nhưng bạn có thể chưa quen với cách software team nghĩ về deployment, interface contract, module boundary, availability, rollback, observability. Path này tận dụng cái bạn đã biết trước, rồi nối sang khái niệm mới.
+
+| Thứ tự | Bài | Thời gian | Bạn học được gì |
+|---|---|---:|---|
+| 1 | [1.2 Software Architecture là gì?](02-what-is-software-architecture.md) | 45m | Vì sao batch vs online inference là decision kiến trúc |
+| 2 | [3.3 Trade-off Analysis](../03-architectural-thinking/03-tradeoffs-analysis.md) | 1.5h | Cân accuracy, latency, freshness, cost, explainability |
+| 3 | [4.1 Quality Attributes](../04-quality-attributes/01-overview.md) | 1h | Chuyển từ model metric sang system metric |
+| 4 | [4.2 FR vs NFR](../04-quality-attributes/02-functional-vs-nfr.md) | 1h | Phân biệt "predict được" với "predict ổn trong production" |
+| 5 | [5.4 Pipeline Architecture](../05-fundamental-styles/04-pipeline-architecture.md) | 2h | Map ETL/ML pipeline sang filter-and-pipe architecture |
+| 6 | [6.4 Event-Driven Architecture](../06-distributed-styles/04-event-driven.md) | 2h | Hiểu streaming features, Kafka, async workflows |
+| 7 | [6.2 Service-based Architecture](../06-distributed-styles/02-service-based.md) | 1.5h | Tổ chức feature service, training service, serving service |
+| 8 | [7.3 C&C Views](../07-documenting/03-component-connector-views.md) | 1h | Vẽ runtime flow của online inference |
+| 9 | [8.3 Smart City Traffic](../08-case-studies/03-smart-city-traffic.md) | 2h | Case real-time data/ML system end-to-end |
+| 10 | [Lộ trình cho Data Scientist](../resources/data-scientist-learning-path.md) | 30m | Checklist và bài tập riêng cho DS |
+
+Tổng: khoảng 13-16 giờ. Sau path này, bạn nên tự tin hơn khi bàn với backend/platform team về feature store, inference latency, model monitoring, hoặc batch vs online architecture.
+
+## Lộ trình C: Refresh nhanh
+
+Đối tượng: đã biết software architecture hoặc system design, muốn refresh nhanh để dùng trong công việc.
 
 | Thứ tự | Tài liệu | Thời gian |
-|---|---|---|
+|---|---|---:|
 | 1 | [Course Summary](../resources/course-summary.md) | 1-2h |
-| 2 | [Exam Checklist](../resources/exam-checklist.md) | 30 phút |
-| 3 | Cụm 2 (SOLID), chỉ overview + 5 SOLID files | 1.5h |
-| 4 | Cụm 5+6, chỉ overview + 1-2 style chính | 1.5h |
-| 5 | Cụm 7, chỉ overview + 4+1 model nhanh | 30 phút |
-| 6 | [Glossary](../resources/glossary.md), scan để spot weak terms | 1h |
+| 2 | [Cross-reference](../resources/cross-reference.md) | 30m |
+| 3 | Cụm 4 overview + Cụm 5/6 overview | 1-2h |
+| 4 | Bài cụ thể đang cần | tuỳ nhu cầu |
+| 5 | [Glossary](../resources/glossary.md) | 30m |
 
-Tổng: ~5-8 giờ. Hiệu quả nếu bạn đã quen với khái niệm và chỉ cần refresh.
+Path này không phù hợp nếu bạn mới hoàn toàn. Nó giống dùng bản đồ khi bạn đã biết thành phố, không phải tour guide cho lần đầu.
 
-### Lộ trình C: Tra cứu (on-demand)
+## Lộ trình D: Tra cứu on-demand
 
-Đối tượng: đã làm SA, vào tra cứu nhanh khi cần.
+Đối tượng: người đã làm dự án thật và chỉ muốn check nhanh một concept.
 
-- Vào [Glossary](../resources/glossary.md) để tìm thuật ngữ → click vào link bài chi tiết.
-- Vào [Cross-reference](../resources/cross-reference.md) để xem bản đồ chủ đề.
-- Vào bài cụ thể bất kỳ, mỗi bài được viết tự-độc-lập với prerequisites được nhắc lại ngắn gọn.
+- Cần thuật ngữ: mở [Glossary](../resources/glossary.md).
+- Cần xem concept liên quan nhau: mở [Cross-reference](../resources/cross-reference.md).
+- Cần DS-specific path: mở [Lộ trình cho Data Scientist](../resources/data-scientist-learning-path.md).
+- Cần review chất lượng nội dung theo góc DS: mở [Review nội dung cho Data Scientist](../resources/content-review-ds.md).
 
-Không có thời gian cố định. Phù hợp khi cần check một concept hoặc compare 2-3 styles.
+## Shortcut paths theo focus area
 
-## Bốn shortcut paths theo focus area
+### Shortcut 1: Tôi muốn hiểu microservices
 
-Nếu bạn chỉ quan tâm một focus area cụ thể, đây là sequence tối ưu:
+1. [1.2 Software Architecture là gì?](02-what-is-software-architecture.md), 30 phút.
+2. [3.3 Trade-off Analysis](../03-architectural-thinking/03-tradeoffs-analysis.md), 1.5h.
+3. [4.1 Quality Attributes](../04-quality-attributes/01-overview.md), 1h.
+4. [5.2 Monolithic vs Distributed](../05-fundamental-styles/02-monolithic-vs-distributed.md), 1h.
+5. [6.2 Service-based](../06-distributed-styles/02-service-based.md), 1h.
+6. [6.3 Microservices](../06-distributed-styles/03-microservices.md), 2h.
+7. [6.4 Event-Driven](../06-distributed-styles/04-event-driven.md), 2h.
 
-### Shortcut 1: "Tôi chỉ muốn hiểu microservices" (8-12 giờ)
+Điểm quan trọng: hãy đọc service-based trước microservices. Nếu bỏ qua bước này, bạn rất dễ nghĩ chỉ có hai cực: monolith hoặc microservices. Thực tế nhiều hệ tốt nằm ở giữa.
 
-1. [Cụm 1.2: SA là gì?](02-what-is-software-architecture.md), 30 phút.
-2. [Cụm 3: Architectural Thinking](../03-architectural-thinking/01-overview.md), 4-6h.
-3. [Cụm 4: Quality Attributes](../04-quality-attributes/01-overview.md), chỉ overview + identifying. 2h.
-4. [Cụm 5.2: Monolithic vs Distributed](../05-fundamental-styles/02-monolithic-vs-distributed.md), 1h.
-5. [Cụm 6.3: Microservices](../06-distributed-styles/03-microservices.md) + 6.4 Event-Driven, 2-3h.
+### Shortcut 2: Tôi muốn document architecture cho team
 
-### Shortcut 2: "Tôi muốn dạy team cách document architecture" (4-6 giờ)
+1. [1.2 Software Architecture là gì?](02-what-is-software-architecture.md), 30 phút.
+2. [4.3 Identifying characteristics](../04-quality-attributes/03-identifying-characteristics.md), 1h.
+3. [7.1 Documenting overview](../07-documenting/01-overview.md), 1h.
+4. [7.2 Module Views](../07-documenting/02-module-views.md), 1.5h.
+5. [7.3 C&C Views](../07-documenting/03-component-connector-views.md), 1.5h.
+6. [7.4 Allocation Views](../07-documenting/04-allocation-views.md), 1.5h.
 
-1. [Cụm 1.2: SA là gì?](02-what-is-software-architecture.md), 30 phút.
-2. [Cụm 4.3: Identifying characteristics](../04-quality-attributes/03-identifying-characteristics.md), 1h.
-3. Cả [Cụm 7: Documenting](../07-documenting/01-overview.md), 4-6h.
-4. Practice viết ADR cho 1 quyết định gần nhất trong team, 1h.
+Nếu bạn làm ML/data platform, hãy practice bằng một flow cụ thể: online prediction request đi qua API, feature lookup, model inference, logging, monitoring như thế nào.
 
-### Shortcut 3: "Tôi muốn master SOLID và improve code quality team" (10-15 giờ)
+### Shortcut 3: Tôi muốn refactor code DS/ML cho dễ maintain
 
-1. [Cụm 1.2: SA là gì?](02-what-is-software-architecture.md), 30 phút.
-2. Cả [Cụm 2: Design Principles](../02-design-principles/01-overview.md), 6-10h.
-3. [Cụm 3.4: Modularity](../03-architectural-thinking/04-modularity.md), 1.5h.
-4. Practice refactor 5-10 đoạn code thật vi phạm SOLID, 3-5h.
+1. [2.2 Cohesion và Coupling](../02-design-principles/02-cohesion-and-coupling.md), 1.5h.
+2. [2.3 SRP](../02-design-principles/03-srp.md), 1h.
+3. [2.4 OCP](../02-design-principles/04-ocp.md), 1h.
+4. [2.7 DIP](../02-design-principles/07-dip.md), 1h.
+5. [3.4 Modularity](../03-architectural-thinking/04-modularity.md), 1.5h.
+6. Practice: tách một notebook training thành package có `data`, `features`, `training`, `evaluation`, `serving`, 3-5h.
 
-### Shortcut 4: "Tôi chuẩn bị interview Senior/Staff Engineer" (15-20 giờ)
+### Shortcut 4: Tôi muốn thiết kế production ML system
 
-1. Cụm 1 đầy đủ, 1-2h.
-2. Cụm 2 SOLID, 4-6h.
-3. Cụm 3 + 4, 6-8h (quan trọng cho behavior-level questions).
-4. Cụm 5 + 6, 4-6h (system design questions thường hỏi style trade-off).
-5. Cụm 7.1 + 7.2, 1.5h.
-6. [Course Summary](../resources/course-summary.md), 1-2h.
+1. [4.1 Quality Attributes](../04-quality-attributes/01-overview.md)
+2. [5.4 Pipeline Architecture](../05-fundamental-styles/04-pipeline-architecture.md)
+3. [6.4 Event-Driven Architecture](../06-distributed-styles/04-event-driven.md)
+4. [6.2 Service-based Architecture](../06-distributed-styles/02-service-based.md)
+5. [7.3 C&C Views](../07-documenting/03-component-connector-views.md)
+6. [8.3 Smart City Traffic](../08-case-studies/03-smart-city-traffic.md)
+7. [Lộ trình cho Data Scientist](../resources/data-scientist-learning-path.md)
+
+Mục tiêu cuối path này: bạn vẽ được kiến trúc cho churn prediction, fraud detection, recommendation serving hoặc ML monitoring platform.
 
 ## Lưu ý khi học
 
-### Đừng "cày" lý thuyết một mình
+### Đừng chỉ đọc, hãy vẽ
 
-SA là kỹ năng *applied*. Đọc lý thuyết suông sẽ quên rất nhanh. Mỗi cụm hãy:
+Software Architecture là kỹ năng applied. Đọc xong một style mà không vẽ topology thì rất dễ tưởng mình hiểu nhưng khi gặp project thật lại bí. Sau mỗi bài ở Cụm 5/6, hãy vẽ lại bằng tay:
 
-- Áp dụng vào ít nhất một dự án bạn đang làm hoặc đã làm.
-- Vẽ topology trên giấy (không gõ vào tool).
-- Giải thích lại cho đồng nghiệp/bạn cùng học, nếu giải thích không trôi nghĩa là bạn chưa hiểu.
+- Component nào nhận input?
+- Component nào lưu state?
+- Data đi qua đâu?
+- Failure xảy ra ở đâu?
+- Nếu load tăng 10 lần, scale chỗ nào?
 
-### Đừng ngại quay lại
-
-Đọc lần đầu xong Cụm 6 mà chưa hiểu thật sự là chuyện bình thường. Quay lại Cụm 4 (quality attributes) thường giúp click. SA có nhiều khái niệm circular, phải đi qua vài lần để thấm.
+Với DS, hãy dùng project quen thuộc của bạn. Ví dụ: một pipeline train churn model hằng ngày. Vẽ data source, feature transformation, training job, model registry, batch scoring, CRM export, monitoring.
 
 ### Đừng bị quyến rũ bởi trends
 
-Trong 5 năm gần đây, microservices, event-driven, serverless được hype rất nhiều. Khoá này dạy bạn để *phản biện* được trends, không phải để follow chúng. Một monolith được thiết kế tốt có thể serve 80% dự án tốt hơn microservices được thiết kế sai.
+Microservices, event-driven, feature store, vector database, service mesh đều có chỗ dùng đúng. Nhưng không cái nào là thuốc chữa bách bệnh. Một cron job đơn giản có monitoring tốt đôi khi thắng một Kafka pipeline phức tạp nhưng không ai vận hành nổi.
 
-### Code thực sự là phần thiết yếu
+### Quay lại Cụm 4 nhiều lần
 
-Bài 3.3 (Balancing Architecture and Hands-On Coding) sẽ nói rõ vì sao architect cần vẫn code. Tuyệt đối đừng coi SA là "thoát code lên design". Quan điểm đó dẫn tới kiến trúc bị disconnect với thực tế.
+Nếu bạn thấy phân vân giữa hai architecture style, thường là vì bạn chưa nói rõ Quality Attributes. Muốn freshness cao hay cost thấp? Muốn latency thấp hay explainability cao? Muốn consistency mạnh hay availability cao? Cụm 4 là nơi giúp bạn biến tranh luận cảm tính thành quyết định có lý do.
 
 ## Tiếp theo
 
-Hết Cụm 1. Bạn nên bắt đầu Cụm 2 với [Tổng quan Design Principles](../02-design-principles/01-overview.md).
-
-Nếu muốn xem bản đồ toàn khoá ở mức gọn hơn, vào [Course Summary](../resources/course-summary.md). Nếu cần check thuật ngữ, vào [Glossary](../resources/glossary.md).
+Nếu bạn đi theo path chuẩn, bắt đầu với [Cụm 1: Tổng quan](01-overview.md). Nếu bạn đến từ Data Science, mở [Lộ trình cho Data Scientist](../resources/data-scientist-learning-path.md) trước, rồi quay lại các bài trong path B.

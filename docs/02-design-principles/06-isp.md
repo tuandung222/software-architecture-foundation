@@ -9,6 +9,12 @@ description: Client không nên bị force depend vào method nó không dùng. 
 
 > **Tóm tắt một dòng**: Đừng force client phụ thuộc vào method nó không dùng. Tách interface lớn thành nhiều interface nhỏ và focused, mỗi cái phục vụ một role/use case cụ thể.
 
+## Nếu bạn đến từ Data Science
+
+ISP giúp tránh một interface quá to cho mọi loại model. Không phải model nào cũng train online được. Không phải model nào cũng explain được. Không phải model nào cũng support `partial_fit`. Nếu bạn ép mọi model implement một interface khổng lồ, nhiều method sẽ raise `NotImplementedError`, và client code phải check lung tung.
+
+Tách interface nhỏ hơn sẽ tự nhiên hơn: `Predictor`, `Trainer`, `Explainer`, `OnlineLearner`, `BatchScorer`. Client nào cần predict chỉ phụ thuộc `Predictor`. Client nào cần explain mới phụ thuộc `Explainer`.
+
 ## Định nghĩa
 
 Robert C. Martin, *Agile Software Development* (2002):

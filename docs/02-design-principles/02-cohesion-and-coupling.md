@@ -9,6 +9,12 @@ description: "Hai khái niệm cốt lõi nhất trong modular design. Cohesion 
 
 > **Tóm tắt một dòng**: Một module tốt là module mà các phần tử bên trong nó tập trung vào cùng một mục đích (cohesion cao) và không bị ràng buộc chặt vào các module khác (coupling thấp). Hai chỉ số này quyết định cả cost-to-change và cost-to-understand của codebase.
 
+## Nếu bạn đến từ Data Science
+
+Cohesion và coupling xuất hiện rất rõ trong notebook. Một notebook có low cohesion khi cùng một file vừa load data, vừa clean, vừa train, vừa plot, vừa export report. Một notebook có high coupling khi đổi tên một column ở bước feature engineering làm vỡ training, evaluation và dashboard ở nhiều cell khác nhau.
+
+Khi chuyển sang production, mục tiêu là tách trách nhiệm: data loading, validation, feature transform, training, evaluation, serving, monitoring. Mỗi phần nên có cohesion cao và giao tiếp với phần khác qua contract rõ. Nếu làm được điều này, pipeline dễ test hơn, model dễ thay hơn, và lỗi data dễ khoanh vùng hơn.
+
 ## Một câu hỏi trước khi vào định nghĩa
 
 Bạn được giao maintain một codebase mới. Hai ngày sau, sếp yêu cầu thêm tính năng X. Bạn mở module dự định sửa và thấy nó:

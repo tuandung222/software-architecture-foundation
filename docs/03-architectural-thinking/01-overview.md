@@ -9,6 +9,10 @@ description: Cụm 3 mở rộng tư duy từ code-level (Cụm 2) lên system-l
 
 > **Tóm tắt một dòng**: Cụm 2 dạy bạn viết code tốt ở mức class/module. Cụm 3 dạy bạn *suy nghĩ như architect*, phân biệt cái gì là architectural, cân nhắc trade-off có hệ thống, và scale principles modularity từ module lên hệ thống.
 
+## Nếu bạn đến từ Data Science
+
+Cụm 3 là bước chuyển từ tư duy "chọn model nào" sang "chọn hình dạng hệ thống nào". Một Data Scientist đã quen so sánh model bằng metric. Architect cũng so sánh option, nhưng metric là latency, cost, freshness, privacy, reliability và maintainability. Đây là cụm giúp bạn học cách lập luận khi không có một đáp án đúng tuyệt đối.
+
 ## Vì sao có cụm này
 
 Bạn vừa hoàn thành Cụm 2, master SOLID. Có thể bạn nghĩ "vậy là biết kiến trúc rồi". Sai. SOLID là *necessary* (cần) nhưng không *sufficient* (đủ) cho kiến trúc tốt. Một codebase có thể tuân thủ 100% SOLID nhưng vẫn vỡ ở mức kiến trúc vì:

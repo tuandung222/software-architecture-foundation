@@ -9,6 +9,12 @@ description: Core ổn định plus plug-ins extensible. OCP scale lên architec
 
 > **Tóm tắt một dòng**: Hệ thống chia thành một core stable nhỏ + nhiều plug-in mở rộng tính năng. OCP ở scale lớn. Phù hợp cho product cần third-party extension hoặc customization mạnh.
 
+## Nếu bạn đến từ Data Science
+
+Microkernel rất hợp với platform cho nhiều model hoặc nhiều thuật toán. Core giữ những thứ ổn định: data contract, pipeline orchestration, registry, logging, permission. Plug-in là phần thay đổi nhiều: model algorithm, feature transformation, evaluation metric, explanation method.
+
+Ví dụ một evaluation platform có core đọc prediction/label và tính report chuẩn. Team có thể thêm metric plug-in như AUC, F1, calibration error, fairness metric mà không sửa core. Đây là OCP ở mức architecture.
+
 ## Topology cốt lõi
 
 ```mermaid

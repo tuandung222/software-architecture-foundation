@@ -42,6 +42,22 @@ Total: **~7300 events/s** sustained, peak 15-20k events/s.
 
 Per day: ~700 million events. Per year: ~250 billion. Storage massive.
 
+
+### Góc nhìn Data Scientist
+
+Nếu bạn đến từ Data Science, case này nên được đọc như một production ML system hơn là một bài backend thông thường. Model phát hiện tai nạn chỉ là một component ở giữa pipeline. Trước model có ingestion, validation, normalization, feature construction. Sau model có alerting, audit log, dashboard, storage nóng/lạnh và monitoring.
+
+Điểm quan trọng là model không tự quyết định kiến trúc. Kiến trúc bị chi phối bởi các Quality Attributes:
+
+- **Freshness**: dữ liệu camera/sensor/GPS phải đến detector đủ nhanh.
+- **Latency**: incident cần được detect trong vài chục giây.
+- **Throughput**: hệ phải xử lý hàng nghìn event mỗi giây.
+- **Reliability**: không được mất event quan trọng.
+- **Auditability**: khi có alert sai, phải truy lại input, model version, feature version.
+- **Evolvability**: thêm detector mới mà không dừng toàn hệ thống.
+
+Vì vậy lựa chọn Event-Driven + Pipeline + Microkernel không phải vì "hiện đại", mà vì nó match với QA của bài toán. Đây là cách bạn nên đọc mọi architecture decision trong case.
+
 ## 2. Identify Quality Attributes
 
 ### Top 7 QA
@@ -387,7 +403,7 @@ End-to-end: camera frame to alert ~15-20s. Within target.
 | Cost | $1500-2500/month | $15-20k/month |
 | Team needed | 15 engineers | 25-30 engineers + 5 ML + 3 SRE |
 
-Architecture khác hoàn toàn vì *context khác*. Same lecturer's principles, different applications.
+Architecture khác hoàn toàn vì *context khác*. Cùng một bộ nguyên tắc, nhưng áp dụng khác nhau khi Quality Attributes thay đổi.
 
 ## Tóm tắt
 

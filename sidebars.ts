@@ -112,6 +112,8 @@ const sidebars: SidebarsConfig = {
         'resources/course-summary',
         'resources/glossary',
         'resources/cross-reference',
+        'resources/content-review-ds',
+        'resources/data-scientist-learning-path',
         'resources/pdfs',
         'resources/exam-checklist',
       ],

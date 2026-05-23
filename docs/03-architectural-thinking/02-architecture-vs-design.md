@@ -9,6 +9,10 @@ description: Phân biệt thực hành quyết định architectural với quy�
 
 > **Tóm tắt một dòng**: Không có ranh giới cứng giữa architecture và design, ranh giới phụ thuộc context. Heuristic thực hành: hỏi 3 câu (bao trùm? ảnh hưởng QA? đắt khi sửa?) cho mỗi quyết định để biết nó deserve cấp attention nào.
 
+## Nếu bạn đến từ Data Science
+
+Trong ML, không phải mọi quyết định đều là kiến trúc. Chọn learning rate, số epoch hoặc threshold ban đầu thường là design/experiment decision. Nhưng chọn batch inference hay online inference, chọn feature store hay query trực tiếp warehouse, chọn lưu model artifact ở registry nào, chọn Kafka hay REST cho prediction events, đó là architectural decision vì ảnh hưởng toàn hệ thống và khó đổi sau này.
+
 ## Câu hỏi mở đầu
 
 Hãy xét 5 quyết định sau và đoán xem cái nào là architectural:

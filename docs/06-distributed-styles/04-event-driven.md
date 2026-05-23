@@ -28,6 +28,20 @@ graph LR
 
 Producer không biết ai consume. Consumer subscribe topic/queue. Decoupling at runtime (knowing who exists).
 
+## Nếu bạn đến từ Data Science
+
+Event-Driven Architecture rất gần với streaming data/ML. Một event không phải là một request hỏi đáp ngay lập tức, mà là một sự kiện đã xảy ra: `TransactionCreated`, `UserClickedProduct`, `FeatureUpdated`, `ModelRegistered`, `PredictionMade`.
+
+Trong fraud detection, transaction event có thể đi qua nhiều consumer song song:
+
+- Feature aggregator cập nhật online features.
+- Fraud model scorer tính risk score.
+- Audit logger lưu event để điều tra sau này.
+- Monitoring service đo drift và error rate.
+- Notification service gửi alert nếu score vượt threshold.
+
+Producer của transaction không cần biết tất cả consumer này. Nó chỉ publish event. Đây là lợi ích lớn nhất của EDA: thêm consumer mới không bắt producer sửa code. Nhưng cái giá là debugging khó hơn, consistency thường là eventual, và bạn phải nghĩ nghiêm túc về duplicate, ordering, schema evolution.
+
 ## Sync vs Async
 
 | Aspect | Sync (request/response) | Async (event-driven) |

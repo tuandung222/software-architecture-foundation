@@ -9,6 +9,12 @@ description: Vì sao NFR (quality attributes) thường quan trọng hơn functi
 
 > **Tóm tắt một dòng**: Functional requirement nói "hệ phải làm X"; Quality attribute nói "hệ phải làm X *tốt cỡ nào*". Architecture được quyết định bởi QA chứ không phải bởi functional requirement, vì cùng functionality có thể được implement bằng vô số architecture khác nhau.
 
+## Nếu bạn đến từ Data Science
+
+Trong ML system, functional requirement thường nghe rất đơn giản: "hệ thống trả về churn score", "hệ thống phát hiện fraud", "hệ thống recommend sản phẩm". Nhưng phần làm kiến trúc khó nằm ở NFR: score phải trả trong bao lâu, feature được phép cũ bao lâu, prediction có cần explain không, có cần audit model version không, pipeline fail thì recover thế nào.
+
+Vì vậy đừng dừng ở câu "model predict được". Hãy hỏi tiếp: predict cho bao nhiêu request mỗi giây, với p95 latency bao nhiêu, khi schema đổi thì phát hiện ở đâu, khi model drift thì ai biết, rollback mất bao lâu. Những câu hỏi này biến một model thành production system.
+
 ## Câu hỏi mở đầu
 
 Hai team build cùng một e-commerce site. Functional requirement giống hệt: catalog, cart, checkout, payment.

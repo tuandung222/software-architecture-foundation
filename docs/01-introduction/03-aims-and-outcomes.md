@@ -9,6 +9,12 @@ description: Khoá học định cho bạn kỹ năng gì khi kết thúc, vì s
 
 > **Tóm tắt một dòng**: Khoá này muốn bạn ra trường biết tên 9 architecture styles phổ biến, đọc được documentation kiến trúc bất kỳ, và lập luận được trade-off khi chọn architecture cho dự án mới, chứ không cố làm bạn thành expert ở mọi pattern.
 
+## Nếu bạn đến từ Data Science
+
+Sau khoá này, mục tiêu không phải biến bạn thành backend architect ngay lập tức. Mục tiêu thực tế hơn là giúp bạn nói chuyện được với platform/backend team bằng cùng một vocabulary. Khi họ hỏi batch hay online inference, REST hay Kafka, model registry tự build hay dùng managed service, bạn hiểu câu hỏi đó liên quan tới latency, freshness, auditability, cost và recoverability như thế nào.
+
+Một outcome quan trọng cho DS là chuyển từ tư duy "model có metric tốt" sang "hệ thống dùng model có vận hành tốt". Đây là bước chuyển rất lớn: bạn không bỏ modelling, nhưng bạn đặt modelling vào một hệ production có boundary, contract, monitoring và rollback.
+
 ## Vì sao cần nói rõ mục tiêu?
 
 Một sai lầm phổ biến khi học SA là cố học "tất cả": SOLID, DDD, CQRS, Event Sourcing, Saga pattern, Outbox pattern, hexagonal, clean architecture, onion architecture, BFF, sidecar, service mesh, mesh app... Mỗi chủ đề lại dẫn tới 5 chủ đề khác. Không ai có thể master tất cả, và cố làm thế chỉ dẫn tới sự nông cạn ở mọi chỗ.

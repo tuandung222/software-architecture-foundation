@@ -9,6 +9,12 @@ description: Phân biệt Architecture Style vs Architecture Pattern. Bốn fund
 
 > **Tóm tắt một dòng**: Architecture Style là "shape" tổng thể của hệ. Cụm này dạy 4 style fundamental (monolithic-friendly): Monolithic baseline, Layered, Pipeline, Microkernel, và quyết định cơ bản nhất: monolithic hay distributed.
 
+## Nếu bạn đến từ Data Science
+
+Trong Cụm 5, bài bạn nên đọc kỹ nhất là Pipeline Architecture. Đây là style gần nhất với ETL, feature engineering, training pipeline và batch scoring. Layered giúp bạn hiểu cách tách API, business logic và persistence. Microkernel giúp bạn hiểu cách thêm plug-in model, metric hoặc feature transform mà không sửa core.
+
+Đừng xem architecture styles như danh sách tên để thuộc. Hãy xem chúng như các hình dạng tổ chức hệ thống. Một notebook lớn là một hình dạng. Một Airflow DAG là một hình dạng khác. Một model serving API với feature store lại là hình dạng khác nữa.
+
 ## Style vs Pattern
 
 Phân biệt:

@@ -9,6 +9,12 @@ description: Cách extract QA từ requirement, kinh nghiệm Top-7 rule, hierar
 
 > **Tóm tắt một dòng**: Đừng pick "all the -ilities". Chọn 3-7 QA top driven bởi business priority, document chúng có thể đo được, dùng workshop với stakeholder để negotiate khi xung đột.
 
+## Nếu bạn đến từ Data Science
+
+Stakeholder hiếm khi nói thẳng bằng thuật ngữ architecture. Họ sẽ không nói "tôi cần feature freshness SLA 5 phút". Họ có thể nói "đừng để hệ thống chặn giao dịch dựa trên thông tin cũ". Nhiệm vụ của bạn là dịch câu đó thành Quality Attribute đo được.
+
+Một số câu hỏi hữu ích: prediction stale bao lâu thì gây hại? Nếu model sai, ai chịu rủi ro? Có cần giải thích từng prediction không? Data chứa PII không? Label về trễ bao lâu? Nếu pipeline training fail, business có chấp nhận dùng model cũ thêm một ngày không? Từ câu trả lời, bạn extract được freshness, explainability, privacy, recoverability và reliability.
+
 ## Vì sao "không quá 7"?
 
 Cognitive limit. Người ta nhớ và optimize được khoảng 5-9 thứ cùng lúc (Miller's 7±2 rule). Architect đặt 15 QA "quan trọng" → 15 QA đều không thực sự được tối ưu.

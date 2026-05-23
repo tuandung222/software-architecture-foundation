@@ -9,6 +9,12 @@ description: SRP không phải "mỗi class chỉ làm một việc" như đa s�
 
 > **Tóm tắt một dòng**: SRP nói "Mỗi module nên có duy nhất một lý do để thay đổi", với "lý do" là một *actor* (một nhóm stakeholder có cùng yêu cầu), không phải là "một function" hay "một concept" như thường bị giảng sai.
 
+## Nếu bạn đến từ Data Science
+
+SRP rất dễ hiểu qua một script training. Nếu function `train_model()` vừa đọc dữ liệu, vừa tạo feature, vừa train, vừa evaluate, vừa ghi artifact lên registry, function đó có quá nhiều lý do để thay đổi. Data source đổi cũng sửa nó. Feature đổi cũng sửa nó. Metric đổi cũng sửa nó. Registry đổi cũng sửa nó.
+
+SRP gợi ý tách theo actor hoặc lý do thay đổi: data engineer quan tâm ingestion, data scientist quan tâm feature/model/metric, ML engineer quan tâm registry/serving, platform engineer quan tâm deployment/monitoring. Khi mỗi module chỉ phục vụ một nhóm thay đổi chính, code production dễ evolve hơn.
+
 ## Phiên bản hay bị giảng sai
 
 Mở Google search "Single Responsibility Principle" và bạn sẽ thấy 90% bài viết định nghĩa như sau:

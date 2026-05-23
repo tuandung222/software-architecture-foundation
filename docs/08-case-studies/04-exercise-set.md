@@ -239,6 +239,91 @@ Major e-commerce expand từ Vietnam ra Southeast Asia (Thailand, Indonesia, Phi
 
 ---
 
+
+## Bài 6: Churn Prediction Platform
+
+### Context
+
+Một công ty SaaS muốn dự đoán khách hàng có nguy cơ churn để đội Customer Success can thiệp sớm. Data đến từ product usage events, billing history, support tickets và CRM notes.
+
+### Functional requirements
+
+- Tính churn score cho mỗi account.
+- Export score sang CRM.
+- Lưu prediction history để phân tích hiệu quả campaign.
+- Cho phép data scientist deploy model version mới.
+
+### Constraints
+
+- Business chỉ gọi khách theo daily campaign mỗi sáng.
+- Data chứa PII và thông tin billing.
+- Team ML có 5 người, chưa có SRE riêng.
+
+### Questions
+
+1. Chọn batch inference hay online inference? Vì sao?
+2. Quality Attributes top 5 là gì?
+3. Có cần Kafka không, hay Airflow batch đủ?
+4. Model registry cần lưu metadata nào?
+5. Vẽ C&C View cho daily scoring flow.
+
+## Bài 7: Real-time Fraud Detection
+
+### Context
+
+Một ví điện tử cần detect giao dịch gian lận trong lúc user thanh toán. Hệ thống phải trả quyết định approve, reject hoặc manual review rất nhanh.
+
+### Functional requirements
+
+- Nhận transaction event từ payment gateway.
+- Tính features gần realtime.
+- Gọi model để tạo fraud score.
+- Gửi quyết định về payment flow.
+- Lưu audit log cho mỗi quyết định.
+
+### Constraints
+
+- p95 latency end-to-end < 200ms.
+- Cần explainability ở mức reason code.
+- Transaction duplicate có thể xảy ra.
+- Label fraud về trễ vài ngày.
+
+### Questions
+
+1. Feature nào precompute, feature nào tính request-time?
+2. REST sync, Kafka async hay hybrid?
+3. Dead-letter queue xử lý event lỗi ra sao?
+4. Monitoring cần đo drift, latency và false positive như thế nào?
+5. ADR quan trọng nhất trong hệ này là gì?
+
+## Bài 8: Feature Store cho ML Platform
+
+### Context
+
+Nhiều team DS trong công ty tính feature riêng, dẫn tới duplicate logic và training-serving skew. Công ty muốn xây feature store dùng chung.
+
+### Functional requirements
+
+- Đăng ký feature definition.
+- Materialize feature cho offline training.
+- Serve online feature cho low-latency inference.
+- Version feature và tracking lineage.
+
+### Constraints
+
+- Một số feature cần freshness < 5 phút.
+- Một số feature chỉ cần daily batch.
+- Data source gồm warehouse, event stream và third-party API.
+- Phải kiểm soát quyền truy cập PII.
+
+### Questions
+
+1. Component chính của feature store là gì?
+2. Boundary giữa feature store và training pipeline nằm ở đâu?
+3. QA nào quyết định online store cần Redis/Cassandra hay không?
+4. Data lineage được document ở view nào?
+5. Khi feature definition đổi, model cũ xử lý ra sao?
+
 ## Reflection questions
 
 Sau khi làm 5 bài:

@@ -9,6 +9,12 @@ description: Component vs Module vs Class. Identify component qua entity-based h
 
 > **Tóm tắt một dòng**: Component là building block của architecture (lớn hơn class, có boundary rõ, có thể deploy/test độc lập). Identify component bằng entity-based hoặc workflow-based; tổ chức theo 3 cohesion + 3 coupling principles của Robert C. Martin.
 
+## Nếu bạn đến từ Data Science
+
+Component trong ML/data system thường là ingestion, validation, feature store, trainer, evaluator, model registry, serving API, monitoring. Mỗi component nên có trách nhiệm rõ và owner rõ. Nếu feature transformation vừa nằm trong training notebook vừa copy sang serving code, bạn đã tạo coupling nguy hiểm giữa training và serving.
+
+Component thinking giúp bạn hỏi đúng: feature definition sống ở đâu? Ai own schema? Model registry lưu những metadata nào? Serving API đọc feature online hay tự tính? Monitoring nhận prediction log từ đâu? Những câu hỏi này quyết định architecture nhiều hơn việc chọn model algorithm.
+
 ## Component là gì?
 
 Robert C. Martin định nghĩa trong *Clean Architecture*:

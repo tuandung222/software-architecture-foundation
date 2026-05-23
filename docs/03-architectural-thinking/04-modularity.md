@@ -29,6 +29,27 @@ Có vẻ là microservices (mỗi service deploy riêng), nhưng services depend
 
 Cả hai anti-pattern này phòng được nếu hiểu modularity đúng.
 
+## Nếu bạn đến từ Data Science
+
+Một DS project cũng có modularity, dù đôi khi nó không được gọi như vậy. Hãy nhìn một ML system production đơn giản:
+
+```text
+ingestion -> validation -> feature engineering -> training -> registry -> serving -> monitoring
+```
+
+Nếu tất cả nằm trong một notebook hoặc một script `train.py`, bạn có Big Ball of Mud phiên bản Data Science. Nếu bạn tách thành 20 microservices nhưng mỗi thay đổi feature phải sửa training service, serving service, monitoring service và dashboard cùng lúc, bạn có Distributed Monolith phiên bản ML platform.
+
+Boundary tự nhiên của ML/data system thường không phải "file Python nào gọi file nào", mà là trách nhiệm thay đổi:
+
+- Data ingestion thay đổi khi nguồn dữ liệu thay đổi.
+- Feature engineering thay đổi khi định nghĩa feature thay đổi.
+- Training thay đổi khi thuật toán hoặc objective thay đổi.
+- Model registry thay đổi khi lifecycle/versioning thay đổi.
+- Serving thay đổi khi latency/scale/deployment thay đổi.
+- Monitoring thay đổi khi cần detect drift, data quality hoặc performance.
+
+Chia module tốt nghĩa là mỗi thay đổi trên không kéo cả hệ thống đi theo.
+
 ## Nguyên tắc: High cohesion at module boundary
 
 Khi chia hệ, mỗi module nên thoả:

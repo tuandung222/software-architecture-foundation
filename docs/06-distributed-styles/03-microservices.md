@@ -9,6 +9,12 @@ description: Style fine-grained 20-100+ services, database per service, eventual
 
 > **Tóm tắt một dòng**: Tách hệ thành nhiều service nhỏ, mỗi service own một bounded context và database riêng, communication chủ yếu qua API + event. Lợi ích cực mạnh cho team scale + independent deploy, nhưng cost ops khổng lồ. Chỉ phù hợp khi team ≥ 50 và đã có DevOps mature.
 
+## Nếu bạn đến từ Data Science
+
+Microservices không phải câu trả lời mặc định cho MLOps. Nếu team nhỏ, microservices có thể làm bạn mất nhiều thời gian vào deployment, networking, tracing, auth, versioning, monitoring hơn là cải thiện model. Một ML platform có 5 service coarse-grained thường thực tế hơn 30 service nhỏ.
+
+Microservices chỉ đáng cân nhắc khi domain đủ lớn: feature platform có team riêng, serving platform có team riêng, training orchestration có team riêng, monitoring có team riêng, và mỗi team cần deploy/scale độc lập. Nếu vẫn cùng một nhóm 5 người sửa mọi service, bạn có thể chỉ đang tạo distributed monolith.
+
 ## Topology
 
 ```mermaid

@@ -9,6 +9,12 @@ description: High-level module không depend low-level module, cả hai depend a
 
 > **Tóm tắt một dòng**: Đảo ngược direction dependency: thay vì module business logic depend trực tiếp vào module infrastructure (database, network), cả hai depend vào abstraction do business logic định nghĩa. Đây là nền tảng cho hexagonal/clean architecture và mọi DI framework.
 
+## Nếu bạn đến từ Data Science
+
+DIP nói rằng logic quan trọng không nên phụ thuộc trực tiếp vào chi tiết infrastructure. Ví dụ training pipeline không nên hard-code BigQuery query, S3 path, MLflow client và Slack webhook trong cùng một function. Nếu làm vậy, muốn chạy local test cũng phải có đủ cloud credentials.
+
+Thiết kế tốt đặt abstraction ở giữa: `DatasetRepository`, `ModelRegistry`, `MetricLogger`, `Notifier`. Production implementation có thể dùng BigQuery, MLflow và Slack. Test implementation có thể dùng local file và in-memory registry. Nhờ vậy business logic của training vẫn ổn định dù tool thay đổi.
+
 ## Phát biểu
 
 Robert C. Martin (1996):

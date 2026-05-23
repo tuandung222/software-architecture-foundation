@@ -9,6 +9,12 @@ description: Quyết định cơ bản nhất khi thiết kế hệ. Vì sao mon
 
 > **Tóm tắt một dòng**: Monolithic = toàn hệ chạy 1 process; Distributed = nhiều process qua network. Monolithic luôn nên là default. Distributed *chỉ* khi có lý do mạnh, vì nó thêm 5x complexity và 5x operational cost.
 
+## Nếu bạn đến từ Data Science
+
+Hành trình production ML thường đi qua nhiều mức. Ban đầu là notebook. Sau đó là một script batch. Sau đó là một package có module rõ. Tiếp theo có thể là một service-based ML platform với feature service, training orchestrator, model registry và serving service. Không nên nhảy từ notebook thẳng sang microservices.
+
+Monolith không phải xấu nếu nó modular. Một batch scoring job rõ ràng, có test, có monitoring, có rollback có thể tốt hơn nhiều so với 10 service nhỏ nhưng coupling chặt và không ai vận hành nổi.
+
 ## Định nghĩa
 
 ### Monolithic Architecture

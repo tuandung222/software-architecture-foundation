@@ -9,6 +9,12 @@ description: Vì sao tài liệu hoá architecture quan trọng. Three views fro
 
 > **Tóm tắt một dòng**: Kiến trúc không được tài liệu hoá là kiến trúc chết - tồn tại trong đầu 1-2 người, evolve không kiểm soát, mất khi người đó rời team. Cụm này dạy framework chuẩn để document - 3 views (Module/C&C/Allocation), ADR, và diagram standards.
 
+## Nếu bạn đến từ Data Science
+
+ML/data system càng cần documentation vì failure thường nằm giữa nhiều boundary: data source đổi schema, feature transform khác training, model registry thiếu metadata, serving API dùng model cũ, monitoring không nhận prediction log. Nếu không có architecture view, mỗi incident trở thành một cuộc truy tìm thủ công.
+
+Ít nhất, hãy document một model production bằng 3 view: Module View cho code/pipeline modules, C&C View cho runtime flow của prediction/training, Allocation View cho nơi chạy API, job, registry, warehouse, object storage và monitoring.
+
 ## Vì sao quan trọng
 
 3 lý do hard-hitting:

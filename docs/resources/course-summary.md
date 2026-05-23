@@ -169,6 +169,24 @@ Real-time incident detection. **Event-Driven + Microservices + Microkernel** mix
 
 5 bài tự practice: Food Delivery, Property Management SaaS, Stock Trading, IoT Manufacturing, Multi-region E-commerce migration.
 
+## Nếu bạn là Data Scientist
+
+Hãy nhớ bản đồ chuyển đổi sau:
+
+| Trong Data Science | Trong Software Architecture |
+|---|---|
+| Notebook dài khó sửa | Cohesion, coupling, SRP |
+| Thêm model mới | OCP, interface contract, microkernel |
+| Training pipeline | Pipeline Architecture |
+| Batch vs online inference | Trade-off dựa trên latency, freshness, cost |
+| Model metric | Một phần của Quality Attributes |
+| Feature store | Component boundary + data ownership |
+| Experiment tracking | Auditability + reproducibility |
+| Model serving | C&C View + Allocation View |
+| Drift monitoring | Observability + reliability |
+
+Một model tốt offline chưa đủ. Production ML cần hệ thống có contract, monitoring, rollback, lineage và cost model rõ ràng. Vì vậy nếu bạn chỉ có ít thời gian, hãy đọc theo thứ tự: 4.1 Quality Attributes, 5.4 Pipeline, 6.4 Event-Driven, 7.3 C&C Views, 8.3 Smart City.
+
 ## Key takeaways
 
 ### 1. Architecture = trade-off

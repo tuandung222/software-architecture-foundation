@@ -9,6 +9,12 @@ description: View về runtime structure. Component instances, connectors, data 
 
 > **Tóm tắt một dòng**: C&C View show *runtime* structure - khi hệ chạy, component instances nào tồn tại, communicate với connector nào, data flow ra sao. Khác Module View ở chỗ Module = static, C&C = dynamic.
 
+## Nếu bạn đến từ Data Science
+
+C&C View rất hữu ích để vẽ online inference. Một request đi từ client vào API, API gọi feature store, load model runtime, trả prediction, ghi prediction log, đẩy metric sang monitoring. Sequence này chính là nơi latency, failure và observability xuất hiện.
+
+Nếu chỉ nhìn code training, bạn sẽ bỏ lỡ runtime behavior. C&C View giúp bạn thấy model không chạy một mình. Nó nằm trong chuỗi connector: HTTP, database query, cache lookup, message queue, logging pipeline.
+
 ## Module vs C&C
 
 | Aspect | Module View | C&C View |

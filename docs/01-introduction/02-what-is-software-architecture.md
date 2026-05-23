@@ -9,6 +9,12 @@ description: Định nghĩa Software Architecture qua ba góc nhìn hình thức
 
 > **Tóm tắt một dòng**: Software Architecture là tập hợp các quyết định khó-thay-đổi-nhất của một hệ phần mềm, đặc trưng bởi (a) tính bao trùm toàn hệ thống, (b) ảnh hưởng quyết định tới quality attributes, và (c) chi phí sửa cao tới mức phải cân nhắc rất kỹ ngay từ đầu.
 
+## Nếu bạn đến từ Data Science
+
+Một cách rất thực tế để hiểu Software Architecture là hỏi: quyết định này có làm thay đổi cách model sống trong production không? Nếu bạn đổi `max_depth` của XGBoost từ 6 sang 8, đó thường là design hoặc experiment detail. Nhưng nếu bạn quyết định batch inference mỗi đêm thay vì online inference theo request, đó là architectural decision: nó ảnh hưởng latency, cost, data freshness, monitoring, deployment và cách team vận hành.
+
+Tương tự, chọn lưu feature trong warehouse hay dùng feature store không chỉ là chọn tool. Nó quyết định data ownership, consistency giữa training và serving, khả năng audit prediction, và cách debug khi feature bị drift. Những quyết định như vậy thường khó đổi sau khi hệ đã chạy, nên chúng thuộc về Software Architecture.
+
 ## Một câu hỏi đơn giản, ba câu trả lời khác nhau
 
 Nếu bạn hỏi ba kỹ sư phần mềm "Software Architecture là gì?", rất có thể bạn nhận được ba câu trả lời khác nhau và cả ba đều đúng một phần. Đó không phải lỗi của họ, đó là vì khái niệm này có nhiều lớp ý nghĩa, và mỗi cộng đồng (academia, industry, một dự án cụ thể) nhấn mạnh một lớp khác nhau. Bài này sẽ đi qua ba góc nhìn phổ biến nhất, sau đó tổng hợp lại thành một định nghĩa hành nghề được.

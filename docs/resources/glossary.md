@@ -179,3 +179,46 @@ description: Bảng tra cứu alphabet các thuật ngữ chính trong khoá Sof
 | Thuật ngữ | Định nghĩa ngắn | Bài |
 |---|---|---|
 | **YAGNI** (You Aren't Gonna Need It) | Don't build feature/abstraction until needed | [2.4](../02-design-principles/04-ocp) |
+
+## Data/ML Architecture terms
+
+### Batch inference
+
+Cách chạy model theo lô, thường theo lịch định kỳ như mỗi giờ hoặc mỗi ngày. Batch inference đơn giản, rẻ, dễ audit, nhưng prediction có thể stale. Xem thêm [Pipeline Architecture](../05-fundamental-styles/04-pipeline-architecture.md) và [Quality Attributes](../04-quality-attributes/01-overview.md).
+
+### Data drift
+
+Hiện tượng phân phối dữ liệu production thay đổi so với dữ liệu training. Data drift ảnh hưởng reliability và model quality, thường cần monitoring riêng.
+
+### Data lineage
+
+Khả năng truy vết dữ liệu đi từ nguồn nào, qua job nào, transform nào, version nào, rồi tới output nào. Lineage liên quan chặt tới auditability và reproducibility.
+
+### Feature freshness
+
+Độ mới của feature so với sự kiện thật ngoài đời. Fraud detection có thể cần freshness vài giây, churn prediction có thể chỉ cần freshness một ngày.
+
+### Feature store
+
+Component quản lý feature definition, offline feature cho training và online feature cho serving. Feature store giúp giảm training-serving skew và tăng reuse giữa các team.
+
+### MLOps
+
+Tập hợp practices để đưa ML vào production: versioning, CI/CD cho model, model registry, monitoring, drift detection, rollback, governance. Trong khoá này, MLOps được nhìn qua lăng kính Software Architecture.
+
+### Model registry
+
+Nơi lưu model artifact, version, metadata, metric, feature schema và trạng thái lifecycle. Registry hỗ trợ deploy, rollback, audit và reproducibility.
+
+### Model serving
+
+Phần hệ thống đưa model ra phục vụ prediction cho batch job, API hoặc stream. Model serving chịu ảnh hưởng mạnh bởi latency, throughput, availability và cost.
+
+### Online inference
+
+Cách gọi model theo request realtime hoặc near-realtime. Online inference có freshness tốt nhưng đòi hỏi API, autoscaling, monitoring và rollback chặt chẽ.
+
+### Training-serving skew
+
+Lỗi xảy ra khi logic feature trong training khác logic feature trong serving. Đây là một dạng coupling nguy hiểm giữa pipeline training và runtime serving.
+

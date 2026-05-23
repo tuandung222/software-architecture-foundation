@@ -9,6 +9,12 @@ description: Áp toàn bộ kiến thức 7 cụm trước vào 2 case study end
 
 > **Tóm tắt một dòng**: 7 cụm trước cung cấp building block. Cụm này áp tất cả vào 2 case thực để bạn thấy cách lập luận "given context X, why this architecture not that" - skill thực sự của architect.
 
+## Nếu bạn đến từ Data Science
+
+Trong hai case study, hãy đọc kỹ Smart City Traffic. Case này có ingest data, normalize, streaming, ML detector, alerting, time-series storage và data warehouse. Nó rất gần với production data/ML system: nhiều nguồn dữ liệu, throughput cao, latency target rõ, model inference nằm trong pipeline lớn hơn.
+
+UAMS vẫn đáng đọc vì nó dạy phần business workflow, audit, data integrity và service-based thinking. Nhưng Smart City là cầu nối trực tiếp hơn từ DS sang Software Architecture.
+
 ## Vì sao case study?
 
 Lý thuyết kiến trúc dễ học, áp dụng khó. Cụm 1-7 cho bạn vocabulary và principles. Nhưng câu hỏi thực sự khi làm architect là:

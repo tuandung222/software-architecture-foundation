@@ -9,6 +9,10 @@ description: Cụm 1 giới thiệu cách suy nghĩ về Software Architecture, 
 
 > **Tóm tắt một dòng**: Software Architecture là tập hợp các quyết định khó-thay-đổi-nhất của một hệ phần mềm, và cụm này dạy bạn cách nhận ra những quyết định đó, đặt tên cho chúng, và bắt đầu cân nhắc chúng một cách có hệ thống.
 
+## Nếu bạn đến từ Data Science
+
+Cụm 1 nên được đọc như phần định nghĩa lại phạm vi công việc khi model đi vào production. Trong notebook, bạn thường kiểm soát toàn bộ môi trường. Trong production, model phụ thuộc vào API, data pipeline, feature store, database, scheduler, monitoring, alerting và quy trình rollback. Cụm này giúp bạn gọi đúng tên các quyết định quan trọng đó.
+
 ## Vì sao Cụm 1 cần đứng trước
 
 Có một sai lầm rất phổ biến khi học Software Architecture: nhảy ngay vào học microservices, event-driven, hay DDD vì nghe có vẻ "kiến trúc". Hậu quả là người học thuộc nhiều pattern nhưng không biết khi nào dùng, không biết vì sao pattern này lại sinh ra, và quan trọng nhất, không biết phân biệt vấn đề kiến trúc với vấn đề thiết kế thuần tuý. Cụm 1 sửa sai lầm này bằng cách bắt đầu từ câu hỏi cơ bản nhất: "Software Architecture rốt cuộc là gì?".

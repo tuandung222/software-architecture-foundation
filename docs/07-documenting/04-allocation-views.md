@@ -9,6 +9,12 @@ description: View về mapping software → hardware/network/team. Deployment vi
 
 > **Tóm tắt một dòng**: Allocation View show *physical* mapping của software lên: hardware/cloud (deployment), file system (implementation), team (work assignment). Trả lời "code này chạy ở đâu, ai own nó".
 
+## Nếu bạn đến từ Data Science
+
+Allocation View trả lời câu hỏi model và data pipeline chạy ở đâu. Training job có chạy trên GPU node không? Serving API chạy CPU hay GPU? Feature store nằm trong Redis, online DB hay managed service? Data lake ở object storage nào? Monitoring chạy chung cluster hay riêng?
+
+Những quyết định này ảnh hưởng cost, latency và recoverability. Một model tốt nhưng deploy nhầm lên instance quá yếu vẫn làm hệ thống fail.
+
 ## 3 subtypes
 
 ### Subtype 1: Deployment View
